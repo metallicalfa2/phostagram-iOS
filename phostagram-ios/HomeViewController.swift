@@ -1,23 +1,16 @@
 //
-//  ProfileViewController.swift
+//  HomeViewController.swift
 //  phostagram-ios
 //
-//  Created by SKIXY-MACBOOK on 30/06/17.
+//  Created by SKIXY-MACBOOK on 03/07/17.
 //  Copyright © 2017 shubhamrathi. All rights reserved.
 //
 
 import UIKit
 
-struct ImageToDisplay {
-	var imageName: String
-}
-
-class ProfileViewController: UIViewController,UICollectionViewDataSource {
+class HomeViewController:UIViewController,UICollectionViewDataSource{
 	var isGridFlowLayoutUsed: Bool = false
-
-	@IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
 	
-	@IBOutlet weak var parentView: UIView!
 	@IBOutlet weak var listButton: UIButton!
 	@IBOutlet weak var gridButton: UIButton!
 	@IBOutlet weak var collectionView: UICollectionView!
@@ -29,11 +22,11 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 	/// Flow layout that displays cells with a List layout, like in a tableView
 	let listFlowLayout = PhotoListflowViewLayout()
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		setupDatasource()
 		setupInitialLayout()
-    }
+	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
@@ -54,19 +47,17 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 		isGridFlowLayoutUsed = true
 		listButton.setImage(#imageLiteral(resourceName: "listNotSelected"), for: .normal)
 		gridButton.setImage(#imageLiteral(resourceName: "gridSelected"), for: .normal)
-
+		
 		UIView.animate(withDuration: 0.2, animations: { () -> Void in
 			self.collectionView.collectionViewLayout.invalidateLayout()
 			self.collectionView.setCollectionViewLayout(self.gridFlowLayout, animated: true)
 		})
 	}
-
-
+	
+	
 	func setupDatasource() {
 		itemsToDisplay = [ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party")]
 		
-		collectionViewHeight.constant = 1000
-
 		collectionView.reloadData()
 	}
 	
@@ -78,11 +69,11 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 	
 }
 
-extension ProfileViewController{
+extension HomeViewController{
 	// MARK: collectionView methods
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+	
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
-		
 		let itemToDisplay = itemsToDisplay[indexPath.row]
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
 		
@@ -97,8 +88,4 @@ extension ProfileViewController{
 		return itemsToDisplay.count
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-	
-		return CGSize.init(width: view.frame.width, height: 240 )
-	}
 }

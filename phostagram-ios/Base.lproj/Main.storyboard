@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,11 +23,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDB-KF-OT1">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jDB-KF-OT1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="951"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-mO-Enr">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-mO-Enr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-VQ-RKe" userLabel="nameView">
                                                 <rect key="frame" x="20" y="20" width="335" height="199"/>
@@ -226,9 +227,12 @@ nagpur,India - 440010</string>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P3c-LZ-pwC">
-                                                <rect key="frame" x="0.0" y="590" width="375" height="295"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P3c-LZ-pwC">
+                                                <rect key="frame" x="0.0" y="590" width="375" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="35d-6z-TDr"/>
+                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PQW-aQ-1OY">
                                                     <size key="itemSize" width="157" height="147"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -291,7 +295,6 @@ nagpur,India - 440010</string>
                                         <constraints>
                                             <constraint firstItem="HzV-C8-W3x" firstAttribute="top" secondItem="0pF-VQ-RKe" secondAttribute="bottom" constant="8" id="5c8-if-qjB"/>
                                             <constraint firstItem="NDp-2W-bdd" firstAttribute="top" secondItem="HzV-C8-W3x" secondAttribute="bottom" constant="16" id="7EW-DW-2CW"/>
-                                            <constraint firstAttribute="height" constant="1000" id="7fV-O5-Ues"/>
                                             <constraint firstItem="lka-b1-Jby" firstAttribute="leading" secondItem="0zz-ql-mJV" secondAttribute="trailing" constant="10" id="7rZ-vG-vxS"/>
                                             <constraint firstItem="NDp-2W-bdd" firstAttribute="leading" secondItem="KwH-mO-Enr" secondAttribute="leading" constant="20" id="8xM-LR-uHx"/>
                                             <constraint firstAttribute="trailing" secondItem="P3c-LZ-pwC" secondAttribute="trailing" id="CQS-l2-7Uf"/>
@@ -304,7 +307,7 @@ nagpur,India - 440010</string>
                                             <constraint firstAttribute="trailing" secondItem="0pF-VQ-RKe" secondAttribute="trailing" constant="20" id="Sc8-Gm-M1j"/>
                                             <constraint firstItem="P3c-LZ-pwC" firstAttribute="top" secondItem="0zz-ql-mJV" secondAttribute="bottom" constant="22" id="afs-SV-ioy"/>
                                             <constraint firstItem="hpk-dL-6c3" firstAttribute="top" secondItem="NDp-2W-bdd" secondAttribute="bottom" constant="24" id="haf-MI-uDL"/>
-                                            <constraint firstAttribute="bottom" secondItem="P3c-LZ-pwC" secondAttribute="bottom" id="med-u0-RF8"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="P3c-LZ-pwC" secondAttribute="bottom" id="med-u0-RF8"/>
                                             <constraint firstItem="0zz-ql-mJV" firstAttribute="centerY" secondItem="hpk-dL-6c3" secondAttribute="centerY" id="ncC-6f-bvS"/>
                                             <constraint firstAttribute="trailing" secondItem="HzV-C8-W3x" secondAttribute="trailing" constant="20" id="p7B-OY-l2a"/>
                                             <constraint firstAttribute="trailing" secondItem="NDp-2W-bdd" secondAttribute="trailing" constant="20" id="pQ3-Ha-CR6"/>
@@ -316,7 +319,6 @@ nagpur,India - 440010</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="KwH-mO-Enr" secondAttribute="trailing" id="FVD-Rf-2Sx"/>
-                                    <constraint firstAttribute="bottom" secondItem="KwH-mO-Enr" secondAttribute="bottom" constant="-49" id="FZ8-7T-Lf8"/>
                                     <constraint firstItem="KwH-mO-Enr" firstAttribute="leading" secondItem="jDB-KF-OT1" secondAttribute="leading" id="cE5-c1-2x2"/>
                                     <constraint firstItem="KwH-mO-Enr" firstAttribute="centerX" secondItem="jDB-KF-OT1" secondAttribute="centerX" id="hhs-SY-ols"/>
                                     <constraint firstItem="KwH-mO-Enr" firstAttribute="top" secondItem="jDB-KF-OT1" secondAttribute="top" id="jhC-5n-ylB"/>
@@ -340,8 +342,10 @@ nagpur,India - 440010</string>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="collectionView" destination="P3c-LZ-pwC" id="FTZ-32-V1C"/>
+                        <outlet property="collectionViewHeight" destination="35d-6z-TDr" id="e0z-FU-f9L"/>
                         <outlet property="gridButton" destination="lka-b1-Jby" id="XdZ-gt-ei4"/>
                         <outlet property="listButton" destination="0zz-ql-mJV" id="h2U-a3-OBA"/>
+                        <outlet property="parentView" destination="KwH-mO-Enr" id="Zf7-AA-b2y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w55-qM-U6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -413,6 +417,27 @@ nagpur,India - 440010</string>
                                                     <constraint firstItem="Yug-jt-Mnb" firstAttribute="leading" secondItem="I5y-lp-jMf" secondAttribute="leading" constant="5" id="vGb-F7-ZgR"/>
                                                 </constraints>
                                             </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="veD-Xy-MuD">
+                                                <rect key="frame" x="67" y="673" width="288" height="461"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bYK-ky-dB4">
+                                                    <size key="itemSize" width="185" height="246"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TXT-y4-vCh">
+                                                        <rect key="frame" x="51.5" y="0.0" width="185" height="246"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="185" height="246"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </view>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -446,12 +471,12 @@ nagpur,India - 440010</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQo-Vh-6Ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4096.8000000000002" y="517.24137931034488"/>
+            <point key="canvasLocation" x="5036" y="517.24137931034488"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="clY-hl-oUJ">
             <objects>
-                <viewController id="AOC-SV-Div" sceneMemberID="viewController">
+                <viewController id="AOC-SV-Div" customClass="HomeViewController" customModule="phostagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JIu-xN-Fz3"/>
                         <viewControllerLayoutGuide type="bottom" id="4iz-wu-3y3"/>
@@ -459,13 +484,106 @@ nagpur,India - 440010</string>
                     <view key="view" contentMode="scaleToFill" id="AEl-w3-Ufv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent using phostagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-8H-JfT">
+                                <rect key="frame" x="36" y="84" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="wow-NJ-EEd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" red="0.3529411764705882" green="0.14117647058823529" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPT-uD-Eom">
+                                <rect key="frame" x="334" y="82" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="DH4-gL-PPl"/>
+                                    <constraint firstAttribute="height" constant="25" id="Z5Y-ZG-p4Z"/>
+                                </constraints>
+                                <state key="normal" image="gridSelected"/>
+                                <connections>
+                                    <action selector="gridButtonPressed:" destination="AOC-SV-Div" eventType="touchUpInside" id="BWY-gK-RLD"/>
+                                    <action selector="gridButtonPressed:" destination="xeV-Ql-grH" eventType="touchUpInside" id="Vgt-nj-pMN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7v-Xg-yZ2">
+                                <rect key="frame" x="299" y="82.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="qRt-yo-STp"/>
+                                    <constraint firstAttribute="width" constant="25" id="uur-Tb-hS4"/>
+                                </constraints>
+                                <state key="normal" image="listNotSelected"/>
+                                <connections>
+                                    <action selector="listButtonPressed:" destination="AOC-SV-Div" eventType="touchUpInside" id="5qg-06-olq"/>
+                                    <action selector="listButtonPressed:" destination="xeV-Ql-grH" eventType="touchUpInside" id="T8T-Sz-Jlm"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wy9-Tl-lDh">
+                                <rect key="frame" x="0.0" y="125.5" width="375" height="492.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q9K-qR-nsv">
+                                    <size key="itemSize" width="375" height="447"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="ohk-Jv-FkB" customClass="photoCollectionViewCell" customModule="phostagram_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="447"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="447"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Gd-Gf-gp0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="1Gd-Gf-gp0" secondAttribute="height" multiplier="3:2" id="5DX-qp-Nb2"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="1Gd-Gf-gp0" secondAttribute="trailing" id="AAo-7y-8ZS"/>
+                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="leading" secondItem="ohk-Jv-FkB" secondAttribute="leading" id="XMs-Q6-v1A"/>
+                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="top" secondItem="ohk-Jv-FkB" secondAttribute="top" id="ijE-Ce-Y75"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="1Gd-Gf-gp0" id="deA-wo-sa2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="AOC-SV-Div" id="smg-aP-vR6"/>
+                                    <outlet property="delegate" destination="AOC-SV-Div" id="74S-mM-iel"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QPT-uD-Eom" firstAttribute="centerY" secondItem="iHe-8H-JfT" secondAttribute="centerY" id="0J8-Os-vF9"/>
+                            <constraint firstItem="QPT-uD-Eom" firstAttribute="trailing" secondItem="AEl-w3-Ufv" secondAttribute="trailingMargin" id="715-aJ-bC9"/>
+                            <constraint firstItem="L7v-Xg-yZ2" firstAttribute="centerY" secondItem="iHe-8H-JfT" secondAttribute="centerY" id="H7t-jO-ur2"/>
+                            <constraint firstItem="QPT-uD-Eom" firstAttribute="top" secondItem="JIu-xN-Fz3" secondAttribute="bottom" constant="18" id="Ozk-ZL-CRb"/>
+                            <constraint firstItem="Wy9-Tl-lDh" firstAttribute="top" secondItem="L7v-Xg-yZ2" secondAttribute="bottom" constant="18" id="QAO-V8-XRK"/>
+                            <constraint firstItem="iHe-8H-JfT" firstAttribute="top" secondItem="JIu-xN-Fz3" secondAttribute="bottom" constant="20" id="dRf-Bu-Bh0"/>
+                            <constraint firstItem="4iz-wu-3y3" firstAttribute="top" secondItem="Wy9-Tl-lDh" secondAttribute="bottom" id="kIl-XR-nhF"/>
+                            <constraint firstItem="QPT-uD-Eom" firstAttribute="leading" secondItem="L7v-Xg-yZ2" secondAttribute="trailing" constant="10" id="luC-cw-kdx"/>
+                            <constraint firstAttribute="trailing" secondItem="Wy9-Tl-lDh" secondAttribute="trailing" id="nPb-vB-ZxP"/>
+                            <constraint firstItem="Wy9-Tl-lDh" firstAttribute="leading" secondItem="AEl-w3-Ufv" secondAttribute="leading" id="sSO-aW-q9k"/>
+                            <constraint firstItem="iHe-8H-JfT" firstAttribute="leading" secondItem="AEl-w3-Ufv" secondAttribute="leadingMargin" constant="20" id="vg1-bE-3IO"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="KBD-AL-Rlh"/>
+                    <navigationItem key="navigationItem" title="Home" id="q5K-Bo-zxj"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Wy9-Tl-lDh" id="Jcj-Om-fsp"/>
+                        <outlet property="gridButton" destination="QPT-uD-Eom" id="5ra-Gf-sJm"/>
+                        <outlet property="listButton" destination="L7v-Xg-yZ2" id="a5h-1V-Fai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AU5-g0-48o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794" y="224"/>
+            <point key="canvasLocation" x="1732" y="223.53823088455775"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Fap-kf-DeC">
@@ -477,7 +595,7 @@ nagpur,India - 440010</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="AOC-SV-Div" kind="relationship" relationship="viewControllers" id="TEz-L8-kyI"/>
+                        <segue destination="V1Q-Q9-Pja" kind="relationship" relationship="viewControllers" id="TEz-L8-kyI"/>
                         <segue destination="1pU-6M-aQt" kind="relationship" relationship="viewControllers" id="yQJ-RR-fVw"/>
                     </connections>
                 </tabBarController>
@@ -520,7 +638,26 @@ nagpur,India - 440010</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPh-Oj-FIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3157.5999999999999" y="517.6911544227886"/>
+            <point key="canvasLocation" x="4096.8000000000002" y="517.6911544227886"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="krN-PM-ENU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V1Q-Q9-Pja" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="KBD-AL-Rlh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M1r-AG-6cU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AOC-SV-Div" kind="relationship" relationship="rootViewController" id="VPq-sI-8Ff"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7J-5T-8Ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="223.53823088455775"/>
         </scene>
     </scenes>
     <resources>
