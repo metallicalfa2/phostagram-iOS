@@ -11,6 +11,7 @@ import UIKit
 class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 	
 	let itemHeight: CGFloat = 240
+	let phoneHeight = UIScreen.main.bounds.height
 	
 	override init() {
 		super.init()
@@ -42,12 +43,22 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 		return collectionView!.frame.width
 	}
 	
+	func height() -> CGFloat{
+		if (phoneHeight < 667) {
+			return 380
+		} else if (phoneHeight < 736) {
+			return 420
+		} else {
+			return 440
+		}
+	}
+	
 	override var itemSize: CGSize {
 		set {
-			self.itemSize = CGSize(width: itemWidth(), height: itemHeight)
+			self.itemSize = CGSize(width: itemWidth(), height: height())
 		}
 		get {
-			return CGSize(width: itemWidth(), height: itemHeight)
+			return CGSize(width: itemWidth(), height: height())
 		}
 	}
 	

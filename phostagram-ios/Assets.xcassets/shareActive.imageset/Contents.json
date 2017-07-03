@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "party.jpg",
+      "filename" : "shareActive.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "shareActive@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "shareActive@3x.png",
       "scale" : "3x"
     }
   ],

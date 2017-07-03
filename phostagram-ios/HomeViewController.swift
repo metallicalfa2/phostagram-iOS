@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController:UIViewController,UICollectionViewDataSource{
+class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
 	var isGridFlowLayoutUsed: Bool = false
 	
 	@IBOutlet weak var listButton: UIButton!
@@ -26,6 +26,7 @@ class HomeViewController:UIViewController,UICollectionViewDataSource{
 		super.viewDidLoad()
 		setupDatasource()
 		setupInitialLayout()
+		
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +41,7 @@ class HomeViewController:UIViewController,UICollectionViewDataSource{
 		
 		UIView.animate(withDuration: 0.2, animations: { () -> Void in
 			self.collectionView.collectionViewLayout.invalidateLayout()
+			self.collectionView.performBatchUpdates(nil, completion: nil)
 			self.collectionView.setCollectionViewLayout(self.listFlowLayout, animated: true)
 		})
 	}
@@ -87,5 +89,42 @@ extension HomeViewController{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return itemsToDisplay.count
 	}
+	
+//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//		let width = collectionView.frame.width
+//		let height = self.view.frame.height
+//		
+//		if (isGridFlowLayoutUsed == true) {
+//			if (height < 667) {
+//				print(height)
+//				return CGSize(width: (width/2 - 1), height: 120)
+//				
+//			} else if (height < 736) {
+//				print(height)
+//				return CGSize(width: width/2, height: 100)
+//				
+//			} else {
+//				return CGSize(width: width/2, height: 100)
+//			}
+//		}
+//		else{
+//			if (height < 667) {
+//				print(height)
+//				return CGSize(width: (width/2 - 1), height: 120)
+//				
+//			} else if (height < 736) {
+//				print(height)
+//				return CGSize(width: width/2, height: 100)
+//				
+//			} else {
+//				return CGSize(width: width/2, height: 100)
+//				
+//			}
+//		}
+//		
+//		return CGSize(width: width,height: self.view.frame.height)
+//	}
+//
+
 	
 }

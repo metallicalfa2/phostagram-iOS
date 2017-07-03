@@ -9,8 +9,11 @@
 import UIKit
 
 class photoCollectionViewCell: UICollectionViewCell{
-	@IBOutlet var imageView: UIImageView!
 
+	@IBOutlet var imageView: UIImageView!
+	@IBOutlet weak var likButton: UIView!
+	@IBOutlet weak var shareButton: UILabel!
+	
 	override func prepareForReuse() {
 		super.prepareForReuse()
 		imageView.image = nil

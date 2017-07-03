@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoGridflowViewLayout: UICollectionViewFlowLayout{
 	let itemHeight: CGFloat = 120
+	let phoneHeight = UIScreen.main.bounds.height
 	
 	override init() {
 		super.init()
@@ -25,21 +26,29 @@ class PhotoGridflowViewLayout: UICollectionViewFlowLayout{
 	Sets up the layout for the collectionView. 0 distance between each cell, and vertical layout
 	*/
 	func setupLayout() {
-		minimumInteritemSpacing = 1
-		minimumLineSpacing = 1
+		minimumInteritemSpacing = 0
+		minimumLineSpacing = 0
 		scrollDirection = .vertical
 	}
 	
 	func itemWidth() -> CGFloat {
-		return (collectionView!.frame.width/2)-1
+		return (collectionView!.frame.width/2)
 	}
-	
+	func height() -> CGFloat{
+		if (phoneHeight < 667) {
+			return 100
+		} else if (phoneHeight < 736) {
+			return 120
+		} else {
+			return 130
+		}
+	}
 	override var itemSize: CGSize {
 		set {
-			self.itemSize = CGSize(width: itemWidth(), height: itemHeight)
+			self.itemSize = CGSize(width: itemWidth(), height: height())
 		}
 		get {
-			return CGSize(width: itemWidth(), height: itemHeight)
+			return CGSize(width: itemWidth(), height: height())
 		}
 	}
 	
