@@ -13,6 +13,9 @@
 		51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51C688E01F0527B400518D56 /* phostagram_ios.xcdatamodeld */; };
 		51C688E41F0527B400518D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51C688E31F0527B400518D56 /* Assets.xcassets */; };
 		51C688E71F0527B400518D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C688E51F0527B400518D56 /* LaunchScreen.storyboard */; };
+		51D93BD41F0A057D00C057A7 /* photoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BD31F0A057D00C057A7 /* photoCollectionViewCell.swift */; };
+		51D93BD61F0A25B800C057A7 /* PhotoListflowViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BD51F0A25B800C057A7 /* PhotoListflowViewLayout.swift */; };
+		51D93BD81F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BD71F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		51C688E31F0527B400518D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51C688E61F0527B400518D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51C688E81F0527B400518D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51D93BD31F0A057D00C057A7 /* photoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoCollectionViewCell.swift; sourceTree = "<group>"; };
+		51D93BD51F0A25B800C057A7 /* PhotoListflowViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListflowViewLayout.swift; sourceTree = "<group>"; };
+		51D93BD71F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGridflowViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				519A04A01F0653DB00B3F8B0 /* ProfileViewController.swift */,
+				51D93BD51F0A25B800C057A7 /* PhotoListflowViewLayout.swift */,
+				51D93BD71F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift */,
 			);
 			name = profile;
 			sourceTree = "<group>";
@@ -49,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				51C688D81F0527B400518D56 /* phostagram-ios */,
-				51C688F01F052B7B00518D56 /* model */,
 				51C688D71F0527B400518D56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +74,9 @@
 			children = (
 				51C688D91F0527B400518D56 /* AppDelegate.swift */,
 				51C688EE1F052B4500518D56 /* Resources */,
+				51C688F01F052B7B00518D56 /* model */,
 				51C688EF1F052B5300518D56 /* viewController */,
+				51D93BD21F0A050500C057A7 /* view */,
 			);
 			path = "phostagram-ios";
 			sourceTree = "<group>";
@@ -97,7 +106,14 @@
 			children = (
 			);
 			name = model;
-			path = "phostagram-ios";
+			sourceTree = "<group>";
+		};
+		51D93BD21F0A050500C057A7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				51D93BD31F0A057D00C057A7 /* photoCollectionViewCell.swift */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				519A04A11F0653DB00B3F8B0 /* ProfileViewController.swift in Sources */,
+				51D93BD81F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift in Sources */,
+				51D93BD41F0A057D00C057A7 /* photoCollectionViewCell.swift in Sources */,
 				51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */,
 				51C688DA1F0527B400518D56 /* AppDelegate.swift in Sources */,
+				51D93BD61F0A25B800C057A7 /* PhotoListflowViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

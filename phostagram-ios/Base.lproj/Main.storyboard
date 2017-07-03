@@ -19,14 +19,14 @@
                         <viewControllerLayoutGuide type="bottom" id="BBP-Mb-TWH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zjR-UT-Axw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDB-KF-OT1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1351"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="951"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-mO-Enr">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-VQ-RKe" userLabel="nameView">
                                                 <rect key="frame" x="20" y="20" width="335" height="199"/>
@@ -135,7 +135,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Astrology   birdwatching   geocaching   goongoozling   helping   meteorology   watching   photography   trainspotting   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4B5-wu-Y8J">
-                                                        <rect key="frame" x="16" y="58" width="319" height="55"/>
+                                                        <rect key="frame" x="24" y="58" width="303" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="z2q-6d-GYI"/>
                                                         </constraints>
@@ -147,19 +147,17 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="bkF-7R-ucl" secondAttribute="trailing" constant="45" id="1ua-er-1iN"/>
-                                                    <constraint firstAttribute="trailing" secondItem="4B5-wu-Y8J" secondAttribute="trailing" id="9YM-pK-bef"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4B5-wu-Y8J" secondAttribute="trailing" constant="8" id="9YM-pK-bef"/>
                                                     <constraint firstItem="4B5-wu-Y8J" firstAttribute="centerX" secondItem="HzV-C8-W3x" secondAttribute="centerX" constant="8" id="GaK-rt-VpD"/>
                                                     <constraint firstItem="bkF-7R-ucl" firstAttribute="leading" secondItem="HzV-C8-W3x" secondAttribute="leading" constant="45" id="Gva-UC-OcW"/>
                                                     <constraint firstItem="bkF-7R-ucl" firstAttribute="top" secondItem="HzV-C8-W3x" secondAttribute="top" id="OPO-o0-2YL"/>
                                                     <constraint firstItem="1xI-eB-h3g" firstAttribute="top" secondItem="HzV-C8-W3x" secondAttribute="top" constant="29" id="PMp-8x-6C5"/>
                                                     <constraint firstAttribute="bottom" secondItem="Cj5-qD-6Vo" secondAttribute="bottom" id="eLZ-wI-TeP"/>
-                                                    <constraint firstAttribute="trailing" secondItem="4B5-wu-Y8J" secondAttribute="trailing" id="g6V-dC-4PA"/>
                                                     <constraint firstItem="4B5-wu-Y8J" firstAttribute="top" secondItem="1xI-eB-h3g" secondAttribute="bottom" constant="8" id="hAf-Y5-Aap"/>
                                                     <constraint firstAttribute="height" constant="150" id="mHG-cn-ugc"/>
                                                     <constraint firstItem="Cj5-qD-6Vo" firstAttribute="leading" secondItem="HzV-C8-W3x" secondAttribute="leading" constant="45" id="mzv-hL-SNW"/>
                                                     <constraint firstAttribute="trailing" secondItem="Cj5-qD-6Vo" secondAttribute="trailing" constant="45" id="oWL-Li-mFW"/>
                                                     <constraint firstItem="1xI-eB-h3g" firstAttribute="leading" secondItem="HzV-C8-W3x" secondAttribute="leading" constant="16" id="uYH-dj-tLO"/>
-                                                    <constraint firstItem="4B5-wu-Y8J" firstAttribute="leading" secondItem="1xI-eB-h3g" secondAttribute="leading" id="uy6-ee-pBY"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDp-2W-bdd">
@@ -228,40 +226,90 @@ nagpur,India - 440010</string>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-a8-wz3">
-                                                <rect key="frame" x="290" y="543" width="25" height="25"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P3c-LZ-pwC">
+                                                <rect key="frame" x="0.0" y="590" width="375" height="295"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PQW-aQ-1OY">
+                                                    <size key="itemSize" width="157" height="147"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="1rL-EZ-BjT" customClass="photoCollectionViewCell" customModule="phostagram_ios" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157" height="147"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="157" height="147"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vzj-Ef-dGP">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="147"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="Vzj-Ef-dGP" firstAttribute="leading" secondItem="1rL-EZ-BjT" secondAttribute="leading" id="9MD-C5-xH2"/>
+                                                            <constraint firstItem="Vzj-Ef-dGP" firstAttribute="top" secondItem="1rL-EZ-BjT" secondAttribute="top" id="HdA-zC-zon"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Vzj-Ef-dGP" secondAttribute="bottom" id="fY8-rq-T7o"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Vzj-Ef-dGP" secondAttribute="trailing" id="oBa-CA-Bva"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="Vzj-Ef-dGP" id="7ej-s8-b9O"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="xeV-Ql-grH" id="mAl-Rk-VVP"/>
+                                                    <outlet property="delegate" destination="xeV-Ql-grH" id="FD7-CG-GTO"/>
+                                                </connections>
+                                            </collectionView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lka-b1-Jby">
+                                                <rect key="frame" x="330" y="542.5" width="25" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="8uK-IB-fHf"/>
-                                                    <constraint firstAttribute="width" constant="25" id="HMO-n6-do5"/>
+                                                    <constraint firstAttribute="height" constant="25" id="6iC-kp-eqB"/>
+                                                    <constraint firstAttribute="width" constant="25" id="BKe-Qe-ASK"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gridNotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="5rE-4x-ELN">
-                                                <rect key="frame" x="330" y="543" width="25" height="25"/>
+                                                <state key="normal" image="gridSelected"/>
+                                                <connections>
+                                                    <action selector="gridButtonPressed:" destination="xeV-Ql-grH" eventType="touchUpInside" id="yzk-Hi-aBD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-ql-mJV">
+                                                <rect key="frame" x="295" y="543" width="25" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="Tsd-G4-a2X"/>
-                                                    <constraint firstAttribute="height" constant="25" id="yrW-p3-8Ox"/>
+                                                    <constraint firstAttribute="width" constant="25" id="MQt-FR-wNp"/>
+                                                    <constraint firstAttribute="height" constant="25" id="Nnz-Wm-MPo"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" image="listNotSelected"/>
+                                                <connections>
+                                                    <action selector="listButtonPressed:" destination="xeV-Ql-grH" eventType="touchUpInside" id="1UA-iQ-dQQ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="HzV-C8-W3x" firstAttribute="top" secondItem="0pF-VQ-RKe" secondAttribute="bottom" constant="8" id="5c8-if-qjB"/>
                                             <constraint firstItem="NDp-2W-bdd" firstAttribute="top" secondItem="HzV-C8-W3x" secondAttribute="bottom" constant="16" id="7EW-DW-2CW"/>
-                                            <constraint firstItem="5rE-4x-ELN" firstAttribute="trailing" secondItem="NDp-2W-bdd" secondAttribute="trailing" id="7Lm-oD-0s6"/>
-                                            <constraint firstAttribute="height" constant="1400" id="7fV-O5-Ues"/>
+                                            <constraint firstAttribute="height" constant="1000" id="7fV-O5-Ues"/>
+                                            <constraint firstItem="lka-b1-Jby" firstAttribute="leading" secondItem="0zz-ql-mJV" secondAttribute="trailing" constant="10" id="7rZ-vG-vxS"/>
                                             <constraint firstItem="NDp-2W-bdd" firstAttribute="leading" secondItem="KwH-mO-Enr" secondAttribute="leading" constant="20" id="8xM-LR-uHx"/>
+                                            <constraint firstAttribute="trailing" secondItem="P3c-LZ-pwC" secondAttribute="trailing" id="CQS-l2-7Uf"/>
                                             <constraint firstItem="0pF-VQ-RKe" firstAttribute="leading" secondItem="KwH-mO-Enr" secondAttribute="leading" constant="20" id="DxJ-4C-jJH"/>
                                             <constraint firstAttribute="trailing" secondItem="0pF-VQ-RKe" secondAttribute="trailing" constant="20" id="L62-hW-gWw"/>
+                                            <constraint firstItem="lka-b1-Jby" firstAttribute="trailing" secondItem="NDp-2W-bdd" secondAttribute="trailing" id="NJa-uN-qIU"/>
+                                            <constraint firstItem="P3c-LZ-pwC" firstAttribute="leading" secondItem="KwH-mO-Enr" secondAttribute="leading" id="QGw-hd-26w"/>
                                             <constraint firstItem="0pF-VQ-RKe" firstAttribute="leading" secondItem="KwH-mO-Enr" secondAttribute="leading" constant="20" id="Rhd-6c-EwV"/>
                                             <constraint firstItem="HzV-C8-W3x" firstAttribute="leading" secondItem="KwH-mO-Enr" secondAttribute="leading" constant="20" id="SXo-eI-X7c"/>
                                             <constraint firstAttribute="trailing" secondItem="0pF-VQ-RKe" secondAttribute="trailing" constant="20" id="Sc8-Gm-M1j"/>
+                                            <constraint firstItem="P3c-LZ-pwC" firstAttribute="top" secondItem="0zz-ql-mJV" secondAttribute="bottom" constant="22" id="afs-SV-ioy"/>
                                             <constraint firstItem="hpk-dL-6c3" firstAttribute="top" secondItem="NDp-2W-bdd" secondAttribute="bottom" constant="24" id="haf-MI-uDL"/>
-                                            <constraint firstItem="5rE-4x-ELN" firstAttribute="leading" secondItem="ebm-a8-wz3" secondAttribute="trailing" constant="15" id="mNG-mI-29O"/>
-                                            <constraint firstItem="5rE-4x-ELN" firstAttribute="top" secondItem="NDp-2W-bdd" secondAttribute="bottom" constant="22" id="mZw-fX-El2"/>
-                                            <constraint firstItem="ebm-a8-wz3" firstAttribute="top" secondItem="NDp-2W-bdd" secondAttribute="bottom" constant="22" id="ngM-jw-KnG"/>
+                                            <constraint firstAttribute="bottom" secondItem="P3c-LZ-pwC" secondAttribute="bottom" id="med-u0-RF8"/>
+                                            <constraint firstItem="0zz-ql-mJV" firstAttribute="centerY" secondItem="hpk-dL-6c3" secondAttribute="centerY" id="ncC-6f-bvS"/>
                                             <constraint firstAttribute="trailing" secondItem="HzV-C8-W3x" secondAttribute="trailing" constant="20" id="p7B-OY-l2a"/>
                                             <constraint firstAttribute="trailing" secondItem="NDp-2W-bdd" secondAttribute="trailing" constant="20" id="pQ3-Ha-CR6"/>
                                             <constraint firstItem="hpk-dL-6c3" firstAttribute="leading" secondItem="KwH-mO-Enr" secondAttribute="leading" constant="36" id="pXA-40-PWe"/>
+                                            <constraint firstItem="lka-b1-Jby" firstAttribute="centerY" secondItem="hpk-dL-6c3" secondAttribute="centerY" id="se5-Mb-fOk"/>
                                             <constraint firstItem="0pF-VQ-RKe" firstAttribute="top" secondItem="KwH-mO-Enr" secondAttribute="top" constant="20" id="tqn-Gc-h5G"/>
                                         </constraints>
                                     </view>
@@ -289,7 +337,12 @@ nagpur,India - 440010</string>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="kKk-DD-RXI"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1400"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="collectionView" destination="P3c-LZ-pwC" id="FTZ-32-V1C"/>
+                        <outlet property="gridButton" destination="lka-b1-Jby" id="XdZ-gt-ei4"/>
+                        <outlet property="listButton" destination="0zz-ql-mJV" id="h2U-a3-OBA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w55-qM-U6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -472,8 +525,8 @@ nagpur,India - 440010</string>
     </scenes>
     <resources>
         <image name="Profile Photo" width="186" height="186"/>
-        <image name="gridNotSelected" width="39" height="38"/>
-        <image name="listSelected" width="42" height="31"/>
+        <image name="gridSelected" width="39" height="38"/>
+        <image name="listNotSelected" width="42" height="31"/>
         <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
