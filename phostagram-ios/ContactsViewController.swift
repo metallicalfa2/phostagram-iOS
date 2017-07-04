@@ -17,11 +17,12 @@ class ContactsViewController:UIViewController{
 		self.tableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha:1)
 		self.tableView.separatorStyle = .none
 		self.tableView.translatesAutoresizingMaskIntoConstraints = false
-		
 	}
 	
-	override func viewWillAppear(_ animated: Bool) {
-
+	@IBAction func addNewContactPressed(_ sender: Any) {
+//		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//		let objSecond = storyboard.instantiateViewController(withIdentifier: "newContact")
+//		navigationController?.pushViewController(objSecond, animated: true)
 	}
 }
 
