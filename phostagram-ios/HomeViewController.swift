@@ -78,7 +78,7 @@ extension HomeViewController{
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
 		let itemToDisplay = itemsToDisplay[indexPath.row]
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
-		
+		cell.imageView.cornerRadius()
 		return cell
 	}
 	

@@ -27,7 +27,7 @@ class PhotoGridflowViewLayout: UICollectionViewFlowLayout{
 	*/
 	func setupLayout() {
 		minimumInteritemSpacing = 0
-		minimumLineSpacing = 0
+		minimumLineSpacing = 10
 		scrollDirection = .vertical
 	}
 	
