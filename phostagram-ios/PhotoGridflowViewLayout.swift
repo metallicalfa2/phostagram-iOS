@@ -27,7 +27,7 @@ class PhotoGridflowViewLayout: UICollectionViewFlowLayout{
 	*/
 	func setupLayout() {
 		minimumInteritemSpacing = 0
-		minimumLineSpacing = 10
+		minimumLineSpacing = 0
 		scrollDirection = .vertical
 	}
 	
@@ -35,6 +35,8 @@ class PhotoGridflowViewLayout: UICollectionViewFlowLayout{
 		return (collectionView!.frame.width/2)
 	}
 	func height() -> CGFloat{
+		print(phoneHeight)
+	
 		if (phoneHeight < 667) {
 			return 100
 		} else if (phoneHeight < 736) {

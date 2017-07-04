@@ -67,8 +67,7 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		isGridFlowLayoutUsed = true
 		collectionView.collectionViewLayout = gridFlowLayout
 	}
-	
-	
+
 }
 
 extension HomeViewController{
@@ -78,7 +77,7 @@ extension HomeViewController{
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
 		let itemToDisplay = itemsToDisplay[indexPath.row]
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
-		cell.imageView.cornerRadius()
+		
 		return cell
 	}
 	
@@ -89,42 +88,5 @@ extension HomeViewController{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return itemsToDisplay.count
 	}
-	
-//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//		let width = collectionView.frame.width
-//		let height = self.view.frame.height
-//		
-//		if (isGridFlowLayoutUsed == true) {
-//			if (height < 667) {
-//				print(height)
-//				return CGSize(width: (width/2 - 1), height: 120)
-//				
-//			} else if (height < 736) {
-//				print(height)
-//				return CGSize(width: width/2, height: 100)
-//				
-//			} else {
-//				return CGSize(width: width/2, height: 100)
-//			}
-//		}
-//		else{
-//			if (height < 667) {
-//				print(height)
-//				return CGSize(width: (width/2 - 1), height: 120)
-//				
-//			} else if (height < 736) {
-//				print(height)
-//				return CGSize(width: width/2, height: 100)
-//				
-//			} else {
-//				return CGSize(width: width/2, height: 100)
-//				
-//			}
-//		}
-//		
-//		return CGSize(width: width,height: self.view.frame.height)
-//	}
-//
-
 	
 }

@@ -25,6 +25,7 @@
 		51D93BEC1F0BB0D000C057A7 /* textFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BEB1F0BB0D000C057A7 /* textFieldViewController.swift */; };
 		51D93BEE1F0BBF4800C057A7 /* uiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BED1F0BBF4800C057A7 /* uiView.swift */; };
 		51D93BF11F0BCCA500C057A7 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BF01F0BCCA500C057A7 /* ContactsViewController.swift */; };
+		51D93BF41F0BF7D100C057A7 /* contactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BF31F0BF7D100C057A7 /* contactsViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		51D93BEB1F0BB0D000C057A7 /* textFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldViewController.swift; sourceTree = "<group>"; };
 		51D93BED1F0BBF4800C057A7 /* uiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uiView.swift; sourceTree = "<group>"; };
 		51D93BF01F0BCCA500C057A7 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		51D93BF31F0BF7D100C057A7 /* contactsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				51C688D91F0527B400518D56 /* AppDelegate.swift */,
+				51D93BDE1F0AD6CC00C057A7 /* extention */,
 				51C688EE1F052B4500518D56 /* Resources */,
 				51C688F01F052B7B00518D56 /* model */,
 				51C688EF1F052B5300518D56 /* viewController */,
@@ -114,7 +117,6 @@
 			children = (
 				51D93BEF1F0BCC9000C057A7 /* contacts */,
 				51D93BE71F0BA37E00C057A7 /* Login */,
-				51D93BDE1F0AD6CC00C057A7 /* extention */,
 				51D93BDB1F0A5FD600C057A7 /* Home */,
 				519A049F1F0653C100B3F8B0 /* Profile */,
 			);
@@ -131,6 +133,7 @@
 		51D93BD21F0A050500C057A7 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				51D93BF21F0BF7B900C057A7 /* contactsView */,
 				51D93BEA1F0BB0BB00C057A7 /* photoView */,
 				51D93BE11F0B777D00C057A7 /* gradientView.swift */,
 				51D93BED1F0BBF4800C057A7 /* uiView.swift */,
@@ -181,6 +184,14 @@
 				51D93BF01F0BCCA500C057A7 /* ContactsViewController.swift */,
 			);
 			name = contacts;
+			sourceTree = "<group>";
+		};
+		51D93BF21F0BF7B900C057A7 /* contactsView */ = {
+			isa = PBXGroup;
+			children = (
+				51D93BF31F0BF7D100C057A7 /* contactsViewCell.swift */,
+			);
+			name = contactsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				51D93BEE1F0BBF4800C057A7 /* uiView.swift in Sources */,
 				51D93BDD1F0A5FEC00C057A7 /* HomeViewController.swift in Sources */,
 				51D93BEC1F0BB0D000C057A7 /* textFieldViewController.swift in Sources */,
+				51D93BF41F0BF7D100C057A7 /* contactsViewCell.swift in Sources */,
 				51D93BD61F0A25B800C057A7 /* PhotoListflowViewLayout.swift in Sources */,
 				51D93BE01F0ADD9700C057A7 /* UIImageViewExtention.swift in Sources */,
 				51D93BE91F0BA39100C057A7 /* getStartedViewController.swift in Sources */,
