@@ -65,7 +65,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 	func setupDatasource() {
 		itemsToDisplay = [ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party")]
 		
-		collectionViewHeight.constant = 1000
+		//collectionViewHeight.constant = 1000
 
 		collectionView.reloadData()
 	}
@@ -97,8 +97,4 @@ extension ProfileViewController{
 		return itemsToDisplay.count
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-	
-		return CGSize.init(width: view.frame.width, height: 240 )
-	}
 }

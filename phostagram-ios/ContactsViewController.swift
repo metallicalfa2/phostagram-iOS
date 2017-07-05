@@ -46,6 +46,13 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource,UIT
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let objSecond = storyboard.instantiateViewController(withIdentifier: "editContact")
+		navigationController?.pushViewController(objSecond, animated: true)
+		
+	}
+	
 	// This methods will be used for smooth scrolling.
 	func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
 		print("prefetchRowsAt \(indexPaths)")

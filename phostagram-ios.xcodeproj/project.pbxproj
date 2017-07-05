@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		519A04A11F0653DB00B3F8B0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A04A01F0653DB00B3F8B0 /* ProfileViewController.swift */; };
+		51C4097A1F0D672E00704A5D /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C409791F0D672E00704A5D /* EditContactViewController.swift */; };
+		51C4097C1F0D686900704A5D /* AddressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C4097B1F0D686900704A5D /* AddressViewCell.swift */; };
 		51C688DA1F0527B400518D56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C688D91F0527B400518D56 /* AppDelegate.swift */; };
 		51C688DF1F0527B400518D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C688DD1F0527B400518D56 /* Main.storyboard */; };
 		51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51C688E01F0527B400518D56 /* phostagram_ios.xcdatamodeld */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		519A04A01F0653DB00B3F8B0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		51C409791F0D672E00704A5D /* EditContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		51C4097B1F0D686900704A5D /* AddressViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewCell.swift; sourceTree = "<group>"; };
 		51C688D61F0527B400518D56 /* phostagram-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "phostagram-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C688D91F0527B400518D56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C688DE1F0527B400518D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,8 +121,8 @@
 		51C688EF1F052B5300518D56 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
-				51D93BEF1F0BCC9000C057A7 /* contacts */,
 				51D93BE71F0BA37E00C057A7 /* Login */,
+				51D93BEF1F0BCC9000C057A7 /* contacts */,
 				51D93BDB1F0A5FD600C057A7 /* Home */,
 				519A049F1F0653C100B3F8B0 /* Profile */,
 			);
@@ -185,6 +189,7 @@
 			children = (
 				51D93BF01F0BCCA500C057A7 /* ContactsViewController.swift */,
 				51D93BF51F0C289400C057A7 /* AddNewContactViewController.swift */,
+				51C409791F0D672E00704A5D /* EditContactViewController.swift */,
 			);
 			name = contacts;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				51D93BF31F0BF7D100C057A7 /* contactsViewCell.swift */,
+				51C4097B1F0D686900704A5D /* AddressViewCell.swift */,
 			);
 			name = contactsView;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				51D93BD81F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift in Sources */,
 				51D93BD41F0A057D00C057A7 /* photoCollectionViewCell.swift in Sources */,
 				51D93BF61F0C289400C057A7 /* AddNewContactViewController.swift in Sources */,
+				51C4097A1F0D672E00704A5D /* EditContactViewController.swift in Sources */,
 				51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */,
 				51C688DA1F0527B400518D56 /* AppDelegate.swift in Sources */,
 				51D93BE21F0B777D00C057A7 /* gradientView.swift in Sources */,
@@ -283,6 +290,7 @@
 				51D93BDD1F0A5FEC00C057A7 /* HomeViewController.swift in Sources */,
 				51D93BEC1F0BB0D000C057A7 /* textFieldViewController.swift in Sources */,
 				51D93BF41F0BF7D100C057A7 /* contactsViewCell.swift in Sources */,
+				51C4097C1F0D686900704A5D /* AddressViewCell.swift in Sources */,
 				51D93BD61F0A25B800C057A7 /* PhotoListflowViewLayout.swift in Sources */,
 				51D93BE01F0ADD9700C057A7 /* UIImageViewExtention.swift in Sources */,
 				51D93BE91F0BA39100C057A7 /* getStartedViewController.swift in Sources */,
