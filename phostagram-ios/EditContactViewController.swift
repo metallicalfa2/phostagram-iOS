@@ -19,8 +19,16 @@ class EditContactViewController:UIViewController{
 	
 	@IBOutlet weak var contactInitial: UILabel!
 	
+	@IBAction func backPressed(_ sender: Any) {
+		navigationController?.popToRootViewController(animated: true)
+	}
+	
 	@IBAction func addAddressPressed(_ sender: Any) {
 	}
+	
+	@IBAction func editPressed(_ sender: Any) {
+	}
+	
 	
 	override func viewDidLoad() {
 		self.tableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
@@ -44,7 +52,6 @@ extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
 			
 			cell.selectionStyle = .none
 			cell.phoneNumber.text = "+91 9321232312"
-			//cell.address.text = "Tori Black"
 			
 			return cell
 		}

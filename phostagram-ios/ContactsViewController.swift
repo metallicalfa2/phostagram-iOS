@@ -47,10 +47,9 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource,UIT
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let objSecond = storyboard.instantiateViewController(withIdentifier: "editContact")
-		navigationController?.pushViewController(objSecond, animated: true)
-		
+//		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//		let objSecond = storyboard.instantiateViewController(withIdentifier: "editContact")
+//		self.present(objSecond, animated: true, completion: nil)
 	}
 	
 	// This methods will be used for smooth scrolling.
