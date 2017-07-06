@@ -26,13 +26,13 @@ class PhotoGridflowViewLayout: UICollectionViewFlowLayout{
 	Sets up the layout for the collectionView. 0 distance between each cell, and vertical layout
 	*/
 	func setupLayout() {
-		minimumInteritemSpacing = 0
-		minimumLineSpacing = 0
+		minimumInteritemSpacing = 10
+		minimumLineSpacing = 6.666
 		scrollDirection = .vertical
 	}
 	
 	func itemWidth() -> CGFloat {
-		return (collectionView!.frame.width/2)
+		return (collectionView!.frame.width/2) - 15
 	}
 	func height() -> CGFloat{
 		print(phoneHeight)

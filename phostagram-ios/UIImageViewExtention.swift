@@ -9,8 +9,7 @@
 import UIKit
 
 extension UIImageView{
-	func cornerRadius(){
-		let radius = 5.0
+	func cornerRadius(radius:CGFloat){
 		self.layer.cornerRadius = CGFloat(radius)
 		self.layer.masksToBounds = true
 	}

@@ -659,7 +659,7 @@ nagpur,India - 440010</string>
                                 </state>
                                 <connections>
                                     <action selector="addNewContactPressed:" destination="kXS-zI-kBa" eventType="touchUpInside" id="tPA-cb-LYf"/>
-                                    <segue destination="d8t-cz-lxS" kind="show" id="usL-PD-w52"/>
+                                    <segue destination="UZj-On-obk" kind="show" action="showDetailViewController:sender:" id="F2o-Xh-neK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -961,7 +961,7 @@ nagpur,India - 440010</string>
         <!--New Contact-->
         <scene sceneID="2qv-Hd-snb">
             <objects>
-                <viewController id="UZj-On-obk" customClass="AddNewContactController" customModule="phostagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="UZj-On-obk" customClass="AddNewContactController" customModule="phostagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="spS-FI-hGR"/>
                         <viewControllerLayoutGuide type="bottom" id="DAV-xD-rFD"/>
@@ -971,7 +971,7 @@ nagpur,India - 440010</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6Z-TC-MnA" userLabel="image View">
-                                <rect key="frame" x="150" y="89" width="75" height="75"/>
+                                <rect key="frame" x="150" y="45" width="75" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R7X-mJ-Aed">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -998,7 +998,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLC-M1-4fo" userLabel="name">
-                                <rect key="frame" x="32" y="184" width="311" height="33"/>
+                                <rect key="frame" x="32" y="140" width="311" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Woh-Mf-pFB">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
@@ -1027,7 +1027,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-wH-HgR" userLabel="phone">
-                                <rect key="frame" x="32" y="295" width="311" height="33"/>
+                                <rect key="frame" x="32" y="251" width="311" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+91 phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OO9-Gu-Gan">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
@@ -1056,7 +1056,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOJ-Bm-ahE" userLabel="age group">
-                                <rect key="frame" x="32" y="237" width="150.5" height="38"/>
+                                <rect key="frame" x="32" y="193" width="150.5" height="38"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="age group" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ywK-v1-J7u">
                                         <rect key="frame" x="0.0" y="0.0" width="150.5" height="38"/>
@@ -1085,7 +1085,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9m-ll-FOc" userLabel="gender">
-                                <rect key="frame" x="192.5" y="237" width="150.5" height="38"/>
+                                <rect key="frame" x="192.5" y="193" width="150.5" height="38"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="gender" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-DV-5il">
                                         <rect key="frame" x="0.0" y="0.0" width="150.5" height="38"/>
@@ -1113,7 +1113,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeO-rO-o5v" userLabel="pincode">
-                                <rect key="frame" x="32" y="348" width="311" height="33"/>
+                                <rect key="frame" x="32" y="304" width="311" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pincode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VV0-I3-Xyv">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
@@ -1142,7 +1142,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34E-kk-LmY" userLabel="address">
-                                <rect key="frame" x="32" y="401" width="311" height="33"/>
+                                <rect key="frame" x="32" y="357" width="311" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SmP-Hr-YWZ">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
@@ -1223,7 +1223,7 @@ nagpur,India - 440010</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0W3-Zt-ScA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3311" y="-572"/>
+            <point key="canvasLocation" x="2839" y="-572"/>
         </scene>
         <!--Home-->
         <scene sceneID="clY-hl-oUJ">
@@ -1381,18 +1381,18 @@ nagpur,India - 440010</string>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="hTC-T0-9S5" firstAttribute="top" secondItem="1Gd-Gf-gp0" secondAttribute="bottom" constant="8" id="4jx-Cg-KIi"/>
-                                            <constraint firstAttribute="trailing" secondItem="1Gd-Gf-gp0" secondAttribute="trailing" id="AAo-7y-8ZS"/>
                                             <constraint firstItem="2Sr-Ag-GYJ" firstAttribute="leading" secondItem="hTC-T0-9S5" secondAttribute="trailing" constant="16" id="CTo-fb-eeO"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Gd-Gf-gp0" secondAttribute="trailing" id="DKk-ta-JFJ"/>
                                             <constraint firstItem="2Sr-Ag-GYJ" firstAttribute="top" secondItem="1Gd-Gf-gp0" secondAttribute="bottom" constant="8" id="FVL-F3-Q0S"/>
                                             <constraint firstItem="o6t-ZG-W8p" firstAttribute="leading" secondItem="ReH-vW-Vl0" secondAttribute="leading" id="Idl-lM-vgr"/>
-                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="leading" secondItem="ohk-Jv-FkB" secondAttribute="leading" id="XMs-Q6-v1A"/>
                                             <constraint firstItem="K8G-7W-m5f" firstAttribute="top" secondItem="o6t-ZG-W8p" secondAttribute="bottom" constant="10" id="YU6-OV-TDN"/>
                                             <constraint firstItem="ReH-vW-Vl0" firstAttribute="leading" secondItem="L2g-6f-yUz" secondAttribute="leading" id="cBR-I6-qcS"/>
-                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="top" secondItem="ohk-Jv-FkB" secondAttribute="top" id="ijE-Ce-Y75"/>
+                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="leading" secondItem="ohk-Jv-FkB" secondAttribute="leading" id="feg-kl-8pZ"/>
                                             <constraint firstItem="L2g-6f-yUz" firstAttribute="leading" secondItem="hTC-T0-9S5" secondAttribute="leading" id="jRf-Ue-WfD"/>
                                             <constraint firstItem="K8G-7W-m5f" firstAttribute="leading" secondItem="o6t-ZG-W8p" secondAttribute="leading" id="lXB-D5-FpW"/>
                                             <constraint firstItem="ReH-vW-Vl0" firstAttribute="top" secondItem="L2g-6f-yUz" secondAttribute="bottom" constant="10" id="lh4-Hq-WsE"/>
                                             <constraint firstItem="o6t-ZG-W8p" firstAttribute="top" secondItem="ReH-vW-Vl0" secondAttribute="bottom" constant="10" id="muz-iB-F0T"/>
+                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="top" secondItem="ohk-Jv-FkB" secondAttribute="top" id="nCT-CP-a9A"/>
                                             <constraint firstItem="L2g-6f-yUz" firstAttribute="top" secondItem="hTC-T0-9S5" secondAttribute="bottom" constant="15" id="nuJ-Eg-tEG"/>
                                             <constraint firstItem="hTC-T0-9S5" firstAttribute="leading" secondItem="ohk-Jv-FkB" secondAttribute="leadingMargin" constant="12" id="xb5-zr-kbF"/>
                                         </constraints>
@@ -1584,24 +1584,6 @@ nagpur,India - 440010</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcq-g4-jZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="793" y="-571"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9kC-b7-X57">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d8t-cz-lxS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="weh-G5-XHG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UZj-On-obk" kind="relationship" relationship="rootViewController" id="ncO-Kx-rQf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Uw-2x-esj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2519" y="-572"/>
         </scene>
         <!--New Contact-->
         <scene sceneID="5DV-L5-ijf">

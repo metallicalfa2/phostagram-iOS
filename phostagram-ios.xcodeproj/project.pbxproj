@@ -16,17 +16,17 @@
 		51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51C688E01F0527B400518D56 /* phostagram_ios.xcdatamodeld */; };
 		51C688E41F0527B400518D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51C688E31F0527B400518D56 /* Assets.xcassets */; };
 		51C688E71F0527B400518D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C688E51F0527B400518D56 /* LaunchScreen.storyboard */; };
-		51D93BD41F0A057D00C057A7 /* photoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BD31F0A057D00C057A7 /* photoCollectionViewCell.swift */; };
+		51D93BD41F0A057D00C057A7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BD31F0A057D00C057A7 /* PhotoCollectionViewCell.swift */; };
 		51D93BD61F0A25B800C057A7 /* PhotoListflowViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BD51F0A25B800C057A7 /* PhotoListflowViewLayout.swift */; };
 		51D93BD81F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BD71F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift */; };
 		51D93BDD1F0A5FEC00C057A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BDC1F0A5FEC00C057A7 /* HomeViewController.swift */; };
 		51D93BE01F0ADD9700C057A7 /* UIImageViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BDF1F0ADD9700C057A7 /* UIImageViewExtention.swift */; };
-		51D93BE21F0B777D00C057A7 /* gradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BE11F0B777D00C057A7 /* gradientView.swift */; };
+		51D93BE21F0B777D00C057A7 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BE11F0B777D00C057A7 /* GradientView.swift */; };
 		51D93BE41F0B86FB00C057A7 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BE31F0B86FB00C057A7 /* UIViewExtention.swift */; };
 		51D93BE61F0B88F900C057A7 /* getStartedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BE51F0B88F900C057A7 /* getStartedButtonView.swift */; };
 		51D93BE91F0BA39100C057A7 /* getStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BE81F0BA39100C057A7 /* getStartedViewController.swift */; };
 		51D93BEC1F0BB0D000C057A7 /* textFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BEB1F0BB0D000C057A7 /* textFieldViewController.swift */; };
-		51D93BEE1F0BBF4800C057A7 /* uiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BED1F0BBF4800C057A7 /* uiView.swift */; };
+		51D93BEE1F0BBF4800C057A7 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BED1F0BBF4800C057A7 /* UIView.swift */; };
 		51D93BF11F0BCCA500C057A7 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BF01F0BCCA500C057A7 /* ContactsViewController.swift */; };
 		51D93BF41F0BF7D100C057A7 /* contactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BF31F0BF7D100C057A7 /* contactsViewCell.swift */; };
 		51D93BF61F0C289400C057A7 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BF51F0C289400C057A7 /* AddNewContactViewController.swift */; };
@@ -44,17 +44,17 @@
 		51C688E31F0527B400518D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51C688E61F0527B400518D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51C688E81F0527B400518D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51D93BD31F0A057D00C057A7 /* photoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoCollectionViewCell.swift; sourceTree = "<group>"; };
+		51D93BD31F0A057D00C057A7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		51D93BD51F0A25B800C057A7 /* PhotoListflowViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListflowViewLayout.swift; sourceTree = "<group>"; };
 		51D93BD71F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGridflowViewLayout.swift; sourceTree = "<group>"; };
 		51D93BDC1F0A5FEC00C057A7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51D93BDF1F0ADD9700C057A7 /* UIImageViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtention.swift; sourceTree = "<group>"; };
-		51D93BE11F0B777D00C057A7 /* gradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gradientView.swift; sourceTree = "<group>"; };
+		51D93BE11F0B777D00C057A7 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		51D93BE31F0B86FB00C057A7 /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		51D93BE51F0B88F900C057A7 /* getStartedButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getStartedButtonView.swift; sourceTree = "<group>"; };
 		51D93BE81F0BA39100C057A7 /* getStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getStartedViewController.swift; sourceTree = "<group>"; };
 		51D93BEB1F0BB0D000C057A7 /* textFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldViewController.swift; sourceTree = "<group>"; };
-		51D93BED1F0BBF4800C057A7 /* uiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uiView.swift; sourceTree = "<group>"; };
+		51D93BED1F0BBF4800C057A7 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		51D93BF01F0BCCA500C057A7 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		51D93BF31F0BF7D100C057A7 /* contactsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsViewCell.swift; sourceTree = "<group>"; };
 		51D93BF51F0C289400C057A7 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 			children = (
 				51D93BF21F0BF7B900C057A7 /* contactsView */,
 				51D93BEA1F0BB0BB00C057A7 /* photoView */,
-				51D93BE11F0B777D00C057A7 /* gradientView.swift */,
-				51D93BED1F0BBF4800C057A7 /* uiView.swift */,
+				51D93BE11F0B777D00C057A7 /* GradientView.swift */,
+				51D93BED1F0BBF4800C057A7 /* UIView.swift */,
 				51D93BE51F0B88F900C057A7 /* getStartedButtonView.swift */,
 				51D93BEB1F0BB0D000C057A7 /* textFieldViewController.swift */,
 			);
@@ -181,7 +181,7 @@
 			children = (
 				51D93BD71F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift */,
 				51D93BD51F0A25B800C057A7 /* PhotoListflowViewLayout.swift */,
-				51D93BD31F0A057D00C057A7 /* photoCollectionViewCell.swift */,
+				51D93BD31F0A057D00C057A7 /* PhotoCollectionViewCell.swift */,
 			);
 			name = photoView;
 			sourceTree = "<group>";
@@ -283,14 +283,14 @@
 				51D93BE41F0B86FB00C057A7 /* UIViewExtention.swift in Sources */,
 				51D93BD81F0A25CC00C057A7 /* PhotoGridflowViewLayout.swift in Sources */,
 				51C4097E1F0D79D600704A5D /* EditContactInfoViewController.swift in Sources */,
-				51D93BD41F0A057D00C057A7 /* photoCollectionViewCell.swift in Sources */,
+				51D93BD41F0A057D00C057A7 /* PhotoCollectionViewCell.swift in Sources */,
 				51D93BF61F0C289400C057A7 /* AddNewContactViewController.swift in Sources */,
 				51C4097A1F0D672E00704A5D /* EditContactViewController.swift in Sources */,
 				51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */,
 				51C688DA1F0527B400518D56 /* AppDelegate.swift in Sources */,
-				51D93BE21F0B777D00C057A7 /* gradientView.swift in Sources */,
+				51D93BE21F0B777D00C057A7 /* GradientView.swift in Sources */,
 				51D93BE61F0B88F900C057A7 /* getStartedButtonView.swift in Sources */,
-				51D93BEE1F0BBF4800C057A7 /* uiView.swift in Sources */,
+				51D93BEE1F0BBF4800C057A7 /* UIView.swift in Sources */,
 				51D93BDD1F0A5FEC00C057A7 /* HomeViewController.swift in Sources */,
 				51D93BEC1F0BB0D000C057A7 /* textFieldViewController.swift in Sources */,
 				51D93BF41F0BF7D100C057A7 /* contactsViewCell.swift in Sources */,

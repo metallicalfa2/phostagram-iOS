@@ -38,10 +38,9 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		isGridFlowLayoutUsed = false
 		gridButton.setImage(#imageLiteral(resourceName: "gridNotSelected"), for: .normal)
 		listButton.setImage(#imageLiteral(resourceName: "listSelected"), for: .normal)
-		
+	
 		UIView.animate(withDuration: 0.2, animations: { () -> Void in
 			self.collectionView.collectionViewLayout.invalidateLayout()
-			self.collectionView.performBatchUpdates(nil, completion: nil)
 			self.collectionView.setCollectionViewLayout(self.listFlowLayout, animated: true)
 		})
 	}
@@ -65,9 +64,11 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	
 	func setupInitialLayout() {
 		isGridFlowLayoutUsed = true
+		gridFlowLayout.sectionInset = UIEdgeInsetsMake(0,10,0,10)
 		collectionView.collectionViewLayout = gridFlowLayout
+		
 	}
-
+	
 }
 
 extension HomeViewController{
@@ -77,7 +78,7 @@ extension HomeViewController{
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
 		let itemToDisplay = itemsToDisplay[indexPath.row]
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
-		
+		(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 5) : cell.imageView.cornerRadius(radius: 0)
 		return cell
 	}
 	
