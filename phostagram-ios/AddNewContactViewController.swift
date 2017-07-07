@@ -20,7 +20,7 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 	@IBOutlet weak var pincode: UITextField!
 	@IBOutlet weak var cancel: UIBarButtonItem!
 	@IBAction func cancelPressed(_ sender: Any) {
-		self.dismiss(animated: true, completion: nil)
+	//	self.dismiss(animated: true, completion: nil)
 	}
 	
 	override func viewDidLoad() {

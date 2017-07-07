@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class ContactsViewController:UIViewController{
 	
@@ -20,9 +21,10 @@ class ContactsViewController:UIViewController{
 	}
 	
 	@IBAction func addNewContactPressed(_ sender: Any) {
-//		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//		let objSecond = storyboard.instantiateViewController(withIdentifier: "newContact")
-//		navigationController?.pushViewController(objSecond, animated: true)
+		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newContact") as? AddNewContactController)!
+		DispatchQueue.main.async {
+			self.present(next, animated: true, completion: nil)
+		}
 	}
 }
 
@@ -39,6 +41,7 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource,UIT
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactViewCell
 		
+		//cell.heroModifiers = [.fade, .translate(x:-100)]
 		cell.selectionStyle = .none
 		cell.contactsLabel.text = "A"
 		cell.name.text = "Tori Black"
@@ -47,9 +50,10 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource,UIT
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//		let objSecond = storyboard.instantiateViewController(withIdentifier: "editContact")
-//		self.present(objSecond, animated: true, completion: nil)
+		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editContact") as? EditContactViewController)!
+		DispatchQueue.main.async {
+			self.present(next, animated: true, completion: nil)
+		}
 	}
 	
 	// This methods will be used for smooth scrolling.
@@ -60,4 +64,22 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource,UIT
 	func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
 		print("cancelPrefetchingForRowsAt \(indexPaths)")
 	}
+}
+
+extension ContactsViewController: HeroViewControllerDelegate {
+//	func heroWillStartAnimatingTo(viewController: UIViewController) {
+//		if let _ = viewController as? EditContactViewController {
+//			tableView.heroModifiers = [.ignoreSubviewModifiers]
+//		}  else {
+//			tableView.heroModifiers = [.cascade]
+//		}
+//	}
+//	func heroWillStartAnimatingFrom(viewController: UIViewController) {
+//		if let _ = viewController as? EditContactViewController {
+//			tableView.heroModifiers = [.ignoreSubviewModifiers]
+//		} else {
+//			tableView.heroModifiers = [.cascade]
+//		}
+//		
+//	}
 }
