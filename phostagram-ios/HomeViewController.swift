@@ -26,7 +26,7 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		super.viewDidLoad()
 		setupDatasource()
 		setupInitialLayout()
-		
+		collectionView.heroModifiers = [.cascade]
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -74,9 +74,12 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 extension HomeViewController{
 	// MARK: collectionView methods
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-	
+		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
+
+		cell.heroModifiers = [.fade, .scale(0.5)]
 		let itemToDisplay = itemsToDisplay[indexPath.row]
+		
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
 		(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 5) : cell.imageView.cornerRadius(radius: 0)
 		return cell

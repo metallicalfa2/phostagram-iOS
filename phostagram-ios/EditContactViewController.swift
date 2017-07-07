@@ -27,7 +27,10 @@ class EditContactViewController:UIViewController{
 	}
 	
 	@IBAction func editPressed(_ sender: Any) {
-		
+		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editContactInfo") as? EditContactInfoViewController)!
+		DispatchQueue.main.async {
+			self.present(next, animated: true, completion: nil)
+		}
 	}
 	
 	

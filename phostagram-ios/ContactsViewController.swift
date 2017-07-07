@@ -20,6 +20,9 @@ class ContactsViewController:UIViewController{
 		self.tableView.translatesAutoresizingMaskIntoConstraints = false
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		navigationController?.isHeroEnabled = true
+	}
 	@IBAction func addNewContactPressed(_ sender: Any) {
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newContact") as? AddNewContactController)!
 		DispatchQueue.main.async {
