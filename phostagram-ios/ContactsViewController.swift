@@ -12,6 +12,7 @@ import Hero
 class ContactsViewController:UIViewController{
 	
 	@IBOutlet weak var tableView: UITableView!
+	let contacts = contactsModel.userContacts
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -23,6 +24,7 @@ class ContactsViewController:UIViewController{
 	override func viewWillAppear(_ animated: Bool) {
 		navigationController?.isHeroEnabled = true
 	}
+	
 	@IBAction func addNewContactPressed(_ sender: Any) {
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newContact") as? AddNewContactController)!
 		DispatchQueue.main.async {
@@ -37,7 +39,7 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource,UIT
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
-		return 10
+		return contactsModel.userContacts.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,13 +49,13 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource,UIT
 		//cell.heroModifiers = [.fade, .translate(x:-100)]
 		cell.selectionStyle = .none
 		cell.contactsLabel.text = "A"
-		cell.name.text = "Tori Black"
-		
+		cell.name.text = contactsModel.userContacts[indexPath.row].name!
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editContact") as? EditContactViewController)!
+		//next.contactAge.text = "Asdf"
 		DispatchQueue.main.async {
 			self.present(next, animated: true, completion: nil)
 		}

@@ -21,4 +21,21 @@ extension UIImageView{
 		self.layer.masksToBounds = true
 	}
 	
+	public func imageFromServerURL(url: URL) {
+		
+		URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+			
+			if error != nil {
+				print(error ?? "error ocurred")
+				return
+			}
+			DispatchQueue.main.async(execute: { () -> Void in
+				let image = UIImage(data: data!)
+				self.image = image
+			})
+			
+		}).resume()
+	}
+
+
 }

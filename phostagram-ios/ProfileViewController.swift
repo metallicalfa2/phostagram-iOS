@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 struct ImageToDisplay {
 	var imageName: String
@@ -21,7 +23,16 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 	@IBOutlet weak var listButton: UIButton!
 	@IBOutlet weak var gridButton: UIButton!
 	@IBOutlet weak var collectionView: UICollectionView!
+	@IBOutlet weak var noOfPhostagram: UILabel!
+	@IBOutlet weak var name: UILabel!
+	@IBOutlet weak var gender: UILabel!
+	@IBOutlet weak var age: UILabel!
 	
+	@IBOutlet weak var interests: UILabel!
+	@IBOutlet weak var phoneNumber: UILabel!
+	@IBOutlet weak var email: UILabel!
+	
+	@IBOutlet weak var profileImg: UIImageView!
 	/// Items to display
 	var itemsToDisplay: [ImageToDisplay] = []
 	/// Flow layout that displays cells with a Grid layout
@@ -29,10 +40,14 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 	/// Flow layout that displays cells with a List layout, like in a tableView
 	let listFlowLayout = PhotoListflowViewLayout()
 	
+	let profile = profileModel.sharedInstance
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupDatasource()
 		setupInitialLayout()
+		fetchDetails()
+		self.profileImg.roundCorners()
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -65,8 +80,6 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 	func setupDatasource() {
 		itemsToDisplay = [ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party")]
 		
-		//collectionViewHeight.constant = 1000
-
 		collectionView.reloadData()
 	}
 	
@@ -75,17 +88,28 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 		collectionView.collectionViewLayout = gridFlowLayout
 	}
 	
+	func fetchDetails(){
+		self.name.text = profile.name
+		self.email.text = profile.email
+		self.age.text = profile.dob
+		self.phoneNumber.text = profile.phoneNumber
+		self.interests.text = profile.interests?.reduce("", {$0 + " " + $1})
+		//self.profileImg.imageFromServerURL(url: URL(string: profile.profilePic!) ?? )
+	}
 	
 }
 
 extension ProfileViewController{
 	// MARK: collectionView methods
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
 		
+		cell.heroModifiers = [.fade, .scale(0.5)]
 		let itemToDisplay = itemsToDisplay[indexPath.row]
-		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
 		
+		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
+		(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 5) : cell.imageView.cornerRadius(radius: 0)
 		return cell
 	}
 	

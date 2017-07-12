@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		23779C3CEBAD2C9E9DBB0EF9 /* Pods_phostagram_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A291F57DA1CC8525DBA3 /* Pods_phostagram_ios.framework */; };
+		51802B061F1508710010EA5A /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B051F1508710010EA5A /* network.swift */; };
+		51802B081F1508BF0010EA5A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B071F1508BF0010EA5A /* Alamofire.framework */; };
+		51802B0A1F1508C20010EA5A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B091F1508C20010EA5A /* SwiftyJSON.framework */; };
+		51802B0D1F1517400010EA5A /* profileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B0C1F1517400010EA5A /* profileModel.swift */; };
+		51802B0F1F15605E0010EA5A /* addressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B0E1F15605E0010EA5A /* addressModel.swift */; };
+		51802B151F16483E0010EA5A /* contactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B141F16483E0010EA5A /* contactsModel.swift */; };
 		519A04A11F0653DB00B3F8B0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A04A01F0653DB00B3F8B0 /* ProfileViewController.swift */; };
 		51C4097A1F0D672E00704A5D /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C409791F0D672E00704A5D /* EditContactViewController.swift */; };
 		51C4097C1F0D686900704A5D /* AddressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C4097B1F0D686900704A5D /* AddressViewCell.swift */; };
@@ -33,9 +39,28 @@
 		51D93BF61F0C289400C057A7 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BF51F0C289400C057A7 /* AddNewContactViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		51802B041F1508530010EA5A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0132AF52DBF8888BD8050792 /* Pods-phostagram-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phostagram-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-phostagram-ios/Pods-phostagram-ios.release.xcconfig"; sourceTree = "<group>"; };
 		100BAD7972A180EF0B25A2BC /* Pods-phostagram-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phostagram-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-phostagram-ios/Pods-phostagram-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		51802B051F1508710010EA5A /* network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
+		51802B071F1508BF0010EA5A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		51802B091F1508C20010EA5A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		51802B0C1F1517400010EA5A /* profileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileModel.swift; sourceTree = "<group>"; };
+		51802B0E1F15605E0010EA5A /* addressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addressModel.swift; sourceTree = "<group>"; };
+		51802B141F16483E0010EA5A /* contactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsModel.swift; sourceTree = "<group>"; };
 		519A04A01F0653DB00B3F8B0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		51C409791F0D672E00704A5D /* EditContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
 		51C4097B1F0D686900704A5D /* AddressViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewCell.swift; sourceTree = "<group>"; };
@@ -69,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51802B0A1F1508C20010EA5A /* SwiftyJSON.framework in Frameworks */,
+				51802B081F1508BF0010EA5A /* Alamofire.framework in Frameworks */,
 				23779C3CEBAD2C9E9DBB0EF9 /* Pods_phostagram_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,9 +106,19 @@
 		4442AD05BCB6B1BDE7D7CA83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51802B091F1508C20010EA5A /* SwiftyJSON.framework */,
+				51802B071F1508BF0010EA5A /* Alamofire.framework */,
 				8CE1A291F57DA1CC8525DBA3 /* Pods_phostagram_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51802AFD1F14F1190010EA5A /* services */ = {
+			isa = PBXGroup;
+			children = (
+				51802B051F1508710010EA5A /* network.swift */,
+			);
+			name = services;
 			sourceTree = "<group>";
 		};
 		519A049F1F0653C100B3F8B0 /* Profile */ = {
@@ -114,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				51C688D91F0527B400518D56 /* AppDelegate.swift */,
+				51802AFD1F14F1190010EA5A /* services */,
 				51D93BDE1F0AD6CC00C057A7 /* extention */,
 				51C688EE1F052B4500518D56 /* Resources */,
 				51C688F01F052B7B00518D56 /* model */,
@@ -149,6 +187,9 @@
 		51C688F01F052B7B00518D56 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				51802B0C1F1517400010EA5A /* profileModel.swift */,
+				51802B0E1F15605E0010EA5A /* addressModel.swift */,
+				51802B141F16483E0010EA5A /* contactsModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -243,6 +284,7 @@
 				51C688D41F0527B400518D56 /* Resources */,
 				1E0E6AA34CB178A076D9C76C /* [CP] Embed Pods Frameworks */,
 				40E9C09A0F5AA4A9B70461DD /* [CP] Copy Pods Resources */,
+				51802B041F1508530010EA5A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,7 +409,11 @@
 				51D93BE61F0B88F900C057A7 /* getStartedButtonView.swift in Sources */,
 				51D93BEE1F0BBF4800C057A7 /* UIView.swift in Sources */,
 				51D93BDD1F0A5FEC00C057A7 /* HomeViewController.swift in Sources */,
+				51802B061F1508710010EA5A /* network.swift in Sources */,
+				51802B151F16483E0010EA5A /* contactsModel.swift in Sources */,
 				51D93BEC1F0BB0D000C057A7 /* textFieldViewController.swift in Sources */,
+				51802B0F1F15605E0010EA5A /* addressModel.swift in Sources */,
+				51802B0D1F1517400010EA5A /* profileModel.swift in Sources */,
 				51D93BF41F0BF7D100C057A7 /* contactsViewCell.swift in Sources */,
 				51C4097C1F0D686900704A5D /* AddressViewCell.swift in Sources */,
 				51D93BD61F0A25B800C057A7 /* PhotoListflowViewLayout.swift in Sources */,

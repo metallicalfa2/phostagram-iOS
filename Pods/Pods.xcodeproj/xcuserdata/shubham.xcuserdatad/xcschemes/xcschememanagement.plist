@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Hero.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-phostagram-ios.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,7 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50637240050A5A6A30C025B99338B7DE</key>
+		<key>6830DB3979C5C1E25E86C89CF007F5F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>984F387E71F4276649B876362C7AED7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

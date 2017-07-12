@@ -7,4 +7,6 @@ target 'phostagram-ios' do
 
   # Pods for phostagram-ios
   pod 'Hero'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 end

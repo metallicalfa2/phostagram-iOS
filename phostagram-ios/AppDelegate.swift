@@ -13,11 +13,11 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	let net = network()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		
+		net.login()
 		let navigationBarAppearace = UINavigationBar.appearance()
 		
 		navigationBarAppearace.tintColor = UIColor(red: 248/255, green: 246/255, blue: 249/255, alpha: 1)
