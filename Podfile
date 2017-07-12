@@ -9,4 +9,5 @@ target 'phostagram-ios' do
   pod 'Hero'
   pod 'SwiftyJSON'
   pod 'Alamofire'
+  pod 'IQKeyboardManager'
 end

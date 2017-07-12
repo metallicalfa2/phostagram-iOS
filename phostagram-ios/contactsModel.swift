@@ -10,7 +10,7 @@ import UIKit
 
 class contactsModel{
 
-	static var userContacts = [contactsModel]()
+	static var userContacts : [contactsModel] = []
 
 	var name: String?
 	var phoneNumber: String?

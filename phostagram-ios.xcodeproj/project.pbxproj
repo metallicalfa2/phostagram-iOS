@@ -153,7 +153,7 @@
 				51C688D91F0527B400518D56 /* AppDelegate.swift */,
 				51802AFD1F14F1190010EA5A /* services */,
 				51D93BDE1F0AD6CC00C057A7 /* extention */,
-				51C688EE1F052B4500518D56 /* Resources */,
+				51C688EE1F052B4500518D56 /* resources */,
 				51C688F01F052B7B00518D56 /* model */,
 				51C688EF1F052B5300518D56 /* viewController */,
 				51D93BD21F0A050500C057A7 /* view */,
@@ -161,16 +161,14 @@
 			path = "phostagram-ios";
 			sourceTree = "<group>";
 		};
-		51C688EE1F052B4500518D56 /* Resources */ = {
+		51C688EE1F052B4500518D56 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				51C688DD1F0527B400518D56 /* Main.storyboard */,
-				51C688E51F0527B400518D56 /* LaunchScreen.storyboard */,
 				51C688E31F0527B400518D56 /* Assets.xcassets */,
 				51C688E81F0527B400518D56 /* Info.plist */,
 				51C688E01F0527B400518D56 /* phostagram_ios.xcdatamodeld */,
 			);
-			name = Resources;
+			name = resources;
 			sourceTree = "<group>";
 		};
 		51C688EF1F052B5300518D56 /* viewController */ = {
@@ -197,6 +195,8 @@
 		51D93BD21F0A050500C057A7 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				51C688E51F0527B400518D56 /* LaunchScreen.storyboard */,
+				51C688DD1F0527B400518D56 /* Main.storyboard */,
 				51D93BF21F0BF7B900C057A7 /* contactsView */,
 				51D93BEA1F0BB0BB00C057A7 /* photoView */,
 				51D93BE11F0B777D00C057A7 /* GradientView.swift */,

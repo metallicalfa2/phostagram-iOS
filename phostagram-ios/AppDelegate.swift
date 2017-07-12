@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		net.login()
+		
+		IQKeyboardManager.shared().isEnabled = true
+		IQKeyboardManager.shared().isEnableAutoToolbar = false
+		IQKeyboardManager.shared().shouldShowTextFieldPlaceholder = false
+		IQKeyboardManager.shared().keyboardDistanceFromTextField = 100
+		
 		let navigationBarAppearace = UINavigationBar.appearance()
 		
 		navigationBarAppearace.tintColor = UIColor(red: 248/255, green: 246/255, blue: 249/255, alpha: 1)

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6830DB3979C5C1E25E86C89CF007F5F3"
+               BlueprintIdentifier = "5B500E6D110F93923507F0B58DA69681"
                BuildableName = "Pods_phostagram_ios.framework"
                BlueprintName = "Pods-phostagram-ios"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6830DB3979C5C1E25E86C89CF007F5F3"
+            BlueprintIdentifier = "5B500E6D110F93923507F0B58DA69681"
             BuildableName = "Pods_phostagram_ios.framework"
             BlueprintName = "Pods-phostagram-ios"
             ReferencedContainer = "container:Pods.xcodeproj">

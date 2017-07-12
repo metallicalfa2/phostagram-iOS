@@ -593,10 +593,11 @@ nagpur,India - 440010</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="addContactImage"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-RZ-dQm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-RZ-dQm">
                                 <rect key="frame" x="29" y="200" width="317" height="418"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" rowHeight="45" id="NhB-fx-wUT" customClass="ContactViewCell" customModule="phostagram_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="317" height="45"/>
@@ -661,9 +662,6 @@ nagpur,India - 440010</string>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,100) fade"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="kXS-zI-kBa" id="dia-40-mxN"/>
                                     <outlet property="delegate" destination="kXS-zI-kBa" id="mZX-Fa-7n7"/>
@@ -698,7 +696,7 @@ nagpur,India - 440010</string>
                     <navigationItem key="navigationItem" title="Contacts" id="Xuf-e1-39v"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="RG5-RZ-dQm" id="yk6-xZ-Qlm"/>
@@ -938,11 +936,24 @@ nagpur,India - 440010</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irq-o4-fVj" userLabel="delete button">
                                 <rect key="frame" x="0.0" y="605" width="375" height="62"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-Np-dqb">
-                                        <rect key="frame" x="32" y="16" width="99" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-Np-dqb" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="16" width="121" height="30"/>
+                                        <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Cc6-3s-dUS"/>
+                                            <constraint firstAttribute="width" constant="121" id="ayT-em-7VY"/>
+                                        </constraints>
                                         <state key="normal" title="delete contact">
-                                            <color key="titleColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deletePressed:" destination="IQg-Tk-Udp" eventType="touchUpInside" id="cav-V5-T6l"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HA7-M8-ZJf" userLabel="border">
                                         <rect key="frame" x="32" y="0.0" width="311" height="1"/>
@@ -1129,7 +1140,7 @@ nagpur,India - 440010</string>
                                     <constraint firstItem="imS-sT-kw2" firstAttribute="leading" secondItem="fLC-M1-4fo" secondAttribute="leading" id="uke-zU-V9G"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,100) fade"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-wH-HgR" userLabel="phone">
@@ -1161,7 +1172,7 @@ nagpur,India - 440010</string>
                                     <constraint firstItem="OO9-Gu-Gan" firstAttribute="leading" secondItem="gpb-wH-HgR" secondAttribute="leading" id="jMx-FB-JYG"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,400) fade"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOJ-Bm-ahE" userLabel="age group">
@@ -1193,7 +1204,7 @@ nagpur,India - 440010</string>
                                     <constraint firstAttribute="trailing" secondItem="ywK-v1-J7u" secondAttribute="trailing" id="uns-yf-oac"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,300) fade"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9m-ll-FOc" userLabel="gender">
@@ -1224,71 +1235,7 @@ nagpur,India - 440010</string>
                                     <constraint firstItem="9Hu-DV-5il" firstAttribute="top" secondItem="B9m-ll-FOc" secondAttribute="top" id="sBv-B6-I0o"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,300) fade"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeO-rO-o5v" userLabel="pincode">
-                                <rect key="frame" x="32" y="319" width="311" height="33"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pincode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VV0-I3-Xyv">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiD-BC-ZSY">
-                                        <rect key="frame" x="0.0" y="32" width="311" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="xEV-nv-SFX"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="VV0-I3-Xyv" firstAttribute="top" secondItem="IeO-rO-o5v" secondAttribute="top" id="7rP-7d-d7V"/>
-                                    <constraint firstItem="VV0-I3-Xyv" firstAttribute="leading" secondItem="IeO-rO-o5v" secondAttribute="leading" id="UTf-YH-bg9"/>
-                                    <constraint firstAttribute="trailing" secondItem="VV0-I3-Xyv" secondAttribute="trailing" id="VC1-nn-RSS"/>
-                                    <constraint firstAttribute="bottom" secondItem="VV0-I3-Xyv" secondAttribute="bottom" id="Zpd-ku-Lz5"/>
-                                    <constraint firstAttribute="width" secondItem="IeO-rO-o5v" secondAttribute="height" multiplier="311:40" constant="53.880000000000003" id="d8q-tC-FDi"/>
-                                    <constraint firstItem="CiD-BC-ZSY" firstAttribute="leading" secondItem="IeO-rO-o5v" secondAttribute="leading" id="hQv-mM-Dts"/>
-                                    <constraint firstAttribute="bottom" secondItem="CiD-BC-ZSY" secondAttribute="bottom" id="iqd-MG-89p"/>
-                                    <constraint firstAttribute="trailing" secondItem="CiD-BC-ZSY" secondAttribute="trailing" id="lUv-nk-f99"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,500) fade"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34E-kk-LmY" userLabel="address">
-                                <rect key="frame" x="32" y="372" width="311" height="33"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SmP-Hr-YWZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvP-PM-fE7">
-                                        <rect key="frame" x="0.0" y="32" width="311" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="zYP-bA-mff"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="LvP-PM-fE7" secondAttribute="trailing" id="1Qc-ej-Lk4"/>
-                                    <constraint firstAttribute="bottom" secondItem="LvP-PM-fE7" secondAttribute="bottom" id="2E1-Lf-BbR"/>
-                                    <constraint firstItem="SmP-Hr-YWZ" firstAttribute="leading" secondItem="34E-kk-LmY" secondAttribute="leading" id="EN6-J3-eh2"/>
-                                    <constraint firstItem="SmP-Hr-YWZ" firstAttribute="top" secondItem="34E-kk-LmY" secondAttribute="top" id="jE9-IG-gyj"/>
-                                    <constraint firstItem="LvP-PM-fE7" firstAttribute="leading" secondItem="34E-kk-LmY" secondAttribute="leading" id="jPe-hd-jKu"/>
-                                    <constraint firstAttribute="width" secondItem="34E-kk-LmY" secondAttribute="height" multiplier="311:40" constant="53.880000000000003" id="nfX-jS-BSg"/>
-                                    <constraint firstAttribute="bottom" secondItem="SmP-Hr-YWZ" secondAttribute="bottom" id="qy8-ya-eeK"/>
-                                    <constraint firstAttribute="trailing" secondItem="SmP-Hr-YWZ" secondAttribute="trailing" id="xHt-zW-Cem"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,500) fade"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydK-pK-dLO" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
@@ -1326,12 +1273,140 @@ nagpur,India - 440010</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(200,0) fade"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="hero_dismissViewController" destination="0W3-Zt-ScA" eventType="touchUpInside" id="rh2-SL-kRI"/>
+                                    <action selector="donePressed:" destination="UZj-On-obk" eventType="touchUpInside" id="Jxd-zX-fKf"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sd5-GJ-F0k" userLabel="state">
+                                <rect key="frame" x="32" y="319" width="150.5" height="38"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-3p-cgp">
+                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="38"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5AR-nr-ThX">
+                                        <rect key="frame" x="0.0" y="37" width="150.5" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="WcB-qQ-K17"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4dB-3p-cgp" firstAttribute="leading" secondItem="sd5-GJ-F0k" secondAttribute="leading" id="BTC-eU-uza"/>
+                                    <constraint firstAttribute="trailing" secondItem="5AR-nr-ThX" secondAttribute="trailing" id="Gft-Ek-nWg"/>
+                                    <constraint firstItem="4dB-3p-cgp" firstAttribute="top" secondItem="sd5-GJ-F0k" secondAttribute="top" id="LZ9-vE-Jqo"/>
+                                    <constraint firstItem="5AR-nr-ThX" firstAttribute="leading" secondItem="sd5-GJ-F0k" secondAttribute="leading" id="RU7-hi-asu"/>
+                                    <constraint firstAttribute="trailing" secondItem="4dB-3p-cgp" secondAttribute="trailing" id="ULL-oe-3mR"/>
+                                    <constraint firstAttribute="bottom" secondItem="4dB-3p-cgp" secondAttribute="bottom" id="aG1-OP-ZcC"/>
+                                    <constraint firstAttribute="width" secondItem="sd5-GJ-F0k" secondAttribute="height" multiplier="150:38" id="rER-c5-kzw"/>
+                                    <constraint firstAttribute="bottom" secondItem="5AR-nr-ThX" secondAttribute="bottom" id="zgV-Ab-72O"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfX-rG-h9w" userLabel="city">
+                                <rect key="frame" x="192.5" y="319" width="150" height="38"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-Vt-Hzi">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="38"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Vn-ad-jiT">
+                                        <rect key="frame" x="0.0" y="37" width="150" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Cth-k5-gE6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ybc-Vt-Hzi" secondAttribute="bottom" id="4ha-hG-tte"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ybc-Vt-Hzi" secondAttribute="trailing" id="Ifo-j2-1z8"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Vn-ad-jiT" secondAttribute="bottom" id="Uwa-xx-cin"/>
+                                    <constraint firstItem="5Vn-ad-jiT" firstAttribute="leading" secondItem="pfX-rG-h9w" secondAttribute="leading" id="Xu4-wr-XFw"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Vn-ad-jiT" secondAttribute="trailing" id="mop-zP-dMY"/>
+                                    <constraint firstItem="Ybc-Vt-Hzi" firstAttribute="leading" secondItem="pfX-rG-h9w" secondAttribute="leading" id="vdN-jx-lEc"/>
+                                    <constraint firstItem="Ybc-Vt-Hzi" firstAttribute="top" secondItem="pfX-rG-h9w" secondAttribute="top" id="wrw-br-R0r"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeO-rO-o5v" userLabel="pincode">
+                                <rect key="frame" x="32" y="377" width="311" height="33"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pincode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VV0-I3-Xyv">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiD-BC-ZSY">
+                                        <rect key="frame" x="0.0" y="32" width="311" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="xEV-nv-SFX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VV0-I3-Xyv" firstAttribute="top" secondItem="IeO-rO-o5v" secondAttribute="top" id="7rP-7d-d7V"/>
+                                    <constraint firstItem="VV0-I3-Xyv" firstAttribute="leading" secondItem="IeO-rO-o5v" secondAttribute="leading" id="UTf-YH-bg9"/>
+                                    <constraint firstAttribute="trailing" secondItem="VV0-I3-Xyv" secondAttribute="trailing" id="VC1-nn-RSS"/>
+                                    <constraint firstAttribute="bottom" secondItem="VV0-I3-Xyv" secondAttribute="bottom" id="Zpd-ku-Lz5"/>
+                                    <constraint firstAttribute="width" secondItem="IeO-rO-o5v" secondAttribute="height" multiplier="311:40" constant="53.880000000000003" id="d8q-tC-FDi"/>
+                                    <constraint firstItem="CiD-BC-ZSY" firstAttribute="leading" secondItem="IeO-rO-o5v" secondAttribute="leading" id="hQv-mM-Dts"/>
+                                    <constraint firstAttribute="bottom" secondItem="CiD-BC-ZSY" secondAttribute="bottom" id="iqd-MG-89p"/>
+                                    <constraint firstAttribute="trailing" secondItem="CiD-BC-ZSY" secondAttribute="trailing" id="lUv-nk-f99"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34E-kk-LmY" userLabel="address">
+                                <rect key="frame" x="32" y="430" width="311" height="33"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SmP-Hr-YWZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvP-PM-fE7">
+                                        <rect key="frame" x="0.0" y="32" width="311" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="zYP-bA-mff"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LvP-PM-fE7" secondAttribute="trailing" id="1Qc-ej-Lk4"/>
+                                    <constraint firstAttribute="bottom" secondItem="LvP-PM-fE7" secondAttribute="bottom" id="2E1-Lf-BbR"/>
+                                    <constraint firstItem="SmP-Hr-YWZ" firstAttribute="leading" secondItem="34E-kk-LmY" secondAttribute="leading" id="EN6-J3-eh2"/>
+                                    <constraint firstItem="SmP-Hr-YWZ" firstAttribute="top" secondItem="34E-kk-LmY" secondAttribute="top" id="jE9-IG-gyj"/>
+                                    <constraint firstItem="LvP-PM-fE7" firstAttribute="leading" secondItem="34E-kk-LmY" secondAttribute="leading" id="jPe-hd-jKu"/>
+                                    <constraint firstAttribute="width" secondItem="34E-kk-LmY" secondAttribute="height" multiplier="311:40" constant="53.880000000000003" id="nfX-jS-BSg"/>
+                                    <constraint firstAttribute="bottom" secondItem="SmP-Hr-YWZ" secondAttribute="bottom" id="qy8-ya-eeK"/>
+                                    <constraint firstAttribute="trailing" secondItem="SmP-Hr-YWZ" secondAttribute="trailing" id="xHt-zW-Cem"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ybc-Vt-Hzi" firstAttribute="leading" secondItem="4dB-3p-cgp" secondAttribute="trailing" constant="10" id="0u8-Mz-SgV"/>
                             <constraint firstItem="m6Z-TC-MnA" firstAttribute="centerX" secondItem="XBh-wv-fDs" secondAttribute="centerX" id="0vB-lZ-4Zj"/>
                             <constraint firstItem="GTH-Yy-J2w" firstAttribute="trailing" secondItem="XBh-wv-fDs" secondAttribute="trailingMargin" constant="-8" id="311-Tf-5e8"/>
                             <constraint firstItem="ydK-pK-dLO" firstAttribute="top" secondItem="spS-FI-hGR" secondAttribute="bottom" constant="12" id="4xb-ZK-TQ6"/>
@@ -1342,15 +1417,17 @@ nagpur,India - 440010</string>
                             <constraint firstAttribute="trailingMargin" secondItem="gpb-wH-HgR" secondAttribute="trailing" constant="16" id="Bxs-fS-PXX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IeO-rO-o5v" secondAttribute="trailing" constant="16" id="C4j-K8-SWD"/>
                             <constraint firstItem="vOJ-Bm-ahE" firstAttribute="top" secondItem="fLC-M1-4fo" secondAttribute="bottom" constant="20" id="IBB-aQ-FCb"/>
+                            <constraint firstItem="Ybc-Vt-Hzi" firstAttribute="height" secondItem="sd5-GJ-F0k" secondAttribute="height" id="Iid-L9-c7h"/>
                             <constraint firstItem="9Hu-DV-5il" firstAttribute="trailing" secondItem="Woh-Mf-pFB" secondAttribute="trailing" id="Isk-Sx-xkY"/>
                             <constraint firstItem="IeO-rO-o5v" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="JEx-FF-rPm"/>
                             <constraint firstItem="34E-kk-LmY" firstAttribute="width" secondItem="34E-kk-LmY" secondAttribute="height" multiplier="311:40" constant="53.880000000000003" id="JOh-G6-aLz"/>
-                            <constraint firstItem="IeO-rO-o5v" firstAttribute="top" secondItem="gpb-wH-HgR" secondAttribute="bottom" constant="20" id="L6A-RQ-kse"/>
+                            <constraint firstItem="IeO-rO-o5v" firstAttribute="top" secondItem="pfX-rG-h9w" secondAttribute="bottom" constant="20" id="M2J-s9-XlE"/>
                             <constraint firstItem="ywK-v1-J7u" firstAttribute="height" secondItem="9Hu-DV-5il" secondAttribute="height" id="NIq-uN-G40"/>
                             <constraint firstItem="fLC-M1-4fo" firstAttribute="top" secondItem="m6Z-TC-MnA" secondAttribute="bottom" constant="20" id="Q7l-44-BB9"/>
                             <constraint firstItem="34E-kk-LmY" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="U54-SN-bny"/>
                             <constraint firstItem="9Hu-DV-5il" firstAttribute="leading" secondItem="ywK-v1-J7u" secondAttribute="trailing" constant="10" id="VJe-w3-n5q"/>
                             <constraint firstItem="B9m-ll-FOc" firstAttribute="top" secondItem="fLC-M1-4fo" secondAttribute="bottom" constant="20" id="X9g-7K-UIu"/>
+                            <constraint firstItem="pfX-rG-h9w" firstAttribute="top" secondItem="gpb-wH-HgR" secondAttribute="bottom" constant="20" id="amJ-bU-Bef"/>
                             <constraint firstItem="ydK-pK-dLO" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="8" id="cmb-Vh-8bq"/>
                             <constraint firstItem="34E-kk-LmY" firstAttribute="width" secondItem="34E-kk-LmY" secondAttribute="height" multiplier="311:40" constant="53.880000000000003" id="lAZ-uS-mzh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fLC-M1-4fo" secondAttribute="trailing" constant="16" id="lgD-a2-GQd"/>
@@ -1358,8 +1435,12 @@ nagpur,India - 440010</string>
                             <constraint firstItem="m6Z-TC-MnA" firstAttribute="top" secondItem="spS-FI-hGR" secondAttribute="bottom" constant="40" id="o3c-SI-eOh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="34E-kk-LmY" secondAttribute="trailing" constant="16" id="ohW-Xq-Al1"/>
                             <constraint firstItem="ywK-v1-J7u" firstAttribute="leading" secondItem="Woh-Mf-pFB" secondAttribute="leading" id="on3-OO-6nU"/>
+                            <constraint firstItem="Ybc-Vt-Hzi" firstAttribute="trailing" secondItem="OO9-Gu-Gan" secondAttribute="trailing" id="p1Q-Wi-bNA"/>
+                            <constraint firstItem="sd5-GJ-F0k" firstAttribute="top" secondItem="gpb-wH-HgR" secondAttribute="bottom" constant="20" id="qZ9-gD-94y"/>
                             <constraint firstItem="IeO-rO-o5v" firstAttribute="width" secondItem="IeO-rO-o5v" secondAttribute="height" multiplier="311:40" constant="53.880000000000003" id="qmO-cN-hTU"/>
                             <constraint firstItem="gpb-wH-HgR" firstAttribute="top" secondItem="B9m-ll-FOc" secondAttribute="bottom" constant="20" id="t9Z-Zx-jom"/>
+                            <constraint firstItem="Ybc-Vt-Hzi" firstAttribute="width" secondItem="sd5-GJ-F0k" secondAttribute="width" id="whF-Zv-ZM8"/>
+                            <constraint firstItem="sd5-GJ-F0k" firstAttribute="leading" secondItem="OO9-Gu-Gan" secondAttribute="leading" id="yOI-yY-z3e"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
@@ -1369,11 +1450,13 @@ nagpur,India - 440010</string>
                     <connections>
                         <outlet property="address" destination="SmP-Hr-YWZ" id="ToN-cX-WsD"/>
                         <outlet property="ageGroup" destination="ywK-v1-J7u" id="1te-i7-Cpv"/>
+                        <outlet property="city" destination="Ybc-Vt-Hzi" id="jrJ-Oq-xPH"/>
                         <outlet property="gender" destination="9Hu-DV-5il" id="Hrx-gR-ZJY"/>
                         <outlet property="imageView" destination="R7X-mJ-Aed" id="mum-Uh-pJK"/>
                         <outlet property="name" destination="Woh-Mf-pFB" id="htR-cq-3XG"/>
                         <outlet property="phone" destination="OO9-Gu-Gan" id="98N-tY-n1c"/>
                         <outlet property="pincode" destination="VV0-I3-Xyv" id="YWH-OO-wh7"/>
+                        <outlet property="state" destination="4dB-3p-cgp" id="IpX-Fu-7ji"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0W3-Zt-ScA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1679,8 +1762,8 @@ nagpur,India - 440010</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="AOC-SV-Div" kind="relationship" relationship="viewControllers" id="REd-gG-Zuf"/>
                         <segue destination="Nvl-6V-qxY" kind="relationship" relationship="viewControllers" id="9T2-vG-U40"/>
+                        <segue destination="AOC-SV-Div" kind="relationship" relationship="viewControllers" id="REd-gG-Zuf"/>
                         <segue destination="1pU-6M-aQt" kind="relationship" relationship="viewControllers" id="yQJ-RR-fVw"/>
                     </connections>
                 </tabBarController>

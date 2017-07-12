@@ -10,18 +10,25 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+protocol contactsDelegate {
+	func reloadData()
+}
 
-class network{
+class network:UIViewController{
+	
+	let contactsController = ContactsViewController()
 	
 	let unavailable = "Unavailable"
 	let loginParameters: Parameters = ["email": "phostagram@phostagram.com", "password": "phostagram"]
 
-	var loginURL:String = "http://13.126.4.227:3000/login"
-	var contactsURL:String = "http://13.126.4.227:3000/contacts"
-	var newContactURL:String = "http://13.126.4.227:3000/contacts/add"
+	let loginURL:String = "http://13.126.4.227:3000/login"
+	let contactsURL:String = "http://13.126.4.227:3000/contacts"
+	let newContactURL:String = "http://13.126.4.227:3000/contacts/add"
 	let profileURL:String = "http://13.126.4.227:3000/profile"
+	let contactsDeleteURL:String = "http://13.126.4.227:3000/contacts/remove"
 	
 	func login(){
+		
 		Alamofire.request(loginURL as String, method: .post, parameters: self.loginParameters,encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
@@ -31,7 +38,7 @@ class network{
 				print("JSON: \(json)") // serialized json response
 			}
 			self.getProfile()
-			self.getContacs()
+			self.getContacts()
 		}
 		
 	}
@@ -40,7 +47,7 @@ class network{
 		Alamofire.request(profileURL as String, method: .get).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result: \(response.result.value)")                         // response serialization result
+			//	print("Result: \(response.result.value)")                         // response serialization result
 			
 			if let json = response.result.value {
 				let profileData = JSON(json)
@@ -50,7 +57,7 @@ class network{
 		}
 	}
 	
-	func getContacs(){
+	func getContacts(){
 		Alamofire.request(contactsURL as String, method: .post).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
@@ -87,26 +94,42 @@ class network{
 	}
 	
 	func createSingletonContacts(_ contacts:JSON){
-//		let address = addressModel("sdfsdf", pincode:12313 ,state:"sdfsdf" ,city: "sdfsdf", userAddressId: "sdfsdf")
-
+		
 		let contacts = contacts["contacts"].map{ return $1 }
-		//print(contacts[0])
+		contactsModel.userContacts = []
 		
 		contacts.forEach{
 			let contact = contactsModel()
 			let addresses = $0["addresses"].map{ return $1 }
-			var contactAddress : [addressModel] = addresses.map{index in
-			return (addressModel(index["line1"].string! ,pincode:Int(index["pincode"].string!)!,state:index["state"].string! ,city: index["city"].string!, userAddressId: index["contactAddressId"].string!))
-			
+			let contactAddresses : [addressModel] = addresses.map{index in
+				return (addressModel(index["line1"].string! ,pincode:Int(index["pincode"].string!)!,state:index["state"].string! ,city: index["city"].string!, userAddressId: index["contactAddressId"].string!))
 			}
 			
-			contact.setValues($0["name"].string!, phoneNumber: $0["name"].string!, sex:$0["name"].string!, dob:$0["name"].string! , contactsId:$0["name"].string!, addresses: contactAddress)
+			contact.setValues($0["name"].string!, phoneNumber: $0["phoneNumber"].string!, sex:$0["sex"].string!, dob:$0["age_group"].string! , contactsId:$0["contactId"].string!, addresses: contactAddresses)
 			contactsModel.userContacts.append(contact)
+		}
+		print(contactsModel.userContacts.count)
+		
+		let notificationNme = NSNotification.Name("reloadTableData")
+		NotificationCenter.default.post(name: notificationNme, object: nil)
+	}
+	
+	func deleteContact(_ contactId:String) -> Bool {
+		print(contactId)
+		let parameter : Parameters = ["contactId" : contactId]
+		
+		Alamofire.request(contactsDeleteURL as String, method: .post, parameters: parameter, encoding: URLEncoding.default).responseJSON { response in
+			//print("Request: \(String(describing: response.request))")   // original url request
+			//print("Response: \(String(describing: response.response))") // http url response
+			//print("Result: \(response.result.value)")                         // response serialization result
+			let res : JSON
+			if let json = response.result.value {
+				res = JSON(json)
+				self.getContacts()
+			}
 			
 		}
-		
-		print(contactsModel.userContacts[0].name)
-		
+		return true
 		
 	}
 }

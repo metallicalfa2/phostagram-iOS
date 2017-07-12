@@ -10,13 +10,13 @@ import UIKit
 
 class EditContactViewController:UIViewController{
 	
+	var contactsIndex : Int = 0
+	let net = network()
+	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var contactName: UILabel!
-	
 	@IBOutlet weak var contactSex: UILabel!
-	
 	@IBOutlet weak var contactAge: UILabel!
-	
 	@IBOutlet weak var contactInitial: UILabel!
 	
 	@IBAction func backPressed(_ sender: Any) {
@@ -34,11 +34,27 @@ class EditContactViewController:UIViewController{
 	}
 	
 	
+	@IBAction func deletePressed(_ sender: Any) {
+		//let _ = net.deleteContact(contactsModel.userContacts[contactsIndex].contactsId!)
+		hero_dismissViewController()
+	}
+	
 	override func viewDidLoad() {
 		self.tableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
 		self.tableView.separatorStyle = .none
 		self.tableView.translatesAutoresizingMaskIntoConstraints = false
-		
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		fetchInitialDetails()
+	}
+	func fetchInitialDetails(){
+	
+		let name = contactsModel.userContacts[contactsIndex].name!
+		self.contactName.text = name
+		self.contactSex.text = contactsModel.userContacts[contactsIndex].sex
+		self.contactAge.text = contactsModel.userContacts[contactsIndex].dob
+		self.contactInitial.text = String(name[name.startIndex])
 	}
 }
 extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
@@ -59,7 +75,7 @@ extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
 			
 			return cell
 		}
-		
+
 		// This methods will be used for smooth scrolling.
 		func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
 			print("prefetchRowsAt \(indexPaths)")

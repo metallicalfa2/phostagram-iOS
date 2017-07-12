@@ -10,6 +10,7 @@ import UIKit
 
 class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
 	let picker = UIImagePickerController()
+	let net = network()
 	
 	@IBOutlet weak var name: UITextField!
 	@IBOutlet weak var gender: UITextField!
@@ -18,9 +19,24 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var address: UITextField!
 	@IBOutlet weak var pincode: UITextField!
-	@IBOutlet weak var cancel: UIBarButtonItem!
+	@IBOutlet weak var state: UITextField!
+	@IBOutlet weak var city: UITextField!
+	
 	@IBAction func cancelPressed(_ sender: Any) {
 	//	self.dismiss(animated: true, completion: nil)
+	}
+	
+	@IBAction func donePressed(_ sender: Any) {
+		let name = self.name.text
+		let gender = self.gender.text
+		let ageGroup = self.ageGroup.text
+		let phone = self.phone.text
+		let address = self.address.text
+		let pincode = self.pincode.text
+		let state = self.state.text
+		let city = self.city.text
+		
+		
 	}
 	
 	override func viewDidLoad() {
@@ -28,34 +44,6 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 		imageView.roundCorners()
 		picker.delegate = self
 		
-		imageView.isUserInteractionEnabled = true
-		let tap = UITapGestureRecognizer(target: self, action: #selector(editImage))
-		imageView.addGestureRecognizer(tap)
 	}
 	
-	func editImage(){
-		picker.allowsEditing = true
-		picker.sourceType = .photoLibrary
-		picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-		present(picker, animated: true, completion: nil)
-	}
-	
-	func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : Any])
-	{
-		if let chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage{
-			self.imageView.image = chosenImage
-		}
-		else if let chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage{
-			self.imageView.image = chosenImage
-		}
-		else{
-			print("Error")
-		}
-		dismiss(animated:true, completion: nil)
-	}
-	
-	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-		dismiss(animated: true, completion: nil)
-		
-	}
 }

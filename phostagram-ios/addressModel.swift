@@ -10,7 +10,7 @@ import UIKit
 
 struct addressModel{
 
-	static let contactAddresses = [addressModel]()
+	static let contactAddresses : [addressModel] = []
 	
 	var addressLineOne: String?
 	var pincode: Int
