@@ -11,6 +11,12 @@ import UIKit
 class EditContactInfoViewController:UIViewController{
 	
 	@IBOutlet weak var imageView: UIImageView!
+	
+	@IBOutlet weak var ageGroup: UITextField!
+	@IBOutlet weak var name: UITextField!
+	@IBOutlet weak var gender: UITextField!
+	@IBOutlet weak var phoneNumber: UITextField!
+	
 	@IBAction func backPressed(_ sender: Any) {
 		navigationController?.popViewController(animated: true)
 	}

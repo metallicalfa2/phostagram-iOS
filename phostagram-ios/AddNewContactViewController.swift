@@ -61,6 +61,7 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.navigationController?.navigationBar.isHidden = true
 		imageView.roundCorners()
 		//picker.delegate = self
 		self.hideKeyboard()
@@ -73,7 +74,7 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 		self.pincode.delegate = self
 		self.state.delegate = self
 		self.city.delegate = self
-		
+
 		let notificationNme = NSNotification.Name("newContactAdded")
 		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissController), name: notificationNme, object: nil)
 	}
@@ -84,10 +85,4 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 	}
 	
 	
-	func textFieldDidEndEditing(_ textField: UITextField) {
-		textField.resignFirstResponder()
-		textField.setNeedsLayout()
-		textField.layoutIfNeeded()
-		
-	}
 }
