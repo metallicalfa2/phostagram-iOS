@@ -23,7 +23,7 @@ class network:UIViewController{
 
 	let loginURL:String = "http://13.126.4.227:3000/login"
 	let contactsURL:String = "http://13.126.4.227:3000/contacts"
-	let newContactURL:String = "http://13.126.4.227:3000/contacts/add"
+	let contactsAddURL:String = "http://13.126.4.227:3000/contacts/add"
 	let profileURL:String = "http://13.126.4.227:3000/profile"
 	let contactsDeleteURL:String = "http://13.126.4.227:3000/contacts/remove"
 	
@@ -102,7 +102,7 @@ class network:UIViewController{
 			let contact = contactsModel()
 			let addresses = $0["addresses"].map{ return $1 }
 			let contactAddresses : [addressModel] = addresses.map{index in
-				return (addressModel(index["line1"].string! ,pincode:Int(index["pincode"].string!)!,state:index["state"].string! ,city: index["city"].string!, userAddressId: index["contactAddressId"].string!))
+				return (addressModel(index["line1"].string! ,pincode:Int(index["pincode"].string!) ?? 0 ,state:index["state"].string! ,city: index["city"].string!, userAddressId: index["contactAddressId"].string!))
 			}
 			
 			contact.setValues($0["name"].string!, phoneNumber: $0["phoneNumber"].string!, sex:$0["sex"].string!, dob:$0["age_group"].string! , contactsId:$0["contactId"].string!, addresses: contactAddresses)
@@ -131,5 +131,26 @@ class network:UIViewController{
 		}
 		return true
 		
+	}
+	
+	func newContact(_ array:[String:Any]){
+		print("adding new Contact")
+		
+		Alamofire.request(contactsAddURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
+			//print("Request: \(String(describing: response.request))")   // original url request
+			//print("Response: \(String(describing: response.response))") // http url response
+			//print("Result: \(response.result.value)")                         // response serialization result
+			
+			if let json = response.result.value {
+				let res = JSON(json)
+				print(res)
+				if( res["status"] != "fail"){
+					let notificationNme = NSNotification.Name("newContactAdded")
+					NotificationCenter.default.post(name: notificationNme, object: nil)
+				}
+				self.getContacts()
+			}
+			
+		}
 	}
 }

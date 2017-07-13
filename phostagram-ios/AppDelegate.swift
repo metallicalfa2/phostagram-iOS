@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		IQKeyboardManager.shared().isEnableAutoToolbar = false
 		IQKeyboardManager.shared().shouldShowTextFieldPlaceholder = false
 		IQKeyboardManager.shared().keyboardDistanceFromTextField = 100
+		//IQKeyboardManager.shared().shouldFixInteractivePopGestureRecognizer = false
+		//IQKeyboardManager.shared().layoutIfNeededOnUpdate = true
 		
 		let navigationBarAppearace = UINavigationBar.appearance()
 		

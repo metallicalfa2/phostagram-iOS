@@ -35,7 +35,7 @@ class EditContactViewController:UIViewController{
 	
 	
 	@IBAction func deletePressed(_ sender: Any) {
-		//let _ = net.deleteContact(contactsModel.userContacts[contactsIndex].contactsId!)
+		let _ = net.deleteContact(contactsModel.userContacts[contactsIndex].contactsId!)
 		hero_dismissViewController()
 	}
 	

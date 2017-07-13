@@ -77,7 +77,7 @@ extension HomeViewController{
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
 
-		cell.heroModifiers = [.fade, .scale(0.5)]
+		//cell.heroModifiers = [.fade, .scale(0.5)]
 		let itemToDisplay = itemsToDisplay[indexPath.row]
 		
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")

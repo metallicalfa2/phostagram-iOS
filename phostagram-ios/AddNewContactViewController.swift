@@ -27,23 +27,67 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 	}
 	
 	@IBAction func donePressed(_ sender: Any) {
-		let name = self.name.text
-		let gender = self.gender.text
-		let ageGroup = self.ageGroup.text
-		let phone = self.phone.text
-		let address = self.address.text
-		let pincode = self.pincode.text
-		let state = self.state.text
-		let city = self.city.text
+		//print(self.name.text)
 		
+		guard let name = self.name.text else{
+			print("enter name")
+			return
+		}
+		guard let gender = self.gender.text else{
+			return
+		}
+		guard let ageGroup = self.ageGroup.text else{
+			return
+		}
+		guard let phone = self.phone.text else{
+			return
+		}
+		guard let address = self.address.text else{
+			return
+		}
+		guard let pincode = self.pincode.text else{
+			return
+		}
+		guard let state = self.state.text else{
+			return
+		}
+		guard let city = self.city.text else{
+			return
+		}
+		
+		net.newContact(["name":name, "sex":gender, "age_group":ageGroup, "phoneNumber":phone, "addresses":[["address_line":address,"state":state,"city":city,"pincode":pincode]] ])
 		
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		imageView.roundCorners()
-		picker.delegate = self
+		//picker.delegate = self
+		self.hideKeyboard()
 		
+		self.name.delegate = self
+		self.gender.delegate = self
+		self.ageGroup.delegate = self
+		self.phone.delegate = self
+		self.address.delegate = self
+		self.pincode.delegate = self
+		self.state.delegate = self
+		self.city.delegate = self
+		
+		let notificationNme = NSNotification.Name("newContactAdded")
+		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissController), name: notificationNme, object: nil)
 	}
 	
+	func dismissController(){
+		hero_dismissViewController()
+
+	}
+	
+	
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		textField.resignFirstResponder()
+		textField.setNeedsLayout()
+		textField.layoutIfNeeded()
+		
+	}
 }

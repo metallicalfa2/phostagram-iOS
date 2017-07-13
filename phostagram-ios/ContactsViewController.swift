@@ -70,7 +70,7 @@ extension ContactsViewController: UITableViewDataSourcePrefetching{
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactViewCell
 		
-		cell.heroModifiers = [.fade, .translate(x:-100)]
+		//cell.heroModifiers = [.fade, .translate(x:-100)]
 		cell.selectionStyle = .none
 		let name = contactsModel.userContacts[indexPath.row].name!
 		cell.contactsLabel.text = String(name[name.startIndex]).uppercased()

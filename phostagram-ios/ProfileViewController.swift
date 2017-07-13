@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 	@IBOutlet weak var name: UILabel!
 	@IBOutlet weak var gender: UILabel!
 	@IBOutlet weak var age: UILabel!
-	
 	@IBOutlet weak var interests: UILabel!
 	@IBOutlet weak var phoneNumber: UILabel!
 	@IBOutlet weak var email: UILabel!
@@ -47,6 +46,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 		setupDatasource()
 		setupInitialLayout()
 		fetchDetails()
+		collectionView.heroModifiers = [.cascade]
 		self.profileImg.roundCorners()
     }
 	
@@ -105,7 +105,6 @@ extension ProfileViewController{
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
 		
-		cell.heroModifiers = [.fade, .scale(0.5)]
 		let itemToDisplay = itemsToDisplay[indexPath.row]
 		
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
