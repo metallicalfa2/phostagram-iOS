@@ -57,7 +57,7 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	
 	
 	func setupDatasource() {
-		itemsToDisplay = [ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party")]
+		itemsToDisplay = [ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons")]
 		
 		collectionView.reloadData()
 	}
@@ -66,7 +66,8 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		isGridFlowLayoutUsed = true
 		gridFlowLayout.sectionInset = UIEdgeInsetsMake(0,10,0,10)
 		collectionView.collectionViewLayout = gridFlowLayout
-		
+		gridFlowLayout.scrollDirection = .horizontal
+		listFlowLayout.scrollDirection = .horizontal
 	}
 	
 }

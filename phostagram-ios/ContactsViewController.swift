@@ -50,6 +50,9 @@ class ContactsViewController:UIViewController, UITableViewDelegate, UITableViewD
 			}
 		}
 	}
+	
+	
+	
 }
 
 extension ContactsViewController: UITableViewDataSourcePrefetching{

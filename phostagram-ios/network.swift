@@ -24,15 +24,19 @@ class network:UIViewController{
 	let loginURL:String = "http://13.126.4.227:3000/login"
 	let contactsURL:String = "http://13.126.4.227:3000/contacts"
 	let contactsAddURL:String = "http://13.126.4.227:3000/contacts/add"
+	let contactsUpdateURL:String = "http://13.126.4.227:3000/contacts/update"
+	let addAddress:String = "http://13.126.4.227:3000/contacts/address/add"
+	let updateAddress:String = "http://13.126.4.227:3000/contacts/address/update"
+	let deleteAddressString:String = "http://13.126.4.227:3000/contacts/address/remove"
 	let profileURL:String = "http://13.126.4.227:3000/profile"
 	let contactsDeleteURL:String = "http://13.126.4.227:3000/contacts/remove"
 	
 	func login(){
 		
 		Alamofire.request(loginURL as String, method: .post, parameters: self.loginParameters,encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
+			//print("Request: \(String(describing: response.request))")   // original url reqest
 			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result: \(response.result)")                         // response serialization result
+			print("Result in login: \(response.result)")                         // response serialization result
 			
 			if let json = response.result.value {
 				print("JSON: \(json)") // serialized json response
@@ -65,7 +69,7 @@ class network:UIViewController{
 			
 			if let json = response.result.value {
 				let contacts = JSON(json)
-				self.createSingletonContacts(contacts)
+				self.createSingletonContacts(contacts,withCompletion: self.reloadData)
 			}
 			
 		}
@@ -93,7 +97,7 @@ class network:UIViewController{
 		                                      addresses: addresses)
 	}
 	
-	func createSingletonContacts(_ contacts:JSON){
+	func createSingletonContacts(_ contacts:JSON, withCompletion completion:() -> Void){
 		
 		let contacts = contacts["contacts"].map{ return $1 }
 		contactsModel.userContacts = []
@@ -104,18 +108,76 @@ class network:UIViewController{
 			let contactAddresses : [addressModel] = addresses.map{index in
 				return (addressModel(index["line1"].string! ,pincode:Int(index["pincode"].string!) ?? 0 ,state:index["state"].string! ,city: index["city"].string!, userAddressId: index["contactAddressId"].string!))
 			}
-			
-			contact.setValues($0["name"].string!, phoneNumber: $0["phoneNumber"].string!, sex:$0["sex"].string!, dob:$0["age_group"].string! , contactsId:$0["contactId"].string!, addresses: contactAddresses)
+			contact.setValues($0["name"].string!, phoneNumber: $0["phoneNumber"].string!, sex:$0["sex"].string!, dob:$0["age_group"].string! , contactsId:$0["contactId"].string!, addresses: contactAddresses, ageGroup: $0["age_group"].string!)
 			contactsModel.userContacts.append(contact)
 		}
-		print(contactsModel.userContacts.count)
+		completion()		
+	}
+	
+	func reloadData(){
 		
 		let notificationNme = NSNotification.Name("reloadTableData")
 		NotificationCenter.default.post(name: notificationNme, object: nil)
+		
+		let contactUpdated = NSNotification.Name("contactUpdated")
+		NotificationCenter.default.post(name: contactUpdated, object: nil)
+		
+		let contactDeleted = NSNotification.Name("contactDeleted")
+		NotificationCenter.default.post(name: contactDeleted, object: nil)
+		
+		let newContactAdded = NSNotification.Name("newContactAdded")
+		NotificationCenter.default.post(name: newContactAdded, object: nil)
+		
+		let newAddressAdded = NSNotification.Name("newAddressAdded")
+		NotificationCenter.default.post(name: newAddressAdded, object: nil)
 	}
 	
+	
+	func newContact(_ array:[String:Any]){
+		print("adding new Contact")
+		
+		Alamofire.request(contactsAddURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
+			//print("Request: \(String(describing: response.request))")   // original url request
+			//print("Response: \(String(describing: response.response))") // http url response
+			//print("Result: \(response.result.value)")                         // response serialization result
+			
+			if let json = response.result.value {
+				let res = JSON(json)
+				print(res)
+				if( res["status"] != "fail"){
+					self.getContacts()
+
+				}
+			}
+			
+		}
+	}
+	
+	func updateContact(_ array:[String:Any]){
+		print(array)
+		
+		Alamofire.request(contactsUpdateURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
+			//print("Request: \(String(describing: response.request))")   // original url request
+			//print("Response: \(String(describing: response.response))") // http url response
+			//print("Result: \(response.result.value)")                         // response serialization result
+			
+			if let json = response.result.value {
+				let res = JSON(json)
+				print(res)
+				if( res["status"] == "success"){
+					self.getContacts()
+
+					//let notificationNme = NSNotification.Name("contactUpdated")
+					//NotificationCenter.default.post(name: notificationNme, object: nil)
+				}
+			}
+			
+		}
+	}
+	
+	
 	func deleteContact(_ contactId:String) -> Bool {
-		print(contactId)
+		//print(contactId)
 		let parameter : Parameters = ["contactId" : contactId]
 		
 		Alamofire.request(contactsDeleteURL as String, method: .post, parameters: parameter, encoding: URLEncoding.default).responseJSON { response in
@@ -130,27 +192,61 @@ class network:UIViewController{
 			
 		}
 		return true
-		
 	}
 	
-	func newContact(_ array:[String:Any]){
-		print("adding new Contact")
-		
-		Alamofire.request(contactsAddURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			//print("Result: \(response.result.value)")                         // response serialization result
-			
+	func addAddress(_ array:[String:Any]){
+	
+		Alamofire.request(addAddress as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
+			print("Request: \(String(describing: response.request))")   // original url request
+			print("Response: \(String(describing: response.response))") // http url response
+			print("Result: \(response.result)")                         // response serialization result
 			if let json = response.result.value {
 				let res = JSON(json)
 				print(res)
-				if( res["status"] != "fail"){
-					let notificationNme = NSNotification.Name("newContactAdded")
-					NotificationCenter.default.post(name: notificationNme, object: nil)
+				if( res["status"] == "success"){
+					self.getContacts()
 				}
-				self.getContacts()
+				
 			}
 			
 		}
 	}
+	
+	func updateAddress(_ array:[String:Any]){
+	
+		Alamofire.request(updateAddress as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
+			print("Request: \(String(describing: response.request))")   // original url request
+			print("Response: \(String(describing: response.response))") // http url response
+			print("Result: \(response.result)")                         // response serialization result
+			if let json = response.result.value {
+				let res = JSON(json)
+				print(res)
+				if( res["status"] == "success"){
+					self.getContacts()
+				}
+				
+			}
+			
+		}
+	}
+	
+	func deleteAddress(_ array:[String:Any]){
+		
+		Alamofire.request(deleteAddressString as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
+			print("Request: \(String(describing: response.request))")   // original url request
+			print("Response: \(String(describing: response.response))") // http url response
+			print("Result: \(response.result)")                         // response serialization result
+			if let json = response.result.value {
+				let res = JSON(json)
+				print(res)
+				if( res["status"] == "success"){
+					self.getContacts()
+				}
+				
+			}
+			
+		}
+	}
+	
+	
 }

@@ -9,6 +9,8 @@
 import UIKit
 class AddressViewCell:UITableViewCell{
 	
+	
+	
 	@IBOutlet weak var delete: UIButton!
 	@IBOutlet weak var edit: UIButton!
 	@IBOutlet weak var phoneNumber: UILabel!

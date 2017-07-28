@@ -18,13 +18,16 @@ class contactsModel{
 	var dob : String?
 	var contactsId: String?
 	var addresses: [addressModel]?
+	var ageGroup: String?
 	
-	func setValues(_ name: String,phoneNumber:String, sex:String, dob:String , contactsId:String , addresses:[addressModel]? ) {
+	func setValues(_ name: String,phoneNumber:String, sex:String, dob:String , contactsId:String , addresses:[addressModel]?, ageGroup:String ) {
 		self.name = name
 		self.phoneNumber = phoneNumber
 		self.sex = sex
 		self.dob = dob
 		self.contactsId = contactsId
+		self.ageGroup = ageGroup
+		self.addresses = addresses
 		//self.addresses = addresses
 	}
 }
