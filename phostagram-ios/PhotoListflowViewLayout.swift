@@ -35,8 +35,8 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 	*/
 	func setupLayout() {
 		minimumInteritemSpacing = 0
-		minimumLineSpacing = 1
-		scrollDirection = .vertical
+		minimumLineSpacing = 0
+		scrollDirection = .horizontal
 	}
 	
 	func itemWidth() -> CGFloat {

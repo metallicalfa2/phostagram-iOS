@@ -39,7 +39,7 @@ class network:UIViewController{
 			print("Result in login: \(response.result)")                         // response serialization result
 			
 			if let json = response.result.value {
-				print("JSON: \(json)") // serialized json response
+				//print("JSON: \(json)") // serialized json response
 			}
 			self.getProfile()
 			self.getContacts()
@@ -143,7 +143,7 @@ class network:UIViewController{
 			
 			if let json = response.result.value {
 				let res = JSON(json)
-				print(res)
+				//print(res)
 				if( res["status"] != "fail"){
 					self.getContacts()
 
@@ -183,7 +183,7 @@ class network:UIViewController{
 		Alamofire.request(contactsDeleteURL as String, method: .post, parameters: parameter, encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in deleting a contact: \(response.result.value)")                         // response serialization result
+			print("Result in deleting a contact: \(String(describing: response.result.value))") // response serialization result
 			let res : JSON
 			if let json = response.result.value {
 				res = JSON(json)

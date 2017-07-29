@@ -21,6 +21,7 @@ class ContactsViewController:UIViewController, UITableViewDelegate, UITableViewD
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
 		self.tableView.translatesAutoresizingMaskIntoConstraints = false
+		self.tableView.backgroundColor = UIColor.white
 		
 		let notificationNme = NSNotification.Name("reloadTableData")
 		NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTableData), name: notificationNme, object: nil)
@@ -85,7 +86,6 @@ extension ContactsViewController: UITableViewDataSourcePrefetching{
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editContact") as? EditContactViewController)!
 		
 		next.contactsIndex = indexPath.row
-		
 		DispatchQueue.main.async {
 			self.present(next, animated: true, completion: nil)
 		}

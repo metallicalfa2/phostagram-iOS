@@ -27,6 +27,10 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		setupDatasource()
 		setupInitialLayout()
 		collectionView.heroModifiers = [.cascade]
+		
+		let leftSwipeGest = UISwipeGestureRecognizer(target: self, action: #selector(funcForGesture))
+		leftSwipeGest.direction = .left
+		collectionView.addGestureRecognizer(leftSwipeGest)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -65,9 +69,20 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	func setupInitialLayout() {
 		isGridFlowLayoutUsed = true
 		gridFlowLayout.sectionInset = UIEdgeInsetsMake(0,10,0,10)
-		collectionView.collectionViewLayout = gridFlowLayout
-		gridFlowLayout.scrollDirection = .horizontal
+		collectionView.collectionViewLayout = listFlowLayout
+		
+		gridFlowLayout.scrollDirection = .vertical
 		listFlowLayout.scrollDirection = .horizontal
+	}
+	
+	func funcForGesture(_ sender:UISwipeGestureRecognizer){
+		if sender.direction == .left {
+			//scroll to next item
+			print("left swipped")
+			let cellItems = self.collectionView.indexPathsForVisibleItems
+			
+			self.collectionView.scrollToItem(at: cellItems.max()!, at: .centeredHorizontally, animated: true)
+		}
 	}
 	
 }

@@ -1807,7 +1807,7 @@ nagpur,India - 440010</string>
                                     <action selector="listButtonPressed:" destination="xeV-Ql-grH" eventType="touchUpInside" id="T8T-Sz-Jlm"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wy9-Tl-lDh">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wy9-Tl-lDh">
                                 <rect key="frame" x="0.0" y="119.5" width="375" height="498.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q9K-qR-nsv">
@@ -1825,14 +1825,14 @@ nagpur,India - 440010</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Gd-Gf-gp0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                    <rect key="frame" x="10" y="10" width="355" height="237"/>
                                                     <color key="backgroundColor" red="0.95590311429999997" green="1" blue="0.1336682887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1Gd-Gf-gp0" secondAttribute="height" multiplier="3:2" id="5DX-qp-Nb2"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTC-T0-9S5" userLabel="likeButton">
-                                                    <rect key="frame" x="20" y="258" width="60" height="16"/>
+                                                    <rect key="frame" x="20" y="255" width="60" height="16"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartActive" translatesAutoresizingMaskIntoConstraints="NO" id="cNs-GT-bAb">
                                                             <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
@@ -1860,7 +1860,7 @@ nagpur,India - 440010</string>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-Ag-GYJ" userLabel="shareButton">
-                                                    <rect key="frame" x="96" y="258" width="50" height="16"/>
+                                                    <rect key="frame" x="96" y="255" width="50" height="16"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareInactive" translatesAutoresizingMaskIntoConstraints="NO" id="QWg-SA-wYe">
                                                             <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
@@ -1891,25 +1891,25 @@ nagpur,India - 440010</string>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-6f-yUz">
-                                                    <rect key="frame" x="20" y="289" width="49" height="17"/>
+                                                    <rect key="frame" x="20" y="286" width="49" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.23137254901960785" green="0.21176470588235294" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-vW-Vl0">
-                                                    <rect key="frame" x="20" y="316" width="29" height="17"/>
+                                                    <rect key="frame" x="20" y="313" width="29" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.23137254900000001" green="0.21176470589999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6t-ZG-W8p">
-                                                    <rect key="frame" x="20" y="343" width="35" height="17"/>
+                                                    <rect key="frame" x="20" y="340" width="35" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.23137254900000001" green="0.21176470589999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="occasion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8G-7W-m5f">
-                                                    <rect key="frame" x="20" y="370" width="58" height="17"/>
+                                                    <rect key="frame" x="20" y="367" width="58" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.23137254900000001" green="0.21176470589999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1919,17 +1919,17 @@ nagpur,India - 440010</string>
                                         <constraints>
                                             <constraint firstItem="hTC-T0-9S5" firstAttribute="top" secondItem="1Gd-Gf-gp0" secondAttribute="bottom" constant="8" id="4jx-Cg-KIi"/>
                                             <constraint firstItem="2Sr-Ag-GYJ" firstAttribute="leading" secondItem="hTC-T0-9S5" secondAttribute="trailing" constant="16" id="CTo-fb-eeO"/>
-                                            <constraint firstAttribute="trailing" secondItem="1Gd-Gf-gp0" secondAttribute="trailing" id="DKk-ta-JFJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Gd-Gf-gp0" secondAttribute="trailing" constant="10" id="DKk-ta-JFJ"/>
                                             <constraint firstItem="2Sr-Ag-GYJ" firstAttribute="top" secondItem="1Gd-Gf-gp0" secondAttribute="bottom" constant="8" id="FVL-F3-Q0S"/>
                                             <constraint firstItem="o6t-ZG-W8p" firstAttribute="leading" secondItem="ReH-vW-Vl0" secondAttribute="leading" id="Idl-lM-vgr"/>
                                             <constraint firstItem="K8G-7W-m5f" firstAttribute="top" secondItem="o6t-ZG-W8p" secondAttribute="bottom" constant="10" id="YU6-OV-TDN"/>
                                             <constraint firstItem="ReH-vW-Vl0" firstAttribute="leading" secondItem="L2g-6f-yUz" secondAttribute="leading" id="cBR-I6-qcS"/>
-                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="leading" secondItem="ohk-Jv-FkB" secondAttribute="leading" id="feg-kl-8pZ"/>
+                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="leading" secondItem="ohk-Jv-FkB" secondAttribute="leading" constant="10" id="feg-kl-8pZ"/>
                                             <constraint firstItem="L2g-6f-yUz" firstAttribute="leading" secondItem="hTC-T0-9S5" secondAttribute="leading" id="jRf-Ue-WfD"/>
                                             <constraint firstItem="K8G-7W-m5f" firstAttribute="leading" secondItem="o6t-ZG-W8p" secondAttribute="leading" id="lXB-D5-FpW"/>
                                             <constraint firstItem="ReH-vW-Vl0" firstAttribute="top" secondItem="L2g-6f-yUz" secondAttribute="bottom" constant="10" id="lh4-Hq-WsE"/>
                                             <constraint firstItem="o6t-ZG-W8p" firstAttribute="top" secondItem="ReH-vW-Vl0" secondAttribute="bottom" constant="10" id="muz-iB-F0T"/>
-                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="top" secondItem="ohk-Jv-FkB" secondAttribute="top" id="nCT-CP-a9A"/>
+                                            <constraint firstItem="1Gd-Gf-gp0" firstAttribute="top" secondItem="ohk-Jv-FkB" secondAttribute="top" constant="10" id="nCT-CP-a9A"/>
                                             <constraint firstItem="L2g-6f-yUz" firstAttribute="top" secondItem="hTC-T0-9S5" secondAttribute="bottom" constant="15" id="nuJ-Eg-tEG"/>
                                             <constraint firstItem="hTC-T0-9S5" firstAttribute="leading" secondItem="ohk-Jv-FkB" secondAttribute="leadingMargin" constant="12" id="xb5-zr-kbF"/>
                                         </constraints>
@@ -2136,8 +2136,8 @@ nagpur,India - 440010</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Nvl-6V-qxY" kind="relationship" relationship="viewControllers" id="9T2-vG-U40"/>
                         <segue destination="QoS-FD-43E" kind="relationship" relationship="viewControllers" id="REd-gG-Zuf"/>
+                        <segue destination="Nvl-6V-qxY" kind="relationship" relationship="viewControllers" id="9T2-vG-U40"/>
                         <segue destination="1pU-6M-aQt" kind="relationship" relationship="viewControllers" id="yQJ-RR-fVw"/>
                     </connections>
                 </tabBarController>
@@ -2427,11 +2427,13 @@ nagpur,India - 440010</string>
             </objects>
             <point key="canvasLocation" x="3492" y="-1281"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="ejR-6z-Vxm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QoS-FD-43E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="76m-7E-6PT"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="shareInactive" systemItem="favorites" id="76m-7E-6PT">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ynv-sf-oSp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -3022,7 +3024,7 @@ nagpur,India - 440010</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UvV-iY-rl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2553" y="-2042"/>
+            <point key="canvasLocation" x="2553" y="-1968"/>
         </scene>
     </scenes>
     <resources>
