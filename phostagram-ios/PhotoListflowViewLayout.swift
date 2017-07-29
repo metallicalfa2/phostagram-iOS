@@ -12,7 +12,7 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 	
 	let itemHeight: CGFloat = 240
 	let phoneHeight = UIScreen.main.bounds.height
-	open var inset: CGFloat = 0.0
+	open var inset: CGFloat = 40
 
 
 	override init() {
@@ -44,13 +44,13 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 		minimumInteritemSpacing = 0
 		minimumLineSpacing = 0
 		scrollDirection = .horizontal
-		sectionInset = UIEdgeInsets(top: 0.0, left: 25, bottom: 0.0, right: 25)
+		sectionInset = UIEdgeInsets(top: 0.0, left: inset, bottom: 0.0, right: inset)
 		footerReferenceSize = CGSize.zero
 		headerReferenceSize = CGSize.zero
 	}
 	
 	func itemWidth() -> CGFloat {
-		return collectionView!.frame.width - 50
+		return collectionView!.frame.width - (inset*2)
 	}
 	
 	func height() -> CGFloat{

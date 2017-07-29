@@ -68,7 +68,7 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	func setupInitialLayout() {
 		isGridFlowLayoutUsed = true
 		//gridFlowLayout.sectionInset = UIEdgeInsetsMake(0,10,0,10)
-		collection.collectionViewLayout = gridFlowLayout
+		collection.collectionViewLayout = listFlowLayout
 		
 		gridFlowLayout.scrollDirection = .vertical
 		listFlowLayout.scrollDirection = .horizontal
@@ -84,6 +84,11 @@ extension HomeViewController{
 		let itemToDisplay = itemsToDisplay[indexPath.row]
 		
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
+		DispatchQueue.main.async(
+			execute: {
+				cell.imageView.cornerRadius(radius: 2)
+			}
+		)
 		(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 2) : cell.imageView.cornerRadius(radius: 0)
 		return cell
 	}

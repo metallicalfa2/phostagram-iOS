@@ -52,7 +52,7 @@ open class ScalingCarouselCell: UICollectionViewCell {
     /// - parameter scaleMinimum:  The minimun % a cell should scale to,
     ///             expressed as a value between 0.0 and 1.0
     open func scale(withCarouselInset carouselInset: CGFloat,
-                    scaleMinimum: CGFloat = 0.9) {
+                    scaleMinimum: CGFloat = 0.90) {
         
         // Ensure we have a superView, and mainView
         guard let superview = superview,
