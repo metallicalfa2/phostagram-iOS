@@ -19,7 +19,7 @@ class network:UIViewController{
 	let contactsController = ContactsViewController()
 	
 	let unavailable = "Unavailable"
-	let loginParameters: Parameters = ["email": "phostagram@phostagram.com", "password": "phostagram"]
+	let loginParameters: Parameters = ["phoneNumber": "9111100000", "password": "phostagram"]
 
 	let loginURL:String = "http://13.126.4.227:3000/login"
 	let contactsURL:String = "http://13.126.4.227:3000/contacts"
@@ -32,7 +32,7 @@ class network:UIViewController{
 	let contactsDeleteURL:String = "http://13.126.4.227:3000/contacts/remove"
 	
 	func login(){
-		
+
 		Alamofire.request(loginURL as String, method: .post, parameters: self.loginParameters,encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url reqest
 			//print("Response: \(String(describing: response.response))") // http url response
@@ -51,7 +51,7 @@ class network:UIViewController{
 		Alamofire.request(profileURL as String, method: .get).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			//	print("Result: \(response.result.value)")                         // response serialization result
+			print("Result in Profile: \(response.result.value)")                         // response serialization result
 			
 			if let json = response.result.value {
 				let profileData = JSON(json)
@@ -65,7 +65,7 @@ class network:UIViewController{
 		Alamofire.request(contactsURL as String, method: .post).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			//print("Result: \(response.result.value)")                         // response serialization result
+			print("Result in get Contacts: \(response.result.value)")                         // response serialization result
 			
 			if let json = response.result.value {
 				let contacts = JSON(json)
@@ -139,7 +139,7 @@ class network:UIViewController{
 		Alamofire.request(contactsAddURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			//print("Result: \(response.result.value)")                         // response serialization result
+			print("Result in creating a neew contact: \(response.result.value)")                         // response serialization result
 			
 			if let json = response.result.value {
 				let res = JSON(json)
@@ -159,7 +159,7 @@ class network:UIViewController{
 		Alamofire.request(contactsUpdateURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			//print("Result: \(response.result.value)")                         // response serialization result
+			print("Result in update contact: \(response.result.value)")                         // response serialization result
 			
 			if let json = response.result.value {
 				let res = JSON(json)
@@ -183,7 +183,7 @@ class network:UIViewController{
 		Alamofire.request(contactsDeleteURL as String, method: .post, parameters: parameter, encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			//print("Result: \(response.result.value)")                         // response serialization result
+			print("Result in deleting a contact: \(response.result.value)")                         // response serialization result
 			let res : JSON
 			if let json = response.result.value {
 				res = JSON(json)
@@ -197,9 +197,9 @@ class network:UIViewController{
 	func addAddress(_ array:[String:Any]){
 	
 		Alamofire.request(addAddress as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			print("Request: \(String(describing: response.request))")   // original url request
-			print("Response: \(String(describing: response.response))") // http url response
-			print("Result: \(response.result)")                         // response serialization result
+			//print("Request: \(String(describing: response.request))")   // original url request
+			//print("Response: \(String(describing: response.response))") // http url response
+			print("Result in adding an address: \(response.result)")                         // response serialization result
 			if let json = response.result.value {
 				let res = JSON(json)
 				print(res)
@@ -215,9 +215,9 @@ class network:UIViewController{
 	func updateAddress(_ array:[String:Any]){
 	
 		Alamofire.request(updateAddress as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			print("Request: \(String(describing: response.request))")   // original url request
-			print("Response: \(String(describing: response.response))") // http url response
-			print("Result: \(response.result)")                         // response serialization result
+			//print("Request: \(String(describing: response.request))")   // original url request
+			//print("Response: \(String(describing: response.response))") // http url response
+			print("Result in updating an address: \(response.result)")                         // response serialization result
 			if let json = response.result.value {
 				let res = JSON(json)
 				print(res)
@@ -233,9 +233,9 @@ class network:UIViewController{
 	func deleteAddress(_ array:[String:Any]){
 		
 		Alamofire.request(deleteAddressString as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			print("Request: \(String(describing: response.request))")   // original url request
-			print("Response: \(String(describing: response.response))") // http url response
-			print("Result: \(response.result)")                         // response serialization result
+			//print("Request: \(String(describing: response.request))")   // original url request
+			//print("Response: \(String(describing: response.response))") // http url response
+			print("Result in deleting address: \(response.result)")                         // response serialization result
 			if let json = response.result.value {
 				let res = JSON(json)
 				print(res)

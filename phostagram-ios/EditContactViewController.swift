@@ -37,9 +37,7 @@ class EditContactViewController:UIViewController{
 	
 	@IBAction func addNewAddressPressed(_ sender: Any) {
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addAddress") as? AddressViewController)!
-		//print(contactsModel.userContacts[contactsIndex].contactsId)
 		next.contactId = contactsModel.userContacts[contactsIndex].contactsId
-		//next.contact = contactsModel.userContacts[contactsIndex]
 		
 		DispatchQueue.main.async {
 			self.present(next, animated: true, completion: nil)
@@ -110,7 +108,7 @@ extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
 		
 		cell.selectionStyle = .none
 		cell.address.text = lineOne! + " " + city! + " " + state! + " - " + String(pincode!)
-		cell.phoneNumber.text = profileModel.sharedInstance.phoneNumber
+		cell.phoneNumber.text = contactsModel.userContacts[contactsIndex].phoneNumber
 		cell.edit.addTarget(self, action: #selector(editButtonClicked), for: .touchUpInside)
 		cell.delete.addTarget(self, action: #selector(deleteButtonClicked), for: .touchUpInside)
 		cell.edit.tag = indexPath.row
@@ -130,7 +128,7 @@ extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
 	
 	func editButtonClicked(_ sender:AnyObject){
 		let button = sender as? UIButton
-		print(button?.tag)
+		//print(button?.tag)
 		
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addAddress") as? AddressViewController)!
 		//print(contactsModel.userContacts[contactsIndex].contactsId)
@@ -145,8 +143,15 @@ extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
 	
 	func deleteButtonClicked(_ sender:AnyObject){
 		let button = sender as? UIButton
+		let tag = button?.tag
+		//print(tag)
 		
-		net.deleteAddress( ["contactId":contactsModel.userContacts[contactsIndex].contactsId!,"contactAddressId":contactsModel.userContacts[contactsIndex].addresses?[(button?.tag)!] ] )
+		if let addressId = contactsModel.userContacts[contactsIndex].addresses?[tag!].userAddressId , let tag = button?.tag {
+			print(addressId)
+			net.deleteAddress( ["contactId": String(tag) ,"contactAddressId":addressId ] )
+		}
+		
+		
 	}
 	
 	

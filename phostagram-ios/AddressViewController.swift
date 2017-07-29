@@ -25,7 +25,7 @@ class AddressViewController: UIViewController{
 	
 	@IBAction func donePressed(_ sender: Any) {
 		print("done pressed on addnewAddress \n")
-		//print(contact?.contactsId)
+		print(contact)
 		
 		guard let lineOne = self.lineOne.text else{
 			print("enter name")
@@ -41,9 +41,13 @@ class AddressViewController: UIViewController{
 			return
 		}
 		if(contact != nil){
-			net.addAddress(["contactId":contact?.contactsId!,"address":["address_line":lineOne, "state":state, "city":city, "pincode":pincode]])
+			//print(contact?.contactsId!)
+			//print((contact?.addresses?[addressIndex!].userAddressId)!)
+			
+			net.updateAddress(["contactId":(contact?.contactsId)!,"contactAddressId":(contact?.addresses?[addressIndex!].userAddressId)!,"address":["address_line":lineOne, "state":state, "city":city, "pincode":pincode]])
+			
 		}else{
-			net.updateAddress(["contactId":contact?.contactsId!,"contactAddressId":contact?.addresses?[addressIndex!].userAddressId,"address":["address_line":lineOne, "state":state, "city":city, "pincode":pincode]])
+			net.addAddress(["contactId":contactId!,"address":["address_line":lineOne, "state":state, "city":city, "pincode":pincode]])
 		}
 	}
 	override func viewDidLoad() {
