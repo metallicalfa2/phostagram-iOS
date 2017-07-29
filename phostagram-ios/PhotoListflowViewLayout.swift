@@ -65,10 +65,10 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 	
 	override var itemSize: CGSize {
 		set {
-			self.itemSize = CGSize(width: itemWidth(), height: height())
+			self.itemSize = CGSize(width: itemWidth(), height: itemWidth()*0.666)
 		}
 		get {
-			return CGSize(width: itemWidth(), height: height())
+			return CGSize(width: itemWidth(), height: itemWidth()*0.666)
 		}
 	}
 	

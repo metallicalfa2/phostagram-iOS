@@ -29,11 +29,6 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		super.viewDidLoad()
 		setupDatasource()
 		setupInitialLayout()
-//		
-//		let leftSwipeGest = UISwipeGestureRecognizer(target: self, action: #selector(funcForGesture))
-//		leftSwipeGest.direction = .left
-//		collectionView.addGestureRecognizer(leftSwipeGest)
-		
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -55,10 +50,11 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		isGridFlowLayoutUsed = true
 		listButton.setImage(#imageLiteral(resourceName: "listNotSelected"), for: .normal)
 		gridButton.setImage(#imageLiteral(resourceName: "gridSelected"), for: .normal)
+		var grid = PhotoGridflowViewLayout()
 		
 		UIView.animate(withDuration: 0.2, animations: { () -> Void in
 			self.collection.collectionViewLayout.invalidateLayout()
-			self.collection.setCollectionViewLayout(self.gridFlowLayout, animated: true)
+			self.collection.setCollectionViewLayout(grid, animated: true)
 		})
 	}
 	
@@ -72,31 +68,10 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	func setupInitialLayout() {
 		isGridFlowLayoutUsed = true
 		//gridFlowLayout.sectionInset = UIEdgeInsetsMake(0,10,0,10)
-		collection.collectionViewLayout = listFlowLayout
+		collection.collectionViewLayout = gridFlowLayout
 		
 		gridFlowLayout.scrollDirection = .vertical
 		listFlowLayout.scrollDirection = .horizontal
-	}
-	
-	func funcForGesture(_ sender:UISwipeGestureRecognizer){
-		print("swiped")
-		if sender.direction == .left {
-			//scroll to next item
-			print("left swipped")
-			let cellItems = self.collectionView.indexPathsForVisibleItems
-			print(cellItems)
-			self.collectionView.scrollToItem(at: cellItems.max()!, at: .right, animated: true)
-			
-			let cellSize = CGSize(width: self.view.frame.width,height: self.view.frame.height);
-			
-			//get current content Offset of the Collection view
-			let contentOffset = collectionView.contentOffset;
-			
-			//scroll to next cell
-			//self.collectionView.scrollRectToVisible(CGRect(x: 50, y: 0,width: cellSize.width - 100 , height: cellSize.height), animated: true);
-			
-
-		}
 	}
 	
 }

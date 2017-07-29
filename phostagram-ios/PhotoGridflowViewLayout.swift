@@ -29,6 +29,7 @@ class PhotoGridflowViewLayout: UICollectionViewFlowLayout{
 		minimumInteritemSpacing = 10
 		minimumLineSpacing = 6.666
 		scrollDirection = .vertical
+		collectionView?.frame = CGRect(x: 0, y: 0, width: 667, height: 1000)
 	}
 	
 	func itemWidth() -> CGFloat {
