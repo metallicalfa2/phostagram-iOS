@@ -10,4 +10,5 @@ target 'phostagram-ios' do
   pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'IQKeyboardManager'
+  pod 'ScalingCarousel'
 end

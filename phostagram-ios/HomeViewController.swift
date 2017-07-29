@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import ScalingCarousel
 
 class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
 	var isGridFlowLayoutUsed: Bool = false
+	
+	@IBOutlet weak var collection: ScalingCarouselView!
 	
 	@IBOutlet weak var listButton: UIButton!
 	@IBOutlet weak var gridButton: UIButton!
@@ -26,11 +29,11 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		super.viewDidLoad()
 		setupDatasource()
 		setupInitialLayout()
-		collectionView.heroModifiers = [.cascade]
+//		
+//		let leftSwipeGest = UISwipeGestureRecognizer(target: self, action: #selector(funcForGesture))
+//		leftSwipeGest.direction = .left
+//		collectionView.addGestureRecognizer(leftSwipeGest)
 		
-		let leftSwipeGest = UISwipeGestureRecognizer(target: self, action: #selector(funcForGesture))
-		leftSwipeGest.direction = .left
-		collectionView.addGestureRecognizer(leftSwipeGest)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -44,8 +47,8 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		listButton.setImage(#imageLiteral(resourceName: "listSelected"), for: .normal)
 	
 		UIView.animate(withDuration: 0.2, animations: { () -> Void in
-			self.collectionView.collectionViewLayout.invalidateLayout()
-			self.collectionView.setCollectionViewLayout(self.listFlowLayout, animated: true)
+			self.collection.collectionViewLayout.invalidateLayout()
+			self.collection.setCollectionViewLayout(self.listFlowLayout, animated: true)
 		})
 	}
 	@IBAction func gridButtonPressed(_ sender: Any) {
@@ -54,34 +57,45 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		gridButton.setImage(#imageLiteral(resourceName: "gridSelected"), for: .normal)
 		
 		UIView.animate(withDuration: 0.2, animations: { () -> Void in
-			self.collectionView.collectionViewLayout.invalidateLayout()
-			self.collectionView.setCollectionViewLayout(self.gridFlowLayout, animated: true)
+			self.collection.collectionViewLayout.invalidateLayout()
+			self.collection.setCollectionViewLayout(self.gridFlowLayout, animated: true)
 		})
 	}
 	
 	
 	func setupDatasource() {
-		itemsToDisplay = [ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons"),ImageToDisplay(imageName: "party"),ImageToDisplay(imageName: "ballons")]
+		itemsToDisplay = [ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island")]
 		
-		collectionView.reloadData()
+		collection.reloadData()
 	}
-	
+	 
 	func setupInitialLayout() {
 		isGridFlowLayoutUsed = true
-		gridFlowLayout.sectionInset = UIEdgeInsetsMake(0,10,0,10)
-		collectionView.collectionViewLayout = listFlowLayout
+		//gridFlowLayout.sectionInset = UIEdgeInsetsMake(0,10,0,10)
+		collection.collectionViewLayout = listFlowLayout
 		
 		gridFlowLayout.scrollDirection = .vertical
 		listFlowLayout.scrollDirection = .horizontal
 	}
 	
 	func funcForGesture(_ sender:UISwipeGestureRecognizer){
+		print("swiped")
 		if sender.direction == .left {
 			//scroll to next item
 			print("left swipped")
 			let cellItems = self.collectionView.indexPathsForVisibleItems
+			print(cellItems)
+			self.collectionView.scrollToItem(at: cellItems.max()!, at: .right, animated: true)
 			
-			self.collectionView.scrollToItem(at: cellItems.max()!, at: .centeredHorizontally, animated: true)
+			let cellSize = CGSize(width: self.view.frame.width,height: self.view.frame.height);
+			
+			//get current content Offset of the Collection view
+			let contentOffset = collectionView.contentOffset;
+			
+			//scroll to next cell
+			//self.collectionView.scrollRectToVisible(CGRect(x: 50, y: 0,width: cellSize.width - 100 , height: cellSize.height), animated: true);
+			
+
 		}
 	}
 	
@@ -92,12 +106,10 @@ extension HomeViewController{
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
-
-		//cell.heroModifiers = [.fade, .scale(0.5)]
 		let itemToDisplay = itemsToDisplay[indexPath.row]
 		
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
-		(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 5) : cell.imageView.cornerRadius(radius: 0)
+		(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 2) : cell.imageView.cornerRadius(radius: 0)
 		return cell
 	}
 	
@@ -109,4 +121,9 @@ extension HomeViewController{
 		return itemsToDisplay.count
 	}
 	
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		collection.didScroll()
+	}
 }
+
+
