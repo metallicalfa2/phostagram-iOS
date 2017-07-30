@@ -86,7 +86,7 @@ extension HomeViewController{
 		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
 		DispatchQueue.main.async(
 			execute: {
-				cell.imageView.cornerRadius(radius: 2)
+				//cell.imageView.dropShadow()
 			}
 		)
 		(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 2) : cell.imageView.cornerRadius(radius: 0)
