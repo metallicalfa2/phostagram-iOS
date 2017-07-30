@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23779C3CEBAD2C9E9DBB0EF9 /* Pods_phostagram_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A291F57DA1CC8525DBA3 /* Pods_phostagram_ios.framework */; };
+		51033C041F2AB69700B03206 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51033C031F2AB69700B03206 /* AddressViewController.swift */; };
 		51802B061F1508710010EA5A /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B051F1508710010EA5A /* network.swift */; };
 		51802B081F1508BF0010EA5A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B071F1508BF0010EA5A /* Alamofire.framework */; };
 		51802B0A1F1508C20010EA5A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B091F1508C20010EA5A /* SwiftyJSON.framework */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		0132AF52DBF8888BD8050792 /* Pods-phostagram-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phostagram-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-phostagram-ios/Pods-phostagram-ios.release.xcconfig"; sourceTree = "<group>"; };
 		100BAD7972A180EF0B25A2BC /* Pods-phostagram-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phostagram-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-phostagram-ios/Pods-phostagram-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		51033C031F2AB69700B03206 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		51802B051F1508710010EA5A /* network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		51802B071F1508BF0010EA5A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		51802B091F1508C20010EA5A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				51D93BF51F0C289400C057A7 /* AddNewContactViewController.swift */,
 				51C409791F0D672E00704A5D /* EditContactViewController.swift */,
 				51C4097D1F0D79D600704A5D /* EditContactInfoViewController.swift */,
+				51033C031F2AB69700B03206 /* AddressViewController.swift */,
 			);
 			name = contacts;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				51D93BE91F0BA39100C057A7 /* getStartedViewController.swift in Sources */,
 				51D93BF11F0BCCA500C057A7 /* ContactsViewController.swift in Sources */,
 				51802B181F179AEA0010EA5A /* UIViewController.swift in Sources */,
+				51033C041F2AB69700B03206 /* AddressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

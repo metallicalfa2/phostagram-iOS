@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ScalingCarousel
 
-class photoCollectionViewCell: UICollectionViewCell{
+class photoCollectionViewCell: ScalingCarouselCell{
 
 	@IBOutlet var imageView: UIImageView!
 	@IBOutlet weak var likButton: UIView!

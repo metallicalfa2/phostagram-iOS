@@ -12,10 +12,16 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 	
 	let itemHeight: CGFloat = 240
 	let phoneHeight = UIScreen.main.bounds.height
-	
+	open var inset: CGFloat = 0
+
 	override init() {
 		super.init()
 		setupLayout()
+	}
+	
+	convenience init(withCarouselInset inset: CGFloat = 0.0) {
+		self.init()
+		self.inset = inset
 	}
 	
 	/**
@@ -35,12 +41,15 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 	*/
 	func setupLayout() {
 		minimumInteritemSpacing = 0
-		minimumLineSpacing = 1
-		scrollDirection = .vertical
+		minimumLineSpacing = 0
+		scrollDirection = .horizontal
+		sectionInset = UIEdgeInsets(top: 0.0, left: inset, bottom: 0.0, right: inset)
+		footerReferenceSize = CGSize.zero
+		headerReferenceSize = CGSize.zero
 	}
 	
 	func itemWidth() -> CGFloat {
-		return collectionView!.frame.width
+		return collectionView!.frame.width - (inset*2)
 	}
 	
 	func height() -> CGFloat{
@@ -55,10 +64,10 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 	
 	override var itemSize: CGSize {
 		set {
-			self.itemSize = CGSize(width: itemWidth(), height: height())
+			self.itemSize = CGSize(width: itemWidth(), height: itemWidth()*0.666)
 		}
 		get {
-			return CGSize(width: itemWidth(), height: height())
+			return CGSize(width: itemWidth(), height: itemWidth()*0.666)
 		}
 	}
 	
