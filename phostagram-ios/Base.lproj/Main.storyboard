@@ -992,7 +992,7 @@ nagpur,India - 440010</string>
                                         <rect key="frame" x="0.0" y="28" width="317" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NhB-fx-wUT" id="Llg-JN-EqD">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBE-Fn-vRg" customClass="contactsImage" customModule="phostagram_ios" customModuleProvider="target">
@@ -1243,7 +1243,7 @@ nagpur,India - 440010</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0h3-1u-oht" id="eMJ-QD-A8l">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9545000312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qJ-I7-3Ko">
@@ -1856,9 +1856,9 @@ nagpur,India - 440010</string>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wy9-Tl-lDh" customClass="ScalingCarouselView" customModule="ScalingCarousel">
                                 <rect key="frame" x="0.0" y="167" width="375" height="250"/>
-                                <color key="backgroundColor" red="0.35686274509999999" green="0.14901960780000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="eyM-pp-NsZ"/>
+                                    <constraint firstAttribute="width" secondItem="Wy9-Tl-lDh" secondAttribute="height" multiplier="3:2" id="oXC-Hq-UIG"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q9K-qR-nsv">
                                     <size key="itemSize" width="373" height="244"/>
@@ -1875,28 +1875,29 @@ nagpur,India - 440010</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-fi-QxT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="228"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="248.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Gd-Gf-gp0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="373" height="228"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="373" height="248.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="1Gd-Gf-gp0" secondAttribute="height" multiplier="3:2" id="xNc-ye-L3Y"/>
+                                                            </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96078431372549022" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="1Gd-Gf-gp0" secondAttribute="bottom" id="8DV-hZ-kYx"/>
                                                         <constraint firstAttribute="trailing" secondItem="1Gd-Gf-gp0" secondAttribute="trailing" id="Q9v-Xt-omS"/>
+                                                        <constraint firstAttribute="width" secondItem="rl4-fi-QxT" secondAttribute="height" multiplier="3:2" id="eRx-ni-1VJ"/>
                                                         <constraint firstItem="1Gd-Gf-gp0" firstAttribute="top" secondItem="rl4-fi-QxT" secondAttribute="top" id="f7W-1Y-RsA"/>
                                                         <constraint firstItem="1Gd-Gf-gp0" firstAttribute="leading" secondItem="rl4-fi-QxT" secondAttribute="leading" id="hg4-v5-StB"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="rl4-fi-QxT" firstAttribute="leading" secondItem="ohk-Jv-FkB" secondAttribute="leading" id="2kH-6P-Ise"/>
                                             <constraint firstAttribute="trailing" secondItem="rl4-fi-QxT" secondAttribute="trailing" id="8Bx-R9-q1N"/>
                                             <constraint firstItem="rl4-fi-QxT" firstAttribute="top" secondItem="ohk-Jv-FkB" secondAttribute="top" id="ONN-ub-RKI"/>
-                                            <constraint firstItem="rl4-fi-QxT" firstAttribute="bottom" secondItem="ohk-Jv-FkB" secondAttribute="bottomMargin" constant="-8" id="rzk-KH-HxC"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="1Gd-Gf-gp0" id="deA-wo-sa2"/>
@@ -1906,7 +1907,7 @@ nagpur,India - 440010</string>
                                 </cells>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1915,7 +1916,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kay-xK-0Uh">
-                                <rect key="frame" x="0.0" y="417" width="375" height="201"/>
+                                <rect key="frame" x="0.0" y="407" width="375" height="211"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K79-jv-aJ1" userLabel="likeButton">
                                         <rect key="frame" x="26" y="8" width="63" height="25"/>
@@ -2075,7 +2076,7 @@ nagpur,India - 440010</string>
                         <constraints>
                             <constraint firstItem="L7v-Xg-yZ2" firstAttribute="top" secondItem="QPT-uD-Eom" secondAttribute="top" id="1HO-yq-xcE"/>
                             <constraint firstItem="QPT-uD-Eom" firstAttribute="trailing" secondItem="AEl-w3-Ufv" secondAttribute="trailingMargin" id="1zX-l2-SS8"/>
-                            <constraint firstItem="Kay-xK-0Uh" firstAttribute="top" secondItem="Wy9-Tl-lDh" secondAttribute="bottom" priority="999" id="FFg-HC-hdW"/>
+                            <constraint firstItem="Kay-xK-0Uh" firstAttribute="top" secondItem="Wy9-Tl-lDh" secondAttribute="bottom" constant="-10" id="FFg-HC-hdW"/>
                             <constraint firstItem="8M5-jI-W0g" firstAttribute="leading" secondItem="AEl-w3-Ufv" secondAttribute="leading" id="RtN-Gy-aWm"/>
                             <constraint firstItem="iHe-8H-JfT" firstAttribute="centerY" secondItem="L7v-Xg-yZ2" secondAttribute="centerY" id="SfW-OB-DuC"/>
                             <constraint firstItem="Wy9-Tl-lDh" firstAttribute="leading" secondItem="Kay-xK-0Uh" secondAttribute="leading" id="UFZ-7n-jbs"/>
@@ -3216,7 +3217,7 @@ nagpur,India - 440010</string>
                                         <rect key="frame" x="0.0" y="69.5" width="375" height="452.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="452.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-4B-nGA">

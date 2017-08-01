@@ -12,7 +12,7 @@ class PhotoListflowViewLayout: UICollectionViewFlowLayout{
 	
 	let itemHeight: CGFloat = 240
 	let phoneHeight = UIScreen.main.bounds.height
-	open var inset: CGFloat = 0
+	open var inset: CGFloat = 20
 
 	override init() {
 		super.init()
