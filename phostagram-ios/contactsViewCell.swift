@@ -14,3 +14,7 @@ class ContactViewCell: UITableViewCell{
 	@IBOutlet weak var contactsView: contactsImage!
 	@IBOutlet weak var contactsLabel: UILabel!
 }
+
+class selectContactViewCell : UITableViewCell{
+	
+}
