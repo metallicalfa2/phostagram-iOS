@@ -17,6 +17,7 @@ protocol contactsDelegate {
 class network:UIViewController{
 	
 	let contactsController = ContactsViewController()
+	static var addressIds : [String] = []
 	
 	let unavailable = "Unavailable"
 	let loginParameters: Parameters = ["phoneNumber": "9111100000", "password": "phostagram"]

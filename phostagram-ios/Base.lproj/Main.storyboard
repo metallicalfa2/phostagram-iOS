@@ -1048,6 +1048,7 @@ nagpur,India - 440010</string>
                                             <outlet property="contactsLabel" destination="sfh-Rz-IwA" id="Hdc-XO-c1E"/>
                                             <outlet property="contactsView" destination="GBE-Fn-vRg" id="hTW-Bj-Nfk"/>
                                             <outlet property="name" destination="rp1-pb-VNw" id="hGV-SS-Vch"/>
+                                            <segue destination="IQg-Tk-Udp" kind="show" id="4Na-Po-89N"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1444,6 +1445,7 @@ nagpur,India - 440010</string>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -3744,7 +3746,7 @@ nagpur,India - 440010</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9545000312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okg-2H-T2a">
-                                                    <rect key="frame" x="68" y="16" width="139" height="16"/>
+                                                    <rect key="frame" x="63" y="16" width="139" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="139" id="ekg-3T-Aj7"/>
                                                     </constraints>
@@ -3753,14 +3755,14 @@ nagpur,India - 440010</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio" translatesAutoresizingMaskIntoConstraints="NO" id="m2A-L8-JLn">
-                                                    <rect key="frame" x="40" y="16" width="20" height="20"/>
+                                                    <rect key="frame" x="40" y="16" width="15" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="qgv-Uu-cJX"/>
-                                                        <constraint firstAttribute="width" constant="20" id="tPA-b9-eHs"/>
+                                                        <constraint firstAttribute="height" constant="15" id="qgv-Uu-cJX"/>
+                                                        <constraint firstAttribute="width" constant="15" id="tPA-b9-eHs"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae7-Ca-RGP">
-                                                    <rect key="frame" x="68" y="40" width="180" height="43"/>
+                                                    <rect key="frame" x="63" y="40" width="185" height="43"/>
                                                     <string key="text">12/d indiana road,
 sample nagar,
 nagpur,India - 440010</string>
@@ -3812,6 +3814,7 @@ nagpur,India - 440010</string>
                                             <outlet property="delete" destination="kQC-JD-5KP" id="2rp-Xa-gi4"/>
                                             <outlet property="edit" destination="yrz-N0-fXZ" id="Whf-JX-Ahx"/>
                                             <outlet property="phoneNumber" destination="okg-2H-T2a" id="FnO-6A-Hk5"/>
+                                            <outlet property="radioImage" destination="m2A-L8-JLn" id="B1d-6U-AQX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

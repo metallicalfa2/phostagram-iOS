@@ -10,9 +10,12 @@ import UIKit
 
 class ContactViewCell: UITableViewCell{
 	
+	var contactId: String?
+	
 	@IBOutlet weak var name: UILabel!
 	@IBOutlet weak var contactsView: contactsImage!
 	@IBOutlet weak var contactsLabel: UILabel!
+	
 }
 
 class selectContactViewCell : UITableViewCell{

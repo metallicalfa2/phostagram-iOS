@@ -102,6 +102,7 @@ extension SelectRecipientsViewController: UITableViewDataSourcePrefetching{
 		let name = contactsModel.userContacts[indexPath.row].name!
 		cell.contactsLabel.text = String(name[name.startIndex]).uppercased()
 		cell.name.text = name
+		cell.contactId = contactsModel.userContacts[indexPath.row].contactsId
 		return cell
 	}
 	

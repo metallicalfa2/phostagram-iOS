@@ -113,6 +113,8 @@ extension SelectRecipientsAddressesViewController:UITableViewDelegate,UITableVie
 		cell.delete.addTarget(self, action: #selector(deleteButtonClicked), for: .touchUpInside)
 		cell.edit.tag = indexPath.row
 		cell.delete.tag = indexPath.row
+		cell.addressId = contactsModel.userContacts[contactsIndex].addresses?[indexPath.row].userAddressId
+		
 		return cell
 	}
 	
@@ -124,6 +126,21 @@ extension SelectRecipientsAddressesViewController:UITableViewDelegate,UITableVie
 	
 	func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
 		print("cancelPrefetchingForRowsAt \(indexPaths)")
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let cell = tableView.cellForRow(at: indexPath) as? AddressViewCell
+		//print(cell ?? "cell")
+		//print(indexPath)
+		if(cell?.radioImage.image == #imageLiteral(resourceName: "radio")){
+			cell?.radioImage.image = #imageLiteral(resourceName: "radio-selected")
+			network.addressIds.append((cell?.addressId)!)
+		}else{
+			cell?.radioImage.image = #imageLiteral(resourceName: "radio")
+			network.addressIds = network.addressIds.filter{ $0 != (cell?.addressId)! }
+		}
+		
+		print(network.addressIds)
 	}
 	
 	func editButtonClicked(_ sender:AnyObject){
