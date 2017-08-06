@@ -11,6 +11,7 @@ import UIKit
 class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
 
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var addressesSelectedText: UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,8 +27,8 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
-		navigationController?.isHeroEnabled = true
 		self.tableView.reloadData()
+		self.addressesSelectedText.text = String(network.addressIds.count) + " addresses selected"
 		
 		if(contactsModel.userContacts.count==0){
 			self.tableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
@@ -37,7 +38,7 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 	@IBAction func addNewContactPressed(_ sender: Any) {
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newContact") as? AddNewContactController)!
 		DispatchQueue.main.async {
-			self.present(next, animated: true, completion: nil)
+			self.navigationController?.pushViewController(next, animated: true)
 		}
 	}
 	
@@ -50,10 +51,9 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 		}
 	}
 	
+	// MARK: - Navigation
 	
 	override func prepare( for segue: UIStoryboardSegue, sender: Any?) {
-		print(sender)
-		
 		if segue.identifier == "selectContactsToSelectAddresses", let destination = segue.destination as? SelectRecipientsAddressesViewController {
 			if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
 				destination.contactsIndex = indexPath.row
@@ -63,17 +63,6 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 		
 		
 	}
-	
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

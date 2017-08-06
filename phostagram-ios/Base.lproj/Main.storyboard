@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VhD-LS-OzA">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,6 +10,7 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -854,11 +855,11 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="qJv-M7-EQm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FKj-vl-UGe" customClass="gradientView" customModule="phostagram_ios" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cb-2L-etL" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="76" y="557" width="223" height="50"/>
+                                <rect key="frame" x="76" y="458" width="168" height="50"/>
                                 <color key="backgroundColor" red="0.28235294119999998" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hSs-Dh-Swu"/>
@@ -874,14 +875,14 @@ nagpur,India - 440010</string>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-Tu-ukV">
-                                <rect key="frame" x="76" y="480" width="223" height="37"/>
+                                <rect key="frame" x="76" y="381" width="168" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="vh7-CB-cIB"/>
                                 </constraints>
                                 <color key="currentPageIndicatorTintColor" red="0.28235294119999998" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ia-z9-K26">
-                                <rect key="frame" x="0.0" y="28" width="375" height="444"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="345"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -926,11 +927,11 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="Pda-iM-Ifs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nlS-Io-JEm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="   search" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pr5-Hw-6Ep" customClass="textField" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="29" y="79" width="317" height="30"/>
+                                <rect key="frame" x="29" y="79" width="262" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bJb-vw-NcW"/>
                                 </constraints>
@@ -983,32 +984,39 @@ nagpur,India - 440010</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-RZ-dQm">
-                                <rect key="frame" x="29" y="200" width="317" height="418"/>
+                                <rect key="frame" x="29" y="200" width="267" height="319"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" rowHeight="45" id="NhB-fx-wUT" customClass="ContactViewCell" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="317" height="45"/>
+                                        <rect key="frame" x="0.0" y="28" width="267" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NhB-fx-wUT" id="Llg-JN-EqD">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBE-Fn-vRg" customClass="contactsImage" customModule="phostagram_ios" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfh-Rz-IwA">
-                                                            <rect key="frame" x="15" y="8" width="16" height="30"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfh-Rz-IwA">
+                                                            <rect key="frame" x="23" y="23" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                                             <color key="textColor" red="0.42745098040000001" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rat-6M-NHN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="sfh-Rz-IwA" firstAttribute="centerX" secondItem="GBE-Fn-vRg" secondAttribute="centerX" id="A6D-Ru-7Ml"/>
+                                                        <constraint firstItem="rat-6M-NHN" firstAttribute="leading" secondItem="GBE-Fn-vRg" secondAttribute="leading" id="O9V-Tt-VPV"/>
+                                                        <constraint firstAttribute="bottom" secondItem="rat-6M-NHN" secondAttribute="bottom" id="Td8-Yx-Thh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rat-6M-NHN" secondAttribute="trailing" id="Zeq-nq-Gzb"/>
                                                         <constraint firstAttribute="width" constant="45" id="dKP-g4-Uix"/>
                                                         <constraint firstItem="sfh-Rz-IwA" firstAttribute="centerY" secondItem="GBE-Fn-vRg" secondAttribute="centerY" id="fwO-Ox-Isu"/>
+                                                        <constraint firstItem="rat-6M-NHN" firstAttribute="top" secondItem="GBE-Fn-vRg" secondAttribute="top" id="oCJ-w6-PUP"/>
                                                         <constraint firstAttribute="width" secondItem="GBE-Fn-vRg" secondAttribute="height" multiplier="1:1" id="tQD-WR-GNM"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -1025,7 +1033,7 @@ nagpur,India - 440010</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calvin Park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp1-pb-VNw">
-                                                    <rect key="frame" x="58.5" y="14" width="200" height="18"/>
+                                                    <rect key="frame" x="33.5" y="14" width="200" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="7qe-j8-g5g"/>
                                                     </constraints>
@@ -1048,7 +1056,10 @@ nagpur,India - 440010</string>
                                             <outlet property="contactsLabel" destination="sfh-Rz-IwA" id="Hdc-XO-c1E"/>
                                             <outlet property="contactsView" destination="GBE-Fn-vRg" id="hTW-Bj-Nfk"/>
                                             <outlet property="name" destination="rp1-pb-VNw" id="hGV-SS-Vch"/>
-                                            <segue destination="IQg-Tk-Udp" kind="show" id="4Na-Po-89N"/>
+                                            <segue destination="IQg-Tk-Udp" kind="show" identifier="contactToAddress" id="4Na-Po-89N">
+                                                <segue key="commit" inheritsFrom="parent" id="vC7-S5-j0S"/>
+                                                <segue key="preview" inheritsFrom="commit" id="Nfw-J5-tVZ"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1058,15 +1069,12 @@ nagpur,India - 440010</string>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brd-Sc-Jip">
-                                <rect key="frame" x="29" y="135" width="317" height="45"/>
+                                <rect key="frame" x="29" y="135" width="262" height="45"/>
                                 <state key="normal" title="add new contact">
                                     <color key="titleColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,200) fade"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="4Fu-cd-dB7" kind="show" id="zn9-bV-a1h"/>
+                                    <action selector="addNewContactPressed:" destination="kXS-zI-kBa" eventType="touchUpInside" id="KhD-WD-TVI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1094,7 +1102,7 @@ nagpur,India - 440010</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7g-0b-bjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="-916"/>
+            <point key="canvasLocation" x="1730.625" y="-916.90140845070425"/>
         </scene>
         <!--Edit Contact View Controller-->
         <scene sceneID="4bg-kw-7ev">
@@ -1105,11 +1113,11 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="Aj0-nw-6FD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M50-FA-B09">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeA-x0-NWf">
-                                <rect key="frame" x="0.0" y="63" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="128"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkX-9M-xBA" customClass="contactsImage" customModule="phostagram_ios" customModuleProvider="target">
                                         <rect key="frame" x="35" y="20" width="45" height="45"/>
@@ -1184,7 +1192,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZc-zu-dK8" userLabel="address">
-                                <rect key="frame" x="0.0" y="191" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="192" width="320" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-Z0-EJq">
                                         <rect key="frame" x="40" y="21" width="54.5" height="18"/>
@@ -1193,7 +1201,7 @@ nagpur,India - 440010</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0e-QV-Mnm" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="313" y="15" width="30" height="30"/>
+                                        <rect key="frame" x="258" y="15" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ane-bB-XmZ"/>
@@ -1213,7 +1221,7 @@ nagpur,India - 440010</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tws-wp-1iP" userLabel="border">
-                                        <rect key="frame" x="32" y="0.0" width="311" height="1"/>
+                                        <rect key="frame" x="32" y="0.0" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="EPf-iV-M5Y"/>
@@ -1236,15 +1244,15 @@ nagpur,India - 440010</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UT8-DV-dO0">
-                                <rect key="frame" x="0.0" y="251" width="375" height="367"/>
+                                <rect key="frame" x="0.0" y="251" width="320" height="280"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addressCell" rowHeight="96" id="0h3-1u-oht" customClass="AddressViewCell" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0h3-1u-oht" id="eMJ-QD-A8l">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9545000312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qJ-I7-3Ko">
@@ -1264,7 +1272,7 @@ nagpur,India - 440010</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIp-yA-68Q">
-                                                    <rect key="frame" x="68" y="40" width="180" height="43"/>
+                                                    <rect key="frame" x="68" y="40" width="125" height="43"/>
                                                     <string key="text">12/d indiana road,
 sample nagar,
 nagpur,India - 440010</string>
@@ -1273,7 +1281,7 @@ nagpur,India - 440010</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdc-P9-Jfp">
-                                                    <rect key="frame" x="317" y="10.5" width="50" height="27"/>
+                                                    <rect key="frame" x="262" y="10.5" width="50" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="9fr-39-xff"/>
                                                     </constraints>
@@ -1286,7 +1294,7 @@ nagpur,India - 440010</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFh-8A-VXJ">
-                                                    <rect key="frame" x="259" y="10.5" width="50" height="27"/>
+                                                    <rect key="frame" x="204" y="10.5" width="50" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <state key="normal" title="edit">
                                                         <color key="titleColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1325,10 +1333,10 @@ nagpur,India - 440010</string>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irq-o4-fVj" userLabel="delete button">
-                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                <rect key="frame" x="0.0" y="515" width="320" height="53"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-Np-dqb" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="16" width="121" height="30"/>
+                                        <rect key="frame" x="32" y="11.5" width="121" height="30"/>
                                         <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Cc6-3s-dUS"/>
@@ -1347,7 +1355,7 @@ nagpur,India - 440010</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HA7-M8-ZJf" userLabel="border">
-                                        <rect key="frame" x="32" y="0.0" width="311" height="1"/>
+                                        <rect key="frame" x="32" y="0.0" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="5Z6-NR-8Ke"/>
@@ -1368,86 +1376,41 @@ nagpur,India - 440010</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,-100) fade"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsN-9n-l1F" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="11" y="32" width="50" height="31"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Cab-n2-41F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="back"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,-100) fade"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="hero_dismissViewController" destination="IQg-Tk-Udp" eventType="touchUpInside" id="a7T-V4-sZK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbs-5S-eb4" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="309" y="32" width="50" height="31"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="tq0-HQ-JBw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="edit"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,100) fade"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="editBecomesDone"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="editPressed:" destination="IQg-Tk-Udp" eventType="touchUpInside" id="gK0-xs-Z1r"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IeA-x0-NWf" firstAttribute="leading" secondItem="M50-FA-B09" secondAttribute="leading" id="42y-Nb-dzp"/>
                             <constraint firstAttribute="trailing" secondItem="JZc-zu-dK8" secondAttribute="trailing" id="HQ2-QP-LLy"/>
-                            <constraint firstItem="nbs-5S-eb4" firstAttribute="top" secondItem="vOq-gB-2Ag" secondAttribute="bottom" constant="12" id="I9F-Fm-8K8"/>
-                            <constraint firstItem="IeA-x0-NWf" firstAttribute="top" secondItem="nbs-5S-eb4" secondAttribute="bottom" id="J6x-sX-1JS"/>
-                            <constraint firstItem="bsN-9n-l1F" firstAttribute="top" secondItem="vOq-gB-2Ag" secondAttribute="bottom" constant="12" id="NkC-en-zlS"/>
                             <constraint firstItem="irq-o4-fVj" firstAttribute="leading" secondItem="M50-FA-B09" secondAttribute="leading" id="Q5o-wb-L43"/>
-                            <constraint firstItem="bsN-9n-l1F" firstAttribute="leading" secondItem="M50-FA-B09" secondAttribute="leading" constant="11" id="Tla-Tw-zad"/>
                             <constraint firstAttribute="trailing" secondItem="irq-o4-fVj" secondAttribute="trailing" id="UOc-m7-gMe"/>
                             <constraint firstItem="Aj0-nw-6FD" firstAttribute="top" secondItem="irq-o4-fVj" secondAttribute="bottom" id="WuM-NF-Wyj"/>
-                            <constraint firstItem="IeA-x0-NWf" firstAttribute="top" secondItem="vOq-gB-2Ag" secondAttribute="bottom" constant="43" id="d1V-2G-3Fe"/>
-                            <constraint firstItem="IeA-x0-NWf" firstAttribute="top" secondItem="bsN-9n-l1F" secondAttribute="bottom" id="o9Z-TN-7Qd"/>
+                            <constraint firstItem="IeA-x0-NWf" firstAttribute="top" secondItem="vOq-gB-2Ag" secondAttribute="bottom" id="d1V-2G-3Fe"/>
                             <constraint firstAttribute="trailing" secondItem="IeA-x0-NWf" secondAttribute="trailing" id="poR-VR-ODf"/>
                             <constraint firstItem="JZc-zu-dK8" firstAttribute="top" secondItem="IeA-x0-NWf" secondAttribute="bottom" id="r4s-OC-5e6"/>
                             <constraint firstItem="JZc-zu-dK8" firstAttribute="leading" secondItem="M50-FA-B09" secondAttribute="leading" id="rzT-hh-pYc"/>
-                            <constraint firstItem="nbs-5S-eb4" firstAttribute="trailing" secondItem="M50-FA-B09" secondAttribute="trailingMargin" id="ztS-lV-S7a"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="contactCell"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="Dg4-MW-2pw">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; Contacts" id="nCv-yU-m5O">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; contacts" id="nCv-yU-m5O">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="hero_dismissViewController" destination="EDt-jQ-l2j" id="eEb-36-I7b"/>
+                                <action selector="backPressed:" destination="IQg-Tk-Udp" id="qhz-ZD-isd"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="edit" id="MmZ-m8-W88">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="editPressed:" destination="IQg-Tk-Udp" id="m1j-vN-OiD"/>
+                                <action selector="editPressed:" destination="IQg-Tk-Udp" id="zva-7m-7cg"/>
+                                <segue destination="xgY-gb-OaM" kind="show" identifier="contactToEditContact" id="0nD-sa-63Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="contactAge" destination="QEq-5i-bOo" id="egf-qz-ZWD"/>
@@ -1461,7 +1424,7 @@ nagpur,India - 440010</string>
             </objects>
             <point key="canvasLocation" x="2552.8000000000002" y="-1281.4092953523239"/>
         </scene>
-        <!--Add New Contact Controller-->
+        <!--new contact-->
         <scene sceneID="2qv-Hd-snb">
             <objects>
                 <viewController storyboardIdentifier="newContact" hidesBottomBarWhenPushed="YES" id="UZj-On-obk" customClass="AddNewContactController" customModule="phostagram_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -1470,48 +1433,11 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="DAV-xD-rFD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XBh-wv-fDs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydK-pK-dLO" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="24" y="76" width="50" height="30"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="8RX-nE-m5u"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="back"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,-100) fade"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="hero_dismissViewController" destination="0W3-Zt-ScA" eventType="touchUpInside" id="hGf-nG-TCS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTH-Yy-J2w" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="301" y="76" width="50" height="30"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Ty0-aV-65L"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="done"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="donePressed:" destination="UZj-On-obk" eventType="touchUpInside" id="Jxd-zX-fKf"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6Z-TC-MnA" userLabel="image View">
-                                <rect key="frame" x="150" y="104" width="75" height="75"/>
+                                <rect key="frame" x="122.5" y="84" width="75" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R7X-mJ-Aed">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -1536,21 +1462,18 @@ nagpur,India - 440010</string>
                                     <constraint firstItem="Kvc-UI-5TA" firstAttribute="leading" secondItem="m6Z-TC-MnA" secondAttribute="leading" id="qG2-NE-Wcf"/>
                                     <constraint firstItem="R7X-mJ-Aed" firstAttribute="leading" secondItem="m6Z-TC-MnA" secondAttribute="leading" id="rlZ-NE-n9Y"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,100) fade"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zf6-l9-kgF">
-                                <rect key="frame" x="32" y="199" width="311" height="40"/>
+                                <rect key="frame" x="32" y="179" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Woh-Mf-pFB">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imS-sT-kw2">
-                                        <rect key="frame" x="0.0" y="39" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="6ku-Y5-UHc"/>
@@ -1562,16 +1485,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YOp-rG-mwk">
-                                <rect key="frame" x="32" y="317.5" width="311" height="40"/>
+                                <rect key="frame" x="32" y="283.5" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+91 phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OO9-Gu-Gan">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7n-6c-z6L">
-                                        <rect key="frame" x="0.0" y="39" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="W1J-dQ-qSf"/>
@@ -1583,16 +1506,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NOq-ze-tSx">
-                                <rect key="frame" x="32" y="259" width="150.5" height="38.5"/>
+                                <rect key="frame" x="32" y="232" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="age group" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ywK-v1-J7u">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06z-uj-IOe">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="dVg-dH-MKj"/>
@@ -1604,16 +1527,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0w1-s5-eMS">
-                                <rect key="frame" x="192.5" y="259" width="150.5" height="38.5"/>
+                                <rect key="frame" x="165" y="232" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="gender" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-DV-5il">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hws-7Z-CpF">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="1tx-3e-uwo"/>
@@ -1625,16 +1548,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dUP-n2-qgW">
-                                <rect key="frame" x="32" y="377.5" width="150.5" height="38.5"/>
+                                <rect key="frame" x="32" y="336.5" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-3p-cgp">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5AR-nr-ThX">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="WcB-qQ-K17"/>
@@ -1646,16 +1569,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-uW-IPa">
-                                <rect key="frame" x="192.5" y="377.5" width="150.5" height="38.5"/>
+                                <rect key="frame" x="165" y="336.5" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-Vt-Hzi">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Vn-ad-jiT">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Cth-k5-gE6"/>
@@ -1667,16 +1590,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rV0-EG-Q02">
-                                <rect key="frame" x="32" y="436" width="311" height="40"/>
+                                <rect key="frame" x="32" y="388" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pincode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VV0-I3-Xyv">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiD-BC-ZSY">
-                                        <rect key="frame" x="0.0" y="39" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="xEV-nv-SFX"/>
@@ -1688,16 +1611,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-Io-kjJ">
-                                <rect key="frame" x="32" y="496" width="311" height="40"/>
+                                <rect key="frame" x="32" y="441" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SmP-Hr-YWZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvP-PM-fE7">
-                                        <rect key="frame" x="0.0" y="39" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="zYP-bA-mff"/>
@@ -1713,9 +1636,7 @@ nagpur,India - 440010</string>
                         <constraints>
                             <constraint firstItem="m6Z-TC-MnA" firstAttribute="centerX" secondItem="XBh-wv-fDs" secondAttribute="centerX" id="0vB-lZ-4Zj"/>
                             <constraint firstItem="rV0-EG-Q02" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="2xN-fA-e27"/>
-                            <constraint firstItem="GTH-Yy-J2w" firstAttribute="trailing" secondItem="XBh-wv-fDs" secondAttribute="trailingMargin" constant="-8" id="311-Tf-5e8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zf6-l9-kgF" secondAttribute="trailing" constant="16" id="4s0-b6-aNg"/>
-                            <constraint firstItem="ydK-pK-dLO" firstAttribute="top" secondItem="spS-FI-hGR" secondAttribute="bottom" constant="12" id="4xb-ZK-TQ6"/>
                             <constraint firstItem="NOq-ze-tSx" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="5fK-lI-jcs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0w1-s5-eMS" secondAttribute="trailing" constant="16" id="6AH-cx-pbb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v4h-uW-IPa" secondAttribute="trailing" constant="16" id="7Mg-mf-Wlp"/>
@@ -1732,23 +1653,35 @@ nagpur,India - 440010</string>
                             <constraint firstAttribute="trailingMargin" secondItem="YOp-rG-mwk" secondAttribute="trailing" constant="16" id="VY6-of-ffV"/>
                             <constraint firstItem="v4h-uW-IPa" firstAttribute="top" secondItem="YOp-rG-mwk" secondAttribute="bottom" constant="20" id="bND-pM-zJz"/>
                             <constraint firstItem="0w1-s5-eMS" firstAttribute="top" secondItem="zf6-l9-kgF" secondAttribute="bottom" constant="20" id="cHo-Oh-1Hg"/>
-                            <constraint firstItem="ydK-pK-dLO" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="8" id="cmb-Vh-8bq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rV0-EG-Q02" secondAttribute="trailing" constant="16" id="dJW-XD-fvg"/>
                             <constraint firstItem="NOq-ze-tSx" firstAttribute="top" secondItem="zf6-l9-kgF" secondAttribute="bottom" constant="20" id="flL-jn-29e"/>
                             <constraint firstItem="0w1-s5-eMS" firstAttribute="leading" secondItem="NOq-ze-tSx" secondAttribute="trailing" constant="10" id="hTx-u8-Li7"/>
                             <constraint firstItem="dUP-n2-qgW" firstAttribute="top" secondItem="YOp-rG-mwk" secondAttribute="bottom" constant="20" id="nfK-3q-XgL"/>
-                            <constraint firstItem="GTH-Yy-J2w" firstAttribute="top" secondItem="spS-FI-hGR" secondAttribute="bottom" constant="12" id="nga-SM-P8u"/>
-                            <constraint firstItem="m6Z-TC-MnA" firstAttribute="top" secondItem="spS-FI-hGR" secondAttribute="bottom" constant="40" id="o3c-SI-eOh"/>
+                            <constraint firstItem="m6Z-TC-MnA" firstAttribute="top" secondItem="spS-FI-hGR" secondAttribute="bottom" constant="20" id="o3c-SI-eOh"/>
                             <constraint firstItem="dUP-n2-qgW" firstAttribute="height" secondItem="v4h-uW-IPa" secondAttribute="height" id="q7a-h2-brT"/>
                             <constraint firstItem="zf6-l9-kgF" firstAttribute="top" secondItem="m6Z-TC-MnA" secondAttribute="bottom" constant="20" id="tai-fR-cOV"/>
                             <constraint firstItem="YOp-rG-mwk" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="x8D-l4-4r4"/>
                             <constraint firstItem="rV0-EG-Q02" firstAttribute="top" secondItem="v4h-uW-IPa" secondAttribute="bottom" constant="20" id="xoj-7d-dyL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mH1-dg-tqK"/>
+                    <navigationItem key="navigationItem" title="new contact" id="mH1-dg-tqK">
+                        <barButtonItem key="leftBarButtonItem" title="cancel" id="F0f-Ly-lcc">
+                            <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelPressed:" destination="UZj-On-obk" id="zud-ry-INf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="done" id="MRR-z8-I0g">
+                            <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="donePressed:" destination="UZj-On-obk" id="vAK-m3-okK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="address" destination="SmP-Hr-YWZ" id="ToN-cX-WsD"/>
@@ -1764,7 +1697,7 @@ nagpur,India - 440010</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0W3-Zt-ScA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3492" y="-590.55472263868069"/>
+            <point key="canvasLocation" x="2552" y="-589"/>
         </scene>
         <!--Home-->
         <scene sceneID="clY-hl-oUJ">
@@ -1775,11 +1708,11 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="4iz-wu-3y3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AEl-w3-Ufv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sent using phostagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-8H-JfT">
-                                <rect key="frame" x="36" y="84" width="267" height="16"/>
+                                <rect key="frame" x="36" y="84" width="212" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Erz-1R-p4n"/>
                                 </constraints>
@@ -1788,7 +1721,7 @@ nagpur,India - 440010</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPT-uD-Eom">
-                                <rect key="frame" x="341" y="83" width="18" height="18"/>
+                                <rect key="frame" x="286" y="83" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="18" id="qJW-YJ-LVI"/>
                                 </constraints>
@@ -1799,7 +1732,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7v-Xg-yZ2">
-                                <rect key="frame" x="313" y="83" width="18" height="18"/>
+                                <rect key="frame" x="258" y="83" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="18" id="UrK-F1-j3k"/>
                                 </constraints>
@@ -1810,7 +1743,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8M5-jI-W0g">
-                                <rect key="frame" x="0.0" y="117" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="117" width="320" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sent by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8Z-qD-PP7">
                                         <rect key="frame" x="37" y="8" width="36" height="12"/>
@@ -1828,13 +1761,13 @@ nagpur,India - 440010</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter Parker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hK-q2-J39">
-                                        <rect key="frame" x="87" y="8" width="280" height="12"/>
+                                        <rect key="frame" x="87" y="8" width="225" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mary Jane" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlM-3e-R1r">
-                                        <rect key="frame" x="87" y="28" width="280" height="12"/>
+                                        <rect key="frame" x="87" y="28" width="225" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1857,7 +1790,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wy9-Tl-lDh" customClass="ScalingCarouselView" customModule="ScalingCarousel">
-                                <rect key="frame" x="0.0" y="167" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="167" width="320" height="213.5"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wy9-Tl-lDh" secondAttribute="height" multiplier="3:2" id="oXC-Hq-UIG"/>
@@ -1870,7 +1803,7 @@ nagpur,India - 440010</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="ohk-Jv-FkB" customClass="photoCollectionViewCell" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="3" width="373" height="244"/>
+                                        <rect key="frame" x="0.0" y="-15.5" width="373" height="244"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="244"/>
@@ -1918,7 +1851,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kay-xK-0Uh">
-                                <rect key="frame" x="0.0" y="407" width="375" height="211"/>
+                                <rect key="frame" x="0.0" y="370.5" width="320" height="148.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K79-jv-aJ1" userLabel="likeButton">
                                         <rect key="frame" x="26" y="8" width="63" height="25"/>
@@ -2012,26 +1945,26 @@ nagpur,India - 440010</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGU-mg-bZn">
-                                        <rect key="frame" x="105" y="41" width="263" height="28"/>
+                                        <rect key="frame" x="105" y="41" width="208" height="28"/>
                                         <string key="text">A selection of free string samples from Soul &amp; Disco Strings. This free strings sample pack features a hand picked selection of </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.32549019607843138" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13 July 2017" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMY-C5-fVX">
-                                        <rect key="frame" x="105" y="73" width="263" height="17"/>
+                                        <rect key="frame" x="105" y="73" width="208" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.32549019610000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tom carter museum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJ2-zS-DEj">
-                                        <rect key="frame" x="105" y="95" width="263" height="17"/>
+                                        <rect key="frame" x="105" y="95" width="208" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.32549019610000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diwali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yho-N2-CMj">
-                                        <rect key="frame" x="105" y="117" width="261" height="17"/>
+                                        <rect key="frame" x="105" y="117" width="206" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.32549019610000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2127,11 +2060,11 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="MrP-kP-LKh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FRF-5X-FtI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0J-ju-FoO" customClass="gradientView" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ea7-hn-YXd"/>
@@ -2146,7 +2079,7 @@ nagpur,India - 440010</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5z-mL-ed6">
-                                <rect key="frame" x="147" y="557" width="80" height="80"/>
+                                <rect key="frame" x="120" y="458" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="JAG-DF-NIf"/>
                                     <constraint firstAttribute="height" constant="80" id="aiQ-rA-C5Q"/>
@@ -2154,7 +2087,7 @@ nagpur,India - 440010</string>
                                 <state key="normal" image="button_capture"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="In9-sm-IhR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="213.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="In9-sm-IhR" secondAttribute="height" multiplier="3:2" id="9xb-Ae-MlI"/>
@@ -2185,83 +2118,7 @@ nagpur,India - 440010</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbd-vv-0pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5687" y="1225"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qTS-U0-wiI">
-            <objects>
-                <viewController id="7YB-7s-oxF" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hh6-OR-Dqb"/>
-                        <viewControllerLayoutGuide type="bottom" id="80O-Vz-QH3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EZj-Nf-g1Q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q6n-SQ-6z3">
-                                <rect key="frame" x="119" y="87" width="137" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="sdfsdf" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xch-bt-Tu5">
-                                        <rect key="frame" x="20" y="20" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-CP-Cbc">
-                                <rect key="frame" x="119" y="192" width="137" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="sdfsdf" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEt-4i-oO9">
-                                        <rect key="frame" x="20" y="20" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sc0-Vs-7Um">
-                                <rect key="frame" x="119" y="298" width="137" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="sdfsdf" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxt-jW-fub">
-                                        <rect key="frame" x="20" y="20" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7aa-4U-Tmz">
-                                <rect key="frame" x="119" y="403" width="137" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="sdfsdf" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kwp-uJ-sxt">
-                                        <rect key="frame" x="20" y="20" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mmb-5r-cfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6359.1999999999998" y="-492.50374812593708"/>
+            <point key="canvasLocation" x="5094" y="1758"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Fap-kf-DeC">
@@ -2273,8 +2130,8 @@ nagpur,India - 440010</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QoS-FD-43E" kind="relationship" relationship="viewControllers" id="REd-gG-Zuf"/>
                         <segue destination="Nvl-6V-qxY" kind="relationship" relationship="viewControllers" id="9T2-vG-U40"/>
+                        <segue destination="QoS-FD-43E" kind="relationship" relationship="viewControllers" id="REd-gG-Zuf"/>
                         <segue destination="1pU-6M-aQt" kind="relationship" relationship="viewControllers" id="yQJ-RR-fVw"/>
                     </connections>
                 </tabBarController>
@@ -2305,7 +2162,7 @@ nagpur,India - 440010</string>
         <scene sceneID="fsl-mP-vPS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nvl-6V-qxY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="O41-Et-kSx"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="O41-Et-kSx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xmk-YA-p1Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -2324,7 +2181,7 @@ nagpur,India - 440010</string>
             </objects>
             <point key="canvasLocation" x="793" y="-571"/>
         </scene>
-        <!--Edit-->
+        <!--edit-->
         <scene sceneID="5DV-L5-ijf">
             <objects>
                 <viewController storyboardIdentifier="editContactInfo" hidesBottomBarWhenPushed="YES" id="xgY-gb-OaM" customClass="EditContactInfoViewController" customModule="phostagram_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -2333,17 +2190,17 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="8Qh-tc-6SK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vta-Ki-Kl8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TA2-L0-0y6" userLabel="image View">
-                                <rect key="frame" x="150" y="85" width="75" height="75"/>
+                                <rect key="frame" x="122.5" y="84" width="75" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X9M-WU-nYz">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                         <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-G9-hCg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-G9-hCg">
                                         <rect key="frame" x="0.0" y="17" width="75" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2364,16 +2221,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2N-nw-noP" userLabel="name">
-                                <rect key="frame" x="32" y="180" width="311" height="33"/>
+                                <rect key="frame" x="32" y="179" width="256" height="26"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WU6-KW-eTg">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihX-UB-0bL">
-                                        <rect key="frame" x="0.0" y="32" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="25" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="wNr-Sq-h9f"/>
@@ -2393,16 +2250,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFs-t2-cip" userLabel="phone">
-                                <rect key="frame" x="32" y="291.5" width="311" height="33"/>
+                                <rect key="frame" x="32" y="276.5" width="256" height="26"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+91 phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smw-aF-B0S">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khm-F5-sk1">
-                                        <rect key="frame" x="0.0" y="32" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="25" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="blT-gl-BsY"/>
@@ -2422,16 +2279,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWi-bj-qPC" userLabel="age group">
-                                <rect key="frame" x="32" y="233" width="150.5" height="38.5"/>
+                                <rect key="frame" x="32" y="225" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="age group" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-ra-ZZs">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="31.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxy-FE-lXA">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="mNy-yn-iIf"/>
@@ -2451,16 +2308,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFd-oS-DSL" userLabel="gender">
-                                <rect key="frame" x="193" y="233" width="150.5" height="38.5"/>
+                                <rect key="frame" x="165.5" y="225" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="gender" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRV-Ri-5kG">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="31.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swH-n2-6x7">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="J5s-Vl-12i"/>
@@ -2478,54 +2335,12 @@ nagpur,India - 440010</string>
                                     <constraint firstAttribute="trailing" secondItem="FRV-Ri-5kG" secondAttribute="trailing" id="sY8-nq-XxE"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obK-gO-LbC" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="309" y="32" width="50" height="30"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="0rT-5k-zrh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="done"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="editBecomesDone"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="donePressed:" destination="xgY-gb-OaM" eventType="touchUpInside" id="g3T-lH-rdu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T03-Ro-p0C" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="16" y="32" width="60" height="30"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="J38-J4-3Ju"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="cancel"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,-100) fade"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="backPressed:" destination="xgY-gb-OaM" eventType="touchUpInside" id="Hcc-l7-Za0"/>
-                                    <action selector="hero_dismissViewController" destination="Itp-rg-UqX" eventType="touchUpInside" id="uDu-dM-iIB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q2N-nw-noP" firstAttribute="leading" secondItem="Vta-Ki-Kl8" secondAttribute="leadingMargin" constant="16" id="3PU-z2-Q1h"/>
                             <constraint firstItem="FRV-Ri-5kG" firstAttribute="trailing" secondItem="WU6-KW-eTg" secondAttribute="trailing" id="474-vC-FCF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="obK-gO-LbC" secondAttribute="trailing" id="ReI-RK-xXZ"/>
-                            <constraint firstItem="T03-Ro-p0C" firstAttribute="top" secondItem="QLJ-DG-4Px" secondAttribute="bottom" constant="12" id="Td4-X8-v13"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NFs-t2-cip" secondAttribute="trailing" constant="16" id="c4Y-ym-vPg"/>
-                            <constraint firstItem="obK-gO-LbC" firstAttribute="top" secondItem="QLJ-DG-4Px" secondAttribute="bottom" constant="12" id="c7P-CH-mzI"/>
                             <constraint firstItem="H4a-ra-ZZs" firstAttribute="height" secondItem="FRV-Ri-5kG" secondAttribute="height" id="dBr-Qu-OlI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q2N-nw-noP" secondAttribute="trailing" constant="16" id="h3I-ea-Zi0"/>
                             <constraint firstItem="H4a-ra-ZZs" firstAttribute="width" secondItem="FRV-Ri-5kG" secondAttribute="width" id="i0c-Qu-zl8"/>
@@ -2534,23 +2349,28 @@ nagpur,India - 440010</string>
                             <constraint firstItem="FRV-Ri-5kG" firstAttribute="leading" secondItem="H4a-ra-ZZs" secondAttribute="trailing" constant="10" id="nef-Yu-0xJ"/>
                             <constraint firstItem="NFs-t2-cip" firstAttribute="top" secondItem="BFd-oS-DSL" secondAttribute="bottom" constant="20" id="pPz-bW-vNC"/>
                             <constraint firstItem="BFd-oS-DSL" firstAttribute="top" secondItem="Q2N-nw-noP" secondAttribute="bottom" constant="20" id="pW2-IH-hmk"/>
-                            <constraint firstItem="TA2-L0-0y6" firstAttribute="top" secondItem="QLJ-DG-4Px" secondAttribute="bottom" constant="65" id="pYt-6u-JRE"/>
+                            <constraint firstItem="TA2-L0-0y6" firstAttribute="top" secondItem="QLJ-DG-4Px" secondAttribute="bottom" constant="20" id="pYt-6u-JRE"/>
                             <constraint firstItem="H4a-ra-ZZs" firstAttribute="leading" secondItem="WU6-KW-eTg" secondAttribute="leading" id="wWN-yU-4dF"/>
                             <constraint firstItem="Q2N-nw-noP" firstAttribute="top" secondItem="TA2-L0-0y6" secondAttribute="bottom" constant="20" id="wq3-rh-VDx"/>
-                            <constraint firstItem="T03-Ro-p0C" firstAttribute="leading" secondItem="Vta-Ki-Kl8" secondAttribute="leadingMargin" id="yK7-07-beX"/>
                             <constraint firstItem="TA2-L0-0y6" firstAttribute="centerX" secondItem="Vta-Ki-Kl8" secondAttribute="centerX" id="ycv-VY-9BY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit" id="NHM-9z-tos">
+                    <navigationItem key="navigationItem" title="edit" id="NHM-9z-tos">
                         <barButtonItem key="leftBarButtonItem" title="&lt; back" id="gVR-dS-z0e">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backPressed:" destination="xgY-gb-OaM" id="LHn-s9-MQD"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="nRl-c2-Fb5">
+                        <barButtonItem key="rightBarButtonItem" title="done" id="nRl-c2-Fb5">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="donePressed:" destination="xgY-gb-OaM" id="EGe-ax-s1t"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="ageGroup" destination="H4a-ra-ZZs" id="jM3-GO-jV9"/>
@@ -2564,11 +2384,11 @@ nagpur,India - 440010</string>
             </objects>
             <point key="canvasLocation" x="3492" y="-1281"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="ejR-6z-Vxm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QoS-FD-43E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="76m-7E-6PT">
+                    <tabBarItem key="tabBarItem" title="Home" id="76m-7E-6PT">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -2585,25 +2405,6 @@ nagpur,India - 440010</string>
             </objects>
             <point key="canvasLocation" x="1732" y="223.53823088455775"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="E55-NU-65K">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Fu-cd-dB7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uRh-K6-QiD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UZj-On-obk" kind="relationship" relationship="rootViewController" id="ohf-9Z-RWx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JH8-BN-658" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2553" y="-572"/>
-        </scene>
         <!--Add New Contact Controller-->
         <scene sceneID="kbr-vp-O9z">
             <objects>
@@ -2613,7 +2414,7 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="sgG-8n-sZs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UZc-aN-Zbh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKV-5O-1gA" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
@@ -2635,7 +2436,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN5-d1-AqH" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="301" y="32" width="50" height="30"/>
+                                <rect key="frame" x="246" y="32" width="50" height="30"/>
                                 <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="VNB-qZ-ZOg"/>
@@ -2653,7 +2454,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bas-cf-FeW" userLabel="image View">
-                                <rect key="frame" x="150" y="60" width="75" height="75"/>
+                                <rect key="frame" x="122.5" y="60" width="75" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T00-We-FCd">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -2683,16 +2484,16 @@ nagpur,India - 440010</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AeB-hz-hD5">
-                                <rect key="frame" x="32" y="155" width="311" height="40"/>
+                                <rect key="frame" x="32" y="155" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63Q-ae-tWf">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Px3-1g-Pc5">
-                                        <rect key="frame" x="0.0" y="39" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="JP9-P3-yxN"/>
@@ -2704,16 +2505,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gTr-ld-0w4">
-                                <rect key="frame" x="32" y="273.5" width="311" height="40"/>
+                                <rect key="frame" x="32" y="259.5" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+91 phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1D-Lo-55L">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO0-rJ-3OF">
-                                        <rect key="frame" x="0.0" y="39" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Pcc-tP-JXV"/>
@@ -2725,16 +2526,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pq6-A9-zZn">
-                                <rect key="frame" x="32" y="215" width="150.5" height="38.5"/>
+                                <rect key="frame" x="32" y="208" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="age group" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRW-YT-txe">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ful-dv-huo">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="fFG-4P-kgA"/>
@@ -2746,16 +2547,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-r2-VOE">
-                                <rect key="frame" x="192.5" y="215" width="150.5" height="38.5"/>
+                                <rect key="frame" x="165" y="208" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="gender" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqw-io-whi">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tih-Ny-t1H">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="6eG-cU-8YV"/>
@@ -2767,16 +2568,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UBF-ob-UCd">
-                                <rect key="frame" x="32" y="333.5" width="150.5" height="38.5"/>
+                                <rect key="frame" x="32" y="312.5" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uF-Hd-w8d">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cg-sY-pGz">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="zAy-zP-Tx0"/>
@@ -2788,16 +2589,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TNZ-bA-ZZ6">
-                                <rect key="frame" x="192.5" y="333.5" width="150.5" height="38.5"/>
+                                <rect key="frame" x="165" y="312.5" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aVL-H7-m3L">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLV-ty-iIh">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="jYG-wP-D3p"/>
@@ -2809,16 +2610,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pUD-BK-zSy">
-                                <rect key="frame" x="32" y="392" width="311" height="40"/>
+                                <rect key="frame" x="32" y="364" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pincode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iUC-DB-iB6">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKW-uY-KOX">
-                                        <rect key="frame" x="0.0" y="39" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Owt-N6-DaT"/>
@@ -2830,16 +2631,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ixm-CU-qJI">
-                                <rect key="frame" x="32" y="452" width="311" height="40"/>
+                                <rect key="frame" x="32" y="417" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2k8-af-NTm">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuO-zO-uPU">
-                                        <rect key="frame" x="0.0" y="39" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Ve1-eJ-c4g"/>
@@ -2923,7 +2724,7 @@ nagpur,India - 440010</string>
             </objects>
             <point key="canvasLocation" x="4520.8000000000002" y="-860.41979010494754"/>
         </scene>
-        <!--Edit-->
+        <!--address-->
         <scene sceneID="oj1-JS-hp3">
             <objects>
                 <viewController storyboardIdentifier="addAddress" hidesBottomBarWhenPushed="YES" id="QMj-js-iSc" customClass="AddressViewController" customModule="phostagram_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -2932,11 +2733,11 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="CJ8-h9-ukD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tbc-F7-qTP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bon-k5-hH3" userLabel="image View">
-                                <rect key="frame" x="150" y="85" width="75" height="75"/>
+                                <rect key="frame" x="122.5" y="84" width="75" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JBm-rO-AW6">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -2963,16 +2764,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4C6-TG-lmE" userLabel="name">
-                                <rect key="frame" x="32" y="180" width="311" height="33"/>
+                                <rect key="frame" x="32" y="179" width="256" height="26"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="line one" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-rP-l0d">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4G-Kf-u27">
-                                        <rect key="frame" x="0.0" y="32" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="25" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="p7g-L5-TxN"/>
@@ -2992,16 +2793,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCH-QO-g3w" userLabel="phone">
-                                <rect key="frame" x="32" y="291.5" width="311" height="33"/>
+                                <rect key="frame" x="32" y="276.5" width="256" height="26"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pincode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9Q-xx-p3E">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpP-5O-7No">
-                                        <rect key="frame" x="0.0" y="32" width="311" height="1"/>
+                                        <rect key="frame" x="0.0" y="25" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="65Z-wU-MSv"/>
@@ -3021,16 +2822,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfK-vb-yJe" userLabel="age group">
-                                <rect key="frame" x="32" y="233" width="150.5" height="38.5"/>
+                                <rect key="frame" x="32" y="225" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNP-Aj-5kz">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="31.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPj-8F-6BR">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Dv0-ZC-ULu"/>
@@ -3050,16 +2851,16 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uq6-dl-w2s" userLabel="gender">
-                                <rect key="frame" x="193" y="233" width="150.5" height="38.5"/>
+                                <rect key="frame" x="165.5" y="225" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="state" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGO-cv-xOa">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="31.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jjg-05-vvA">
-                                        <rect key="frame" x="0.0" y="37.5" width="150.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="nE8-l1-u9Z"/>
@@ -3077,45 +2878,6 @@ nagpur,India - 440010</string>
                                     <constraint firstAttribute="bottom" secondItem="sGO-cv-xOa" secondAttribute="bottom" id="zIT-K2-U83"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1Q-n0-YnU" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="309" y="32" width="50" height="30"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="9c3-6H-Fhv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="done"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="editBecomesDone"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="donePressed:" destination="QMj-js-iSc" eventType="touchUpInside" id="joF-t5-szt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I66-NM-wQ1" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="16" y="32" width="60" height="30"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="diV-KU-XXJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="cancel"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,-100) fade"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="cancelPressed:" destination="QMj-js-iSc" eventType="touchUpInside" id="VTS-vK-78m"/>
-                                    <action selector="hero_dismissViewController" destination="UvV-iY-rl4" eventType="touchUpInside" id="nxn-re-k7b"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3123,8 +2885,6 @@ nagpur,India - 440010</string>
                             <constraint firstItem="sGO-cv-xOa" firstAttribute="leading" secondItem="dNP-Aj-5kz" secondAttribute="trailing" constant="10" id="3es-Oc-R7p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4C6-TG-lmE" secondAttribute="trailing" constant="16" id="5zL-wl-qOq"/>
                             <constraint firstItem="ZCH-QO-g3w" firstAttribute="top" secondItem="uq6-dl-w2s" secondAttribute="bottom" constant="20" id="6Xs-oz-4r3"/>
-                            <constraint firstItem="v1Q-n0-YnU" firstAttribute="top" secondItem="qYK-3X-2nA" secondAttribute="bottom" constant="12" id="8IG-Ib-yBf"/>
-                            <constraint firstItem="I66-NM-wQ1" firstAttribute="top" secondItem="qYK-3X-2nA" secondAttribute="bottom" constant="12" id="FQa-LF-1Np"/>
                             <constraint firstItem="dNP-Aj-5kz" firstAttribute="height" secondItem="sGO-cv-xOa" secondAttribute="height" id="GIZ-4u-5Om"/>
                             <constraint firstItem="ZCH-QO-g3w" firstAttribute="leading" secondItem="tbc-F7-qTP" secondAttribute="leadingMargin" constant="16" id="J25-Da-NF8"/>
                             <constraint firstItem="RfK-vb-yJe" firstAttribute="top" secondItem="4C6-TG-lmE" secondAttribute="bottom" constant="20" id="Nbq-g7-P9Y"/>
@@ -3132,22 +2892,27 @@ nagpur,India - 440010</string>
                             <constraint firstItem="dNP-Aj-5kz" firstAttribute="width" secondItem="sGO-cv-xOa" secondAttribute="width" id="Sfg-MF-bVi"/>
                             <constraint firstItem="uq6-dl-w2s" firstAttribute="top" secondItem="4C6-TG-lmE" secondAttribute="bottom" constant="20" id="TF9-QQ-tBP"/>
                             <constraint firstItem="4C6-TG-lmE" firstAttribute="top" secondItem="Bon-k5-hH3" secondAttribute="bottom" constant="20" id="fG7-Hj-RgF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="v1Q-n0-YnU" secondAttribute="trailing" id="jiV-0K-awd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZCH-QO-g3w" secondAttribute="trailing" constant="16" id="myl-p9-JuW"/>
                             <constraint firstItem="Bon-k5-hH3" firstAttribute="centerX" secondItem="tbc-F7-qTP" secondAttribute="centerX" id="rIC-hw-cgR"/>
-                            <constraint firstItem="I66-NM-wQ1" firstAttribute="leading" secondItem="tbc-F7-qTP" secondAttribute="leadingMargin" id="sLz-Zx-XEH"/>
                             <constraint firstItem="dNP-Aj-5kz" firstAttribute="leading" secondItem="a2N-rP-l0d" secondAttribute="leading" id="u8B-S2-0mN"/>
-                            <constraint firstItem="Bon-k5-hH3" firstAttribute="top" secondItem="qYK-3X-2nA" secondAttribute="bottom" constant="65" id="vXe-In-KXI"/>
+                            <constraint firstItem="Bon-k5-hH3" firstAttribute="top" secondItem="qYK-3X-2nA" secondAttribute="bottom" constant="20" id="vXe-In-KXI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit" id="n52-va-TvR">
+                    <navigationItem key="navigationItem" title="address" id="n52-va-TvR">
                         <barButtonItem key="leftBarButtonItem" title="&lt; back" id="PNg-To-ndi">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelPressed:" destination="QMj-js-iSc" id="fmB-GL-gYD"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="IZ5-vB-XxQ">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="donePressed:" destination="QMj-js-iSc" id="bsI-9i-bbV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -3172,7 +2937,7 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="dg5-n4-vlg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vix-Es-SzS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent using phostagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2s-AX-cg8">
@@ -3185,7 +2950,7 @@ nagpur,India - 440010</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcS-eV-kGr">
-                                <rect key="frame" x="341" y="39" width="18" height="18"/>
+                                <rect key="frame" x="286" y="39" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="bJ8-Gx-Jwo"/>
                                     <constraint firstAttribute="width" constant="18" id="dtz-os-cNU"/>
@@ -3197,7 +2962,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVq-Oj-ZO5">
-                                <rect key="frame" x="313" y="39.5" width="18" height="18"/>
+                                <rect key="frame" x="258" y="39.5" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="68e-bs-zTh"/>
                                     <constraint firstAttribute="width" constant="18" id="7QZ-2x-QQb"/>
@@ -3209,7 +2974,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-DR-npq" customClass="ScalingCarouselView" customModule="ScalingCarousel">
-                                <rect key="frame" x="0.0" y="75.5" width="375" height="591.5"/>
+                                <rect key="frame" x="0.0" y="75.5" width="320" height="492.5"/>
                                 <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W2O-RZ-UZF">
                                     <size key="itemSize" width="375" height="452.5"/>
@@ -3219,10 +2984,10 @@ nagpur,India - 440010</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="q6O-48-Bd4" customClass="photoCollectionViewCell" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="69.5" width="375" height="452.5"/>
+                                        <rect key="frame" x="0.0" y="20" width="375" height="452.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="452.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="453"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-4B-nGA">
@@ -3396,7 +3161,7 @@ nagpur,India - 440010</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBE-iE-DgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4271" y="1481"/>
+            <point key="canvasLocation" x="4367" y="1863"/>
         </scene>
         <!--select recipients-->
         <scene sceneID="Sme-PH-M8p">
@@ -3407,17 +3172,17 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="9e5-GT-prI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cgh-Yz-vyM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contacts selected." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rr-ed-crU">
-                                <rect key="frame" x="29" y="76" width="317" height="14.5"/>
+                                <rect key="frame" x="29" y="76" width="262" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="   search" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysp-fH-fWP" customClass="textField" customModule="phostagram_ios" customModuleProvider="target">
-                                <rect key="frame" x="29" y="102.5" width="317" height="30"/>
+                                <rect key="frame" x="29" y="102.5" width="262" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XrG-2i-gcu"/>
                                 </constraints>
@@ -3470,16 +3235,16 @@ nagpur,India - 440010</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zfe-0h-IkL">
-                                <rect key="frame" x="29" y="200" width="317" height="467"/>
+                                <rect key="frame" x="29" y="200" width="267" height="368"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" rowHeight="45" id="cFy-ey-jV2" customClass="ContactViewCell" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="317" height="45"/>
+                                        <rect key="frame" x="0.0" y="28" width="267" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFy-ey-jV2" id="Oiu-1q-BfT">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eZ-FA-LAH" customClass="contactsImage" customModule="phostagram_ios" customModuleProvider="target">
@@ -3512,7 +3277,7 @@ nagpur,India - 440010</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calvin Park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-6T-aw0">
-                                                    <rect key="frame" x="58.5" y="14" width="200" height="18"/>
+                                                    <rect key="frame" x="33.5" y="14" width="200" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="N22-gN-ceV"/>
                                                     </constraints>
@@ -3545,7 +3310,7 @@ nagpur,India - 440010</string>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRM-x9-kiO">
-                                <rect key="frame" x="29" y="148.5" width="317" height="45"/>
+                                <rect key="frame" x="29" y="148.5" width="262" height="45"/>
                                 <state key="normal" title="add new contact">
                                     <color key="titleColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -3579,6 +3344,9 @@ nagpur,India - 440010</string>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="next" id="fHs-ug-cYW">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="b5K-1I-vvW" kind="show" id="8o1-xf-Z2m"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -3587,6 +3355,7 @@ nagpur,India - 440010</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="addressesSelectedText" destination="1Rr-ed-crU" id="MGR-GN-aRw"/>
                         <outlet property="tableView" destination="zfe-0h-IkL" id="8gn-HE-FyS"/>
                     </connections>
                 </viewController>
@@ -3594,7 +3363,7 @@ nagpur,India - 440010</string>
             </objects>
             <point key="canvasLocation" x="4431.1999999999998" y="223.53823088455775"/>
         </scene>
-        <!--Select Recipients Addresses View Controller-->
+        <!--select addresses-->
         <scene sceneID="SSe-fW-tCr">
             <objects>
                 <viewController storyboardIdentifier="selectRecipientsAddresses" hidesBottomBarWhenPushed="YES" id="YMy-yc-mZC" customClass="SelectRecipientsAddressesViewController" customModule="phostagram_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -3603,11 +3372,11 @@ nagpur,India - 440010</string>
                         <viewControllerLayoutGuide type="bottom" id="XSR-Ez-ElD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AZt-KC-9fD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0z-uz-ZaY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="128"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGo-tx-X0L" customClass="contactsImage" customModule="phostagram_ios" customModuleProvider="target">
                                         <rect key="frame" x="35" y="20" width="45" height="45"/>
@@ -3682,7 +3451,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39v-t9-Cy3" userLabel="address">
-                                <rect key="frame" x="0.0" y="192" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="192" width="320" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XO-q3-Ocs">
                                         <rect key="frame" x="40" y="21" width="54.5" height="18"/>
@@ -3691,7 +3460,7 @@ nagpur,India - 440010</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5W-9H-KKe" customClass="getStartedButton" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="313" y="15" width="30" height="30"/>
+                                        <rect key="frame" x="258" y="15" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="1RY-GS-G99"/>
@@ -3711,7 +3480,7 @@ nagpur,India - 440010</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaF-Al-rK1" userLabel="border">
-                                        <rect key="frame" x="32" y="0.0" width="311" height="1"/>
+                                        <rect key="frame" x="32" y="0.0" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="0pE-MA-RYa"/>
@@ -3734,15 +3503,15 @@ nagpur,India - 440010</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U5H-dl-R35">
-                                <rect key="frame" x="0.0" y="251" width="375" height="367"/>
+                                <rect key="frame" x="0.0" y="251" width="320" height="280"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addressCell" rowHeight="96" id="kfO-D2-uqN" customClass="AddressViewCell" customModule="phostagram_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfO-D2-uqN" id="apG-hv-7wJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9545000312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okg-2H-T2a">
@@ -3762,7 +3531,7 @@ nagpur,India - 440010</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae7-Ca-RGP">
-                                                    <rect key="frame" x="63" y="40" width="185" height="43"/>
+                                                    <rect key="frame" x="63" y="40" width="130" height="43"/>
                                                     <string key="text">12/d indiana road,
 sample nagar,
 nagpur,India - 440010</string>
@@ -3771,7 +3540,7 @@ nagpur,India - 440010</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQC-JD-5KP">
-                                                    <rect key="frame" x="317" y="10.5" width="50" height="27"/>
+                                                    <rect key="frame" x="262" y="10.5" width="50" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="k8u-6q-gcz"/>
                                                     </constraints>
@@ -3784,7 +3553,7 @@ nagpur,India - 440010</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrz-N0-fXZ">
-                                                    <rect key="frame" x="259" y="10.5" width="50" height="27"/>
+                                                    <rect key="frame" x="204" y="10.5" width="50" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <state key="normal" title="edit">
                                                         <color key="titleColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3824,10 +3593,10 @@ nagpur,India - 440010</string>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lla-xb-AW8" userLabel="delete button">
-                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                <rect key="frame" x="0.0" y="515" width="320" height="53"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qx-Xu-dHO" userLabel="border">
-                                        <rect key="frame" x="32" y="0.0" width="311" height="1"/>
+                                        <rect key="frame" x="32" y="0.0" width="256" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="X1T-SO-puQ"/>
@@ -3863,7 +3632,7 @@ nagpur,India - 440010</string>
                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="contactCell"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="fQD-Nq-R75">
+                    <navigationItem key="navigationItem" title="select addresses" id="fQD-Nq-R75">
                         <barButtonItem key="leftBarButtonItem" title="&lt; back" id="ls2-4V-Q9H">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -3872,6 +3641,9 @@ nagpur,India - 440010</string>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="done" id="17Z-ua-rKn">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="done:" destination="YMy-yc-mZC" id="PGC-Nm-Ghq"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -3888,7 +3660,112 @@ nagpur,India - 440010</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyV-yF-YN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5378" y="224"/>
+            <point key="canvasLocation" x="5269" y="-173"/>
+        </scene>
+        <!--enter details-->
+        <scene sceneID="Ccw-DV-aBC">
+            <objects>
+                <viewController id="b5K-1I-vvW" customClass="CaptionViewController" customModule="phostagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q7e-eG-cqo"/>
+                        <viewControllerLayoutGuide type="bottom" id="SeR-zV-6YZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UOW-FB-7vj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="island" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-SY-YxM">
+                                <rect key="frame" x="0.0" y="64" width="320" height="213.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MaO-SY-YxM" secondAttribute="height" multiplier="3:2" id="GvY-NQ-E3C"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Y9-BL-4xk">
+                                <rect key="frame" x="32" y="293.5" width="256" height="33"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Caption" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nV0-Me-SJj">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RM-fr-5JO">
+                                        <rect key="frame" x="0.0" y="32" width="256" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="tGM-Jm-yrp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3Y9-BL-4xk" secondAttribute="height" multiplier="311:40" id="hfP-oe-kQe"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-0k-0bD">
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.14901960780000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Fir-CT-dRj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="PHOST IT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sc8-0k-0bD" firstAttribute="leading" secondItem="UOW-FB-7vj" secondAttribute="leading" id="AsZ-XU-ZX2"/>
+                            <constraint firstItem="MaO-SY-YxM" firstAttribute="leading" secondItem="UOW-FB-7vj" secondAttribute="leading" id="BQ7-4R-f4C"/>
+                            <constraint firstItem="3Y9-BL-4xk" firstAttribute="top" secondItem="MaO-SY-YxM" secondAttribute="bottom" constant="16" id="C0o-Xg-pMc"/>
+                            <constraint firstItem="MaO-SY-YxM" firstAttribute="top" secondItem="Q7e-eG-cqo" secondAttribute="bottom" id="CoL-tt-Dw4"/>
+                            <constraint firstAttribute="trailing" secondItem="MaO-SY-YxM" secondAttribute="trailing" id="Kr8-SX-iOi"/>
+                            <constraint firstAttribute="trailing" secondItem="3Y9-BL-4xk" secondAttribute="trailing" constant="32" id="U2O-fq-eYt"/>
+                            <constraint firstItem="3Y9-BL-4xk" firstAttribute="leading" secondItem="UOW-FB-7vj" secondAttribute="leading" constant="32" id="WIY-bL-8Jg"/>
+                            <constraint firstItem="SeR-zV-6YZ" firstAttribute="top" secondItem="sc8-0k-0bD" secondAttribute="bottom" id="Xav-HL-HbY"/>
+                            <constraint firstItem="3Y9-BL-4xk" firstAttribute="centerX" secondItem="UOW-FB-7vj" secondAttribute="centerX" id="Xlc-zC-9uP"/>
+                            <constraint firstAttribute="trailing" secondItem="sc8-0k-0bD" secondAttribute="trailing" id="et9-aL-r2E"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="enter details" id="rXr-EM-DI2">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; back" id="wdA-Xw-8yE">
+                            <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="b5K-1I-vvW" id="o8e-1h-SOh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="next" id="zt6-4M-xOf">
+                            <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="b5K-1I-vvW" id="cdj-BV-7fr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEM-dd-J2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5269" y="526"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1rt-Cl-twj">
+            <objects>
+                <viewController id="QPi-XT-bbN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uPP-1p-ACA"/>
+                        <viewControllerLayoutGuide type="bottom" id="JMl-Qi-YnV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ea8-qu-IHb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u48-QH-eyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6268" y="525"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a5u-EP-5Ir">
@@ -3914,10 +3791,14 @@ nagpur,India - 440010</string>
         <image name="button_capture" width="56" height="56"/>
         <image name="gridSelected" width="39" height="38"/>
         <image name="heartActive" width="70" height="67"/>
+        <image name="island" width="1429" height="857"/>
         <image name="listNotSelected" width="42" height="31"/>
         <image name="placeholder" width="256" height="256"/>
         <image name="radio" width="16" height="16"/>
         <image name="shareActive" width="55" height="59"/>
         <image name="shareInactive" width="55" height="59"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Na-Po-89N"/>
+    </inferredMetricsTieBreakers>
 </document>

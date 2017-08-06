@@ -11,6 +11,7 @@
 		51033C041F2AB69700B03206 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51033C031F2AB69700B03206 /* AddressViewController.swift */; };
 		5162D42F1F34527E000B2DA7 /* SelectRecipientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D42E1F34527E000B2DA7 /* SelectRecipientsViewController.swift */; };
 		5162D4311F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4301F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift */; };
+		5162D4331F375D63000B2DA7 /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4321F375D63000B2DA7 /* CaptionViewController.swift */; };
 		51802B061F1508710010EA5A /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B051F1508710010EA5A /* network.swift */; };
 		51802B081F1508BF0010EA5A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B071F1508BF0010EA5A /* Alamofire.framework */; };
 		51802B0A1F1508C20010EA5A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B091F1508C20010EA5A /* SwiftyJSON.framework */; };
@@ -62,6 +63,7 @@
 		51033C031F2AB69700B03206 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		5162D42E1F34527E000B2DA7 /* SelectRecipientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRecipientsViewController.swift; sourceTree = "<group>"; };
 		5162D4301F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRecipientsAddressesViewController.swift; sourceTree = "<group>"; };
+		5162D4321F375D63000B2DA7 /* CaptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
 		51802B051F1508710010EA5A /* network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		51802B071F1508BF0010EA5A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		51802B091F1508C20010EA5A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				5162D42E1F34527E000B2DA7 /* SelectRecipientsViewController.swift */,
 				5162D4301F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift */,
+				5162D4321F375D63000B2DA7 /* CaptionViewController.swift */,
 			);
 			name = order;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				51C4097E1F0D79D600704A5D /* EditContactInfoViewController.swift in Sources */,
 				51D93BD41F0A057D00C057A7 /* PhotoCollectionViewCell.swift in Sources */,
 				51D93BF61F0C289400C057A7 /* AddNewContactViewController.swift in Sources */,
+				5162D4331F375D63000B2DA7 /* CaptionViewController.swift in Sources */,
 				51C4097A1F0D672E00704A5D /* EditContactViewController.swift in Sources */,
 				5162D42F1F34527E000B2DA7 /* SelectRecipientsViewController.swift in Sources */,
 				51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */,

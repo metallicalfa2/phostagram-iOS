@@ -21,41 +21,41 @@ class AddressViewController: UIViewController{
 	var addressIndex: Int?
 	
 	@IBAction func cancelPressed(_ sender: Any) {
+		dismissViewController()
 	}
 	
 	@IBAction func donePressed(_ sender: Any) {
 		print("done pressed on addnewAddress \n")
-		print(contact)
 		
-		guard let lineOne = self.lineOne.text else{
+		guard let lineOne = self.lineOne.text, lineOne != "" else{
 			print("enter name")
 			return
 		}
-		guard let state = self.state.text else{
+		guard let state = self.state.text, state != "" else{
 			return
 		}
-		guard let city = self.city.text else{
+		guard let city = self.city.text, city != "" else{
 			return
 		}
-		guard let pincode = self.pincode.text else{
+		guard let pincode = self.pincode.text, pincode != "" else{
 			return
 		}
+		
 		if(contact != nil){
-			//print(contact?.contactsId!)
-			//print((contact?.addresses?[addressIndex!].userAddressId)!)
-			
 			net.updateAddress(["contactId":(contact?.contactsId)!,"contactAddressId":(contact?.addresses?[addressIndex!].userAddressId)!,"address":["address_line":lineOne, "state":state, "city":city, "pincode":pincode]])
-			
 		}else{
 			net.addAddress(["contactId":contactId!,"address":["address_line":lineOne, "state":state, "city":city, "pincode":pincode]])
 		}
+		
 	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		imageView.roundCorners()
+		self.hideKeyboard()
 		loadInitialData()
+		
 		let notificationNme = NSNotification.Name("newAddressAdded")
-		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissController), name: notificationNme, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissViewController), name: notificationNme, object: nil)
 	}
 	
 	func loadInitialData(){
@@ -71,8 +71,4 @@ class AddressViewController: UIViewController{
 		}
 	}
 	
-	
-	func dismissController(){
-		hero_dismissViewController()
-	}
 }

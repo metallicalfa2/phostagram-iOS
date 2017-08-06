@@ -24,10 +24,8 @@ class EditContactViewController:UIViewController{
 		navigationController?.popToRootViewController(animated: true)
 	}
 	
-	@IBAction func addAddressPressed(_ sender: Any) {
-	}
-	
 	@IBAction func editPressed(_ sender: Any) {
+		print("editPressed \n")
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editContactInfo") as? EditContactInfoViewController)!
 		next.contact = contactsModel.userContacts[contactsIndex]
 		DispatchQueue.main.async {
@@ -40,7 +38,8 @@ class EditContactViewController:UIViewController{
 		next.contactId = contactsModel.userContacts[contactsIndex].contactsId
 		
 		DispatchQueue.main.async {
-			self.present(next, animated: true, completion: nil)
+			//self.present(next, animated: true, completion: nil)
+			self.navigationController?.pushViewController(next, animated: true)
 		}
 	}
 	
@@ -62,7 +61,7 @@ class EditContactViewController:UIViewController{
 	}
 	
 	func fetchInitialDetails(){
-		print("viewWillAppear now \n")
+		print("viewWillAppear now , contacts index is \(contactsIndex) \n")
 		let name = contactsModel.userContacts[contactsIndex].name!
 		self.contactName.text = name
 		self.contactSex.text = contactsModel.userContacts[contactsIndex].sex
@@ -73,7 +72,7 @@ class EditContactViewController:UIViewController{
 	}
 	
 	func dismissController(){
-		hero_dismissViewController()
+		dismissViewController()
 	}
 	
 	
@@ -86,6 +85,17 @@ class EditContactViewController:UIViewController{
 		}
 	}
 	
+	// MARK: - Navigation
+	
+	override func prepare( for segue: UIStoryboardSegue, sender: Any?) {
+		print("segue from selected row index")
+		if segue.identifier == "contactToEditContact", let destination = segue.destination as? EditContactInfoViewController {
+			destination.contact = contactsModel.userContacts[contactsIndex]
+		}
+		
+		
+	}
+
 }
 
 extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
@@ -113,6 +123,8 @@ extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
 		cell.delete.addTarget(self, action: #selector(deleteButtonClicked), for: .touchUpInside)
 		cell.edit.tag = indexPath.row
 		cell.delete.tag = indexPath.row
+		
+		
 		return cell
 	}
 
@@ -146,9 +158,9 @@ extension EditContactViewController:UITableViewDelegate,UITableViewDataSource{
 		let tag = button?.tag
 		//print(tag)
 		
-		if let addressId = contactsModel.userContacts[contactsIndex].addresses?[tag!].userAddressId , let tag = button?.tag {
+		if let addressId = contactsModel.userContacts[contactsIndex].addresses?[tag!].userAddressId{
 			print(addressId)
-			net.deleteAddress( ["contactId": String(tag) ,"contactAddressId":addressId ] )
+			net.deleteAddress( ["contactId": contactsModel.userContacts[contactsIndex].contactsId ?? ""  ,"contactAddressId":addressId ] )
 		}
 		
 		

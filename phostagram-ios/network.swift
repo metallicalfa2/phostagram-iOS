@@ -236,7 +236,7 @@ class network:UIViewController{
 		Alamofire.request(deleteAddressString as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in deleting address: \(response.result)")                         // response serialization result
+			print("Result in deleting address: \(response.result)")     // response serialization result
 			if let json = response.result.value {
 				let res = JSON(json)
 				print(res)

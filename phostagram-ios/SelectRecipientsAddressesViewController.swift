@@ -21,9 +21,12 @@ class SelectRecipientsAddressesViewController: UIViewController {
 	@IBOutlet weak var contactInitial: UILabel!
 	
 	@IBAction func backPressed(_ sender: Any) {
-		self.dismissController()
+		self.dismissViewController()
 	}
 	
+	@IBAction func done(_ sender: Any) {
+		dismissViewController()
+	}
 	@IBAction func addAddressPressed(_ sender: Any) {
 	}
 	
@@ -40,8 +43,10 @@ class SelectRecipientsAddressesViewController: UIViewController {
 		next.contactId = contactsModel.userContacts[contactsIndex].contactsId
 		
 		DispatchQueue.main.async {
-			self.present(next, animated: true, completion: nil)
+			//self.present(next, animated: true, completion: nil)
+			self.navigationController?.pushViewController(next, animated: true)
 		}
+		
 	}
 	
 	@IBAction func deletePressed(_ sender: Any) {
@@ -54,7 +59,7 @@ class SelectRecipientsAddressesViewController: UIViewController {
 		self.tableView.translatesAutoresizingMaskIntoConstraints = false
 		
 		let notificationNme = NSNotification.Name("contactUpdated")
-		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissController), name: notificationNme, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(dismissViewController), name: notificationNme, object: nil)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -71,11 +76,6 @@ class SelectRecipientsAddressesViewController: UIViewController {
 		self.contactID = contactsModel.userContacts[contactsIndex].contactsId
 		self.reloadTableData()
 	}
-	
-	func dismissController(){
-		hero_dismissViewController()
-	}
-	
 	
 	func reloadTableData(){
 		print("reloading data")

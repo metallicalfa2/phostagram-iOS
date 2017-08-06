@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hero
 
 class ContactsViewController:UIViewController, UITableViewDelegate, UITableViewDataSource{
 	
@@ -28,7 +27,6 @@ class ContactsViewController:UIViewController, UITableViewDelegate, UITableViewD
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
-		navigationController?.isHeroEnabled = true
 		self.tableView.reloadData()
 		
 		if(contactsModel.userContacts.count==0){
@@ -37,9 +35,11 @@ class ContactsViewController:UIViewController, UITableViewDelegate, UITableViewD
 	}
 	
 	@IBAction func addNewContactPressed(_ sender: Any) {
+		print("addNewContactPressed")
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newContact") as? AddNewContactController)!
 		DispatchQueue.main.async {
-			self.present(next, animated: true, completion: nil)
+			//self.present(next, animated: true, completion: nil)
+			self.navigationController?.pushViewController(next, animated: true)
 		}
 	}
 	
@@ -52,6 +52,21 @@ class ContactsViewController:UIViewController, UITableViewDelegate, UITableViewD
 		}
 	}
 	
+	// MARK: - Navigation
+	
+	override func prepare( for segue: UIStoryboardSegue, sender: Any?) {
+		print("segue from selected row index")
+		if segue.identifier == "contactToAddress", let destination = segue.destination as? EditContactViewController {
+			if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+				destination.contactsIndex = indexPath.row
+				print(indexPath.row)
+			}
+			
+		}
+		
+		
+	}
+
 	
 	
 }
@@ -83,12 +98,7 @@ extension ContactsViewController: UITableViewDataSourcePrefetching{
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editContact") as? EditContactViewController)!
-		
-		next.contactsIndex = indexPath.row
-		DispatchQueue.main.async {
-			self.present(next, animated: true, completion: nil)
-		}
+	
 	}
 	
 	// This methods will be used for smooth scrolling.
@@ -98,24 +108,6 @@ extension ContactsViewController: UITableViewDataSourcePrefetching{
 	
 	func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
 		print("cancelPrefetchingForRowsAt \(indexPaths)")
-	}
-}
-
-extension ContactsViewController: HeroViewControllerDelegate {
-	func heroWillStartAnimatingTo(viewController: UIViewController) {
-		if let _ = viewController as? EditContactViewController {
-			tableView.heroModifiers = [.ignoreSubviewModifiers]
-		}  else {
-			tableView.heroModifiers = [.cascade]
-		}
-	}
-	func heroWillStartAnimatingFrom(viewController: UIViewController) {
-		if let _ = viewController as? EditContactViewController {
-			tableView.heroModifiers = [.ignoreSubviewModifiers]
-		} else {
-			tableView.heroModifiers = [.cascade]
-		}
-		
 	}
 }
 

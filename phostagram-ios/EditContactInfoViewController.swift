@@ -21,20 +21,21 @@ class EditContactInfoViewController:UIViewController{
 	
 	@IBAction func backPressed(_ sender: Any) {
 		navigationController?.popViewController(animated: true)
+		//self.dismissController()
 	}
 	@IBAction func donePressed(_ sender: Any) {
 	
-		guard let name = self.name.text else{
+		guard let name = self.name.text , name != "" else{
 			print("enter name")
 			return
 		}
-		guard let gender = self.gender.text else{
+		guard let gender = self.gender.text , gender != "" else{
 			return
 		}
-		guard let ageGroup = self.ageGroup.text else{
+		guard let ageGroup = self.ageGroup.text , ageGroup != "" else{
 			return
 		}
-		guard let phoneNumber = self.phoneNumber.text else{
+		guard let phoneNumber = self.phoneNumber.text , phoneNumber != "" else{
 			return
 		}
 		//print(contact?.contactsId!)
@@ -44,25 +45,22 @@ class EditContactInfoViewController:UIViewController{
 		}
 	}
 	
-	override func  viewDidLoad(){
+	override func viewDidLoad(){
 		super.viewDidLoad()
 		imageView.roundCorners()
 		
 		let notificationNme = NSNotification.Name("contactUpdated")
-		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissController), name: notificationNme, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissViewController), name: notificationNme, object: nil)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		fetchInitialDetails()
 	}
 	func fetchInitialDetails(){
-		
+		print("fetch initial details called")
 		self.name.text = contact?.name
 		self.gender.text = contact?.sex
 		self.ageGroup.text  = contact?.dob
 		self.phoneNumber.text = contact?.phoneNumber
-	}
-	func dismissController(){
-		hero_dismissViewController()
 	}
 }

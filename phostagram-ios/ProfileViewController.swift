@@ -46,7 +46,6 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource {
 		setupDatasource()
 		setupInitialLayout()
 		fetchDetails()
-		collectionView.heroModifiers = [.cascade]
 		self.profileImg.roundCorners()
     }
 	

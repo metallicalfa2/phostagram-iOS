@@ -31,11 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		navigationBarAppearace.tintColor = UIColor(red: 248/255, green: 246/255, blue: 249/255, alpha: 1)
 		navigationBarAppearace.barTintColor = UIColor(red: 248/255, green: 246/255, blue: 249/255, alpha: 1)
-
 		navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 90/255, green: 36/255, blue: 55/255, alpha: 1)]
 
-
 		return true
+		
 	}
 
 	func applicationWillResignActive(_ application: UIApplication) {

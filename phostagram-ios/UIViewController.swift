@@ -17,8 +17,13 @@ extension UIViewController{
 		
 		view.addGestureRecognizer(tap)
 	}
+	
 	func dismissKeyboard()
 	{
 		view.endEditing(true)
+	}
+	
+	func dismissViewController(){
+		navigationController?.popViewController(animated: true)
 	}
 }

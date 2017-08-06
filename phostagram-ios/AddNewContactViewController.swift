@@ -23,35 +23,36 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 	@IBOutlet weak var city: UITextField!
 	
 	@IBAction func cancelPressed(_ sender: Any) {
-	//	self.dismiss(animated: true, completion: nil)
+		print("cancelled on addNewContactPressed")
+		dismissViewController()
 	}
 	
 	@IBAction func donePressed(_ sender: Any) {
-		//print(self.name.text)
+		print("done in add new contact pressed")
 		
-		guard let name = self.name.text else{
+		guard let name = self.name.text, name != "" else{
 			print("enter name")
 			return
 		}
-		guard let gender = self.gender.text else{
+		guard let gender = self.gender.text, gender != "" else{
 			return
 		}
-		guard let ageGroup = self.ageGroup.text else{
+		guard let ageGroup = self.ageGroup.text, ageGroup != "" else{
 			return
 		}
-		guard let phone = self.phone.text else{
+		guard let phone = self.phone.text, phone != "" else{
 			return
 		}
-		guard let address = self.address.text else{
+		guard let address = self.address.text, address != "" else{
 			return
 		}
-		guard let pincode = self.pincode.text else{
+		guard let pincode = self.pincode.text, pincode != "" else{
 			return
 		}
-		guard let state = self.state.text else{
+		guard let state = self.state.text, state != "" else{
 			return
 		}
-		guard let city = self.city.text else{
+		guard let city = self.city.text, city != "" else{
 			return
 		}
 		
@@ -61,7 +62,6 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.navigationController?.navigationBar.isHidden = true
 		imageView.roundCorners()
 		//picker.delegate = self
 		self.hideKeyboard()
@@ -76,12 +76,7 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 		self.city.delegate = self
 
 		let notificationNme = NSNotification.Name("newContactAdded")
-		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissController), name: notificationNme, object: nil)
-	}
-	
-	func dismissController(){
-		hero_dismissViewController()
-
+		NotificationCenter.default.addObserver(self, selector: #selector(self.dismissViewController), name: notificationNme, object: nil)
 	}
 	
 	

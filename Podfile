@@ -6,7 +6,6 @@ target 'phostagram-ios' do
   use_frameworks!
 
   # Pods for phostagram-ios
-  pod 'Hero'
   pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'IQKeyboardManager'
