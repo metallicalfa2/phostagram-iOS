@@ -18,6 +18,8 @@ class network:UIViewController{
 	
 	let contactsController = ContactsViewController()
 	static var addressIds : [String] = []
+	static var userAddressIds : [String] = []
+	static var contactIds : [String] = []   
 	
 	let unavailable = "Unavailable"
 	let loginParameters: Parameters = ["phoneNumber": "9111100000", "password": "phostagram"]

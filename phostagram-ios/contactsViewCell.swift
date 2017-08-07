@@ -15,6 +15,7 @@ class ContactViewCell: UITableViewCell{
 	@IBOutlet weak var name: UILabel!
 	@IBOutlet weak var contactsView: contactsImage!
 	@IBOutlet weak var contactsLabel: UILabel!
+	@IBOutlet weak var tickImage: UIImageView!
 	
 }
 

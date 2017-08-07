@@ -29,6 +29,11 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		super.viewDidLoad()
 		setupDatasource()
 		setupInitialLayout()
+		self.newCardPressed(self)
+	}
+	
+	@IBAction func newCardPressed(_ sender: Any) {
+		
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

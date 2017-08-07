@@ -27,9 +27,6 @@ class SelectRecipientsAddressesViewController: UIViewController {
 	@IBAction func done(_ sender: Any) {
 		dismissViewController()
 	}
-	@IBAction func addAddressPressed(_ sender: Any) {
-	}
-	
 	@IBAction func editPressed(_ sender: Any) {
 		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editContactInfo") as? EditContactInfoViewController)!
 		next.contact = contactsModel.userContacts[contactsIndex]
@@ -168,13 +165,7 @@ extension SelectRecipientsAddressesViewController:UITableViewDelegate,UITableVie
 			net.deleteAddress( ["contactId": String(tag) ,"contactAddressId":addressId ] )
 		}
 		
-		
 	}
-	
-	
-	
-	
-	
 	
 	
 }

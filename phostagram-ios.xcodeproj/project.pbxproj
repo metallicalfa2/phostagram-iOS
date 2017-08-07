@@ -12,6 +12,10 @@
 		5162D42F1F34527E000B2DA7 /* SelectRecipientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D42E1F34527E000B2DA7 /* SelectRecipientsViewController.swift */; };
 		5162D4311F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4301F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift */; };
 		5162D4331F375D63000B2DA7 /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4321F375D63000B2DA7 /* CaptionViewController.swift */; };
+		5162D4351F37A0A4000B2DA7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4341F37A0A4000B2DA7 /* UIColor.swift */; };
+		5162D4371F37AA2F000B2DA7 /* SendToYourselfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4361F37AA2F000B2DA7 /* SendToYourselfViewController.swift */; };
+		5162D4391F3873B3000B2DA7 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4381F3873B3000B2DA7 /* PreviewViewController.swift */; };
+		5162D43B1F3873FF000B2DA7 /* CALayer+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D43A1F3873FF000B2DA7 /* CALayer+extention.swift */; };
 		51802B061F1508710010EA5A /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B051F1508710010EA5A /* network.swift */; };
 		51802B081F1508BF0010EA5A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B071F1508BF0010EA5A /* Alamofire.framework */; };
 		51802B0A1F1508C20010EA5A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B091F1508C20010EA5A /* SwiftyJSON.framework */; };
@@ -64,6 +68,10 @@
 		5162D42E1F34527E000B2DA7 /* SelectRecipientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRecipientsViewController.swift; sourceTree = "<group>"; };
 		5162D4301F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRecipientsAddressesViewController.swift; sourceTree = "<group>"; };
 		5162D4321F375D63000B2DA7 /* CaptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
+		5162D4341F37A0A4000B2DA7 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		5162D4361F37AA2F000B2DA7 /* SendToYourselfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendToYourselfViewController.swift; sourceTree = "<group>"; };
+		5162D4381F3873B3000B2DA7 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		5162D43A1F3873FF000B2DA7 /* CALayer+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+extention.swift"; sourceTree = "<group>"; };
 		51802B051F1508710010EA5A /* network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		51802B071F1508BF0010EA5A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		51802B091F1508C20010EA5A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -129,6 +137,8 @@
 				5162D42E1F34527E000B2DA7 /* SelectRecipientsViewController.swift */,
 				5162D4301F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift */,
 				5162D4321F375D63000B2DA7 /* CaptionViewController.swift */,
+				5162D4361F37AA2F000B2DA7 /* SendToYourselfViewController.swift */,
+				5162D4381F3873B3000B2DA7 /* PreviewViewController.swift */,
 			);
 			name = order;
 			sourceTree = "<group>";
@@ -242,6 +252,8 @@
 				51D93BDF1F0ADD9700C057A7 /* UIImageViewExtention.swift */,
 				51D93BE31F0B86FB00C057A7 /* UIViewExtention.swift */,
 				51802B171F179AEA0010EA5A /* UIViewController.swift */,
+				5162D4341F37A0A4000B2DA7 /* UIColor.swift */,
+				5162D43A1F3873FF000B2DA7 /* CALayer+extention.swift */,
 			);
 			name = extention;
 			sourceTree = "<group>";
@@ -427,6 +439,7 @@
 				51D93BF61F0C289400C057A7 /* AddNewContactViewController.swift in Sources */,
 				5162D4331F375D63000B2DA7 /* CaptionViewController.swift in Sources */,
 				51C4097A1F0D672E00704A5D /* EditContactViewController.swift in Sources */,
+				5162D43B1F3873FF000B2DA7 /* CALayer+extention.swift in Sources */,
 				5162D42F1F34527E000B2DA7 /* SelectRecipientsViewController.swift in Sources */,
 				51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */,
 				51C688DA1F0527B400518D56 /* AppDelegate.swift in Sources */,
@@ -438,13 +451,16 @@
 				51802B061F1508710010EA5A /* network.swift in Sources */,
 				51802B151F16483E0010EA5A /* contactsModel.swift in Sources */,
 				51D93BEC1F0BB0D000C057A7 /* textFieldViewController.swift in Sources */,
+				5162D4351F37A0A4000B2DA7 /* UIColor.swift in Sources */,
 				51802B0F1F15605E0010EA5A /* addressModel.swift in Sources */,
 				51802B0D1F1517400010EA5A /* profileModel.swift in Sources */,
 				51D93BF41F0BF7D100C057A7 /* contactsViewCell.swift in Sources */,
+				5162D4391F3873B3000B2DA7 /* PreviewViewController.swift in Sources */,
 				51C4097C1F0D686900704A5D /* AddressViewCell.swift in Sources */,
 				51D93BD61F0A25B800C057A7 /* PhotoListflowViewLayout.swift in Sources */,
 				51D93BE01F0ADD9700C057A7 /* UIImageViewExtention.swift in Sources */,
 				51D93BE91F0BA39100C057A7 /* getStartedViewController.swift in Sources */,
+				5162D4371F37AA2F000B2DA7 /* SendToYourselfViewController.swift in Sources */,
 				51D93BF11F0BCCA500C057A7 /* ContactsViewController.swift in Sources */,
 				51802B181F179AEA0010EA5A /* UIViewController.swift in Sources */,
 				51033C041F2AB69700B03206 /* AddressViewController.swift in Sources */,

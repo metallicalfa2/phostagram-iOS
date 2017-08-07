@@ -12,9 +12,11 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var addressesSelectedText: UILabel!
+	@IBOutlet weak var sendToYourselfImag: UIImageView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		sendToYourselfImag.roundCorners()
 		self.tableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha:1)
 		self.tableView.separatorStyle = .none
 		self.tableView.delegate = self
@@ -22,8 +24,12 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 		self.tableView.translatesAutoresizingMaskIntoConstraints = false
 		self.tableView.backgroundColor = UIColor.white
 		
-		let notificationNme = NSNotification.Name("reloadTableData")
-		NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTableData), name: notificationNme, object: nil)
+		let notificationName = NSNotification.Name("reloadTableData")
+		NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTableData), name: notificationName, object: nil)
+	}
+	
+	@IBAction func sendToYourselfButton(_ sender: Any) {
+		
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -89,7 +95,9 @@ extension SelectRecipientsViewController: UITableViewDataSourcePrefetching{
 		//cell.heroModifiers = [.fade, .translate(x:-100)]
 		cell.selectionStyle = .none
 		let name = contactsModel.userContacts[indexPath.row].name!
-		cell.contactsLabel.text = String(name[name.startIndex]).uppercased()
+		//cell.contactsLabel.text = String(name[name.startIndex]).uppercased()
+		cell.tickImage.image = #imageLiteral(resourceName: "tick")
+		cell.contactsView.backgroundColor = UIColor(rgb: 0xD79E93)
 		cell.name.text = name
 		cell.contactId = contactsModel.userContacts[indexPath.row].contactsId
 		return cell
