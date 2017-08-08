@@ -14,7 +14,7 @@ protocol contactsDelegate {
 	func reloadData()
 }
 
-class network:UIViewController{
+class network{
 	
 	let contactsController = ContactsViewController()
 	static var addressIds : [String] = []

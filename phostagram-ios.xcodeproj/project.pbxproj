@@ -16,6 +16,7 @@
 		5162D4371F37AA2F000B2DA7 /* SendToYourselfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4361F37AA2F000B2DA7 /* SendToYourselfViewController.swift */; };
 		5162D4391F3873B3000B2DA7 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4381F3873B3000B2DA7 /* PreviewViewController.swift */; };
 		5162D43B1F3873FF000B2DA7 /* CALayer+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D43A1F3873FF000B2DA7 /* CALayer+extention.swift */; };
+		5162D43D1F389C3D000B2DA7 /* order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D43C1F389C3C000B2DA7 /* order.swift */; };
 		51802B061F1508710010EA5A /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B051F1508710010EA5A /* network.swift */; };
 		51802B081F1508BF0010EA5A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B071F1508BF0010EA5A /* Alamofire.framework */; };
 		51802B0A1F1508C20010EA5A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51802B091F1508C20010EA5A /* SwiftyJSON.framework */; };
@@ -72,6 +73,7 @@
 		5162D4361F37AA2F000B2DA7 /* SendToYourselfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendToYourselfViewController.swift; sourceTree = "<group>"; };
 		5162D4381F3873B3000B2DA7 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		5162D43A1F3873FF000B2DA7 /* CALayer+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+extention.swift"; sourceTree = "<group>"; };
+		5162D43C1F389C3C000B2DA7 /* order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = order.swift; sourceTree = "<group>"; };
 		51802B051F1508710010EA5A /* network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		51802B071F1508BF0010EA5A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		51802B091F1508C20010EA5A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/phostagram-ios-bpugdxqkwagonpgymllhgykeoyep/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				51802B051F1508710010EA5A /* network.swift */,
+				5162D43C1F389C3C000B2DA7 /* order.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				5162D42F1F34527E000B2DA7 /* SelectRecipientsViewController.swift in Sources */,
 				51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */,
 				51C688DA1F0527B400518D56 /* AppDelegate.swift in Sources */,
+				5162D43D1F389C3D000B2DA7 /* order.swift in Sources */,
 				51D93BE21F0B777D00C057A7 /* GradientView.swift in Sources */,
 				5162D4311F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift in Sources */,
 				51D93BE61F0B88F900C057A7 /* getStartedButtonView.swift in Sources */,
