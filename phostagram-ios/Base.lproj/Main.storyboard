@@ -3917,6 +3917,30 @@ nagpur,India - 440010</string>
             </objects>
             <point key="canvasLocation" x="6266.25" y="525"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Sjg-pZ-k3f">
+            <objects>
+                <viewController id="h1P-w7-Ejh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="74L-a0-N58"/>
+                        <viewControllerLayoutGuide type="bottom" id="O62-KE-awj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yc6-WB-ZXu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSk-EM-ZUe">
+                                <rect key="frame" x="40" y="121" width="179" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42745098040000001" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nn1-dk-8yO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7170" y="525"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="a5u-EP-5Ir">
             <objects>

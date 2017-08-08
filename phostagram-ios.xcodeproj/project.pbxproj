@@ -592,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 100BAD7972A180EF0B25A2BC /* Pods-phostagram-ios.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FS9MJBEMW5;
 				INFOPLIST_FILE = "phostagram-ios/Info.plist";
@@ -606,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0132AF52DBF8888BD8050792 /* Pods-phostagram-ios.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FS9MJBEMW5;
 				INFOPLIST_FILE = "phostagram-ios/Info.plist";
