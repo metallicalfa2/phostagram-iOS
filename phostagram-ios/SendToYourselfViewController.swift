@@ -85,13 +85,13 @@ extension SendToYourselfViewController:UITableViewDelegate,UITableViewDataSource
 		//print(indexPath)
 		if(cell?.radioImage.image == #imageLiteral(resourceName: "radio")){
 			cell?.radioImage.image = #imageLiteral(resourceName: "radio-selected")
-			network.addressIds.append((cell?.addressId)!)
+			order.addressIds.append((cell?.addressId)!)
 		}else{
 			cell?.radioImage.image = #imageLiteral(resourceName: "radio")
-			network.addressIds = network.addressIds.filter{ $0 != (cell?.addressId)! }
+			order.addressIds = order.addressIds.filter{ $0 != (cell?.addressId)! }
 		}
 		
-		print(network.addressIds)
+		print(order.addressIds)
 	}
 	
 	func editButtonClicked(_ sender:AnyObject){

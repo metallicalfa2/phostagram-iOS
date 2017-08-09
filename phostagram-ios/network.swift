@@ -40,7 +40,7 @@ class network{
 			print("Result in login: \(response.result)")                         // response serialization result
 			
 			if let json = response.result.value {
-				//print("JSON: \(json)") // serialized json response
+				print("JSON: \(json)") // serialized json response
 			}
 			self.getProfile()
 			self.getContacts()

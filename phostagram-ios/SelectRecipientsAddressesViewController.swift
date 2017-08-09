@@ -13,6 +13,7 @@ class SelectRecipientsAddressesViewController: UIViewController {
 	var contactsIndex : Int = 0
 	let net = network()
 	var contactID:String?
+	var currentContactsCount : Int = 0
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var contactName: UILabel!
@@ -51,6 +52,7 @@ class SelectRecipientsAddressesViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
+		self.currentContactsCount = order.contactIds.count
 		self.tableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
 		self.tableView.separatorStyle = .none
 		self.tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -127,17 +129,22 @@ extension SelectRecipientsAddressesViewController:UITableViewDelegate,UITableVie
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let cell = tableView.cellForRow(at: indexPath) as? AddressViewCell
-		//print(cell ?? "cell")
-		//print(indexPath)
+		
 		if(cell?.radioImage.image == #imageLiteral(resourceName: "radio")){
 			cell?.radioImage.image = #imageLiteral(resourceName: "radio-selected")
-			network.addressIds.append((cell?.addressId)!)
+			order.addressIds.append((cell?.addressId)!)
 		}else{
 			cell?.radioImage.image = #imageLiteral(resourceName: "radio")
-			network.addressIds = network.addressIds.filter{ $0 != (cell?.addressId)! }
+			order.addressIds = order.addressIds.filter{ $0 != (cell?.addressId)! }
 		}
 		
-		print(network.addressIds)
+		if order.contactIds.count == currentContactsCount{
+			order.contactIds.append(contactID!)
+		}else{
+			order.contactIds = order.contactIds.filter { $0 != contactID! }
+		}
+		
+		print(order.addressIds)
 	}
 	
 	func editButtonClicked(_ sender:AnyObject){

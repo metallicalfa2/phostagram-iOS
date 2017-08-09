@@ -34,7 +34,7 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 	
 	override func viewWillAppear(_ animated: Bool) {
 		self.tableView.reloadData()
-		self.addressesSelectedText.text = String(network.addressIds.count) + " addresses selected"
+		self.addressesSelectedText.text = String(order.addressIds.count) + " addresses selected"
 		
 		if(contactsModel.userContacts.count==0){
 			self.tableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
