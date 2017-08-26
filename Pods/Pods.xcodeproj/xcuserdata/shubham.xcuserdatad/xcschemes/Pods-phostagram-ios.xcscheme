@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "466FEB0ECF7D243A3B36540B3F96D052"
+               BlueprintIdentifier = "6966CA4459F252142D24A26528B86D59"
                BuildableName = "Pods_phostagram_ios.framework"
                BlueprintName = "Pods-phostagram-ios"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "466FEB0ECF7D243A3B36540B3F96D052"
+            BlueprintIdentifier = "6966CA4459F252142D24A26528B86D59"
             BuildableName = "Pods_phostagram_ios.framework"
             BlueprintName = "Pods-phostagram-ios"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,21 +1,24 @@
 PODS:
   - Alamofire (4.5.0)
+  - Fusuma (1.1.3)
   - IQKeyboardManager (4.0.10)
   - ScalingCarousel (1.0.3)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
+  - Fusuma
   - IQKeyboardManager
   - ScalingCarousel
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Fusuma: ba5cd0900038505a8593b4a49348a56a762d3f50
   IQKeyboardManager: 593ee99b88381f4b9ccb22bd680f22606351bd41
   ScalingCarousel: c1ce9b7f97c423614773328b762b5b723ed9ff7e
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: f9ed801fce1ab089dceae3ad81a2fa5c3f44e754
+PODFILE CHECKSUM: 649a73aa9c3d8215ae3a843bbf51eafa119506d2
 
 COCOAPODS: 1.1.1

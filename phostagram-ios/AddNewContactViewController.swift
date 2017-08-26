@@ -56,7 +56,7 @@ class AddNewContactController: UIViewController,UIImagePickerControllerDelegate,
 			return
 		}
 		
-		net.newContact(["name":name, "sex":gender, "age_group":ageGroup, "phoneNumber":phone, "addresses":[["address_line":address,"state":state,"city":city,"pincode":pincode]] ])
+		net.newContact(["name":name, "sex":gender, "age_group":ageGroup,"dob":"01/01/1996", "phoneNumber":phone, "addresses":[["address_line":address,"state":state,"city":city,"pincode":pincode]] ])
 		
 	}
 	

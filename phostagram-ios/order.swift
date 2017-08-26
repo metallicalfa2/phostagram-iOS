@@ -16,13 +16,13 @@ class order{
 	static var userAddressIds : [String] = []
 	static var contactIds : [String] = []
 	
-	let orderDraftString = "http://13.126.4.227:3000/orders/draft/new"
-	let orderDraftAddPhoto = "http://13.126.4.227:3000//orders/draft/addPhoto"
+	let orderDraftString = "http://52.91.31.125:3000/orders/draft/new"
+	let orderDraftAddPhoto = "http://52.91.31.125:3000/orders/draft/addPhoto"
 	
 	func newOrderDraft(){
 		Alamofire.request(orderDraftString as String).responseJSON { response in
 			print("Request: \(String(describing: response.request))")   // original url reqest
-			print("Response: \(String(describing: response.response))") // http url response
+			print("Response: \(String(describing: response.response))") // h	ttp url response
 			print("Result in new draft: \(response.result)")   // response serialization result
 			
 			if let json = response.result.value {
@@ -48,4 +48,6 @@ class order{
 			
 		}
 	}
+	
+	
 }

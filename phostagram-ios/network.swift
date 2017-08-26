@@ -22,15 +22,15 @@ class network{
 	let unavailable = "Unavailable"
 	let loginParameters: Parameters = ["phoneNumber": "9111100000", "password": "phostagram"]
 
-	let loginURL:String = "http://13.126.4.227:3000/login"
-	let contactsURL:String = "http://13.126.4.227:3000/contacts"
-	let contactsAddURL:String = "http://13.126.4.227:3000/contacts/add"
-	let contactsUpdateURL:String = "http://13.126.4.227:3000/contacts/update"
-	let addAddress:String = "http://13.126.4.227:3000/contacts/address/add"
-	let updateAddress:String = "http://13.126.4.227:3000/contacts/address/update"
-	let deleteAddressString:String = "http://13.126.4.227:3000/contacts/address/remove"
-	let profileURL:String = "http://13.126.4.227:3000/profile"
-	let contactsDeleteURL:String = "http://13.126.4.227:3000/contacts/remove"
+	let loginURL:String = "http://52.91.31.125:3000/login"
+	let contactsURL:String = "http://52.91.31.125:3000/contacts"
+	let contactsAddURL:String = "http://52.91.31.125:3000/contacts/add"
+	let contactsUpdateURL:String = "http://52.91.31.125:3000/contacts/update"
+	let addAddress:String = "http://52.91.31.125:3000/contacts/address/add"
+	let updateAddress:String = "http://52.91.31.125:3000/contacts/address/update"
+	let deleteAddressString:String = "http://52.91.31.125:3000/contacts/address/remove"
+	let profileURL:String = "http://52.91.31.125:3000/profile"
+	let contactsDeleteURL:String = "http://52.91.31.125:3000/contacts/remove"
 	
 	func login(){
 
@@ -83,7 +83,7 @@ class network{
 
 		var addresses : [addressModel] = []
 		for (_,value) in profile["user"]["userAddresses"]{
-			addresses.append(addressModel(value["line1"].string! ,pincode:Int(value["pincode"].string!)!,state:value["state"].string! ,city: value["city"].string!, userAddressId: value["userAddressId"].string!))
+			addresses.append(addressModel(value["address_line"].string! ,pincode:Int(value["pincode"].string!)!,state:value["state"].string! ,city: value["city"].string!, userAddressId: value["userAddressId"].string!))
 		}
 		
 		profileModel.sharedInstance.setValues(profile["user"]["name"].string ?? self.unavailable,
@@ -99,7 +99,7 @@ class network{
 	}
 	
 	func createSingletonContacts(_ contacts:JSON, withCompletion completion:() -> Void){
-		
+		print(contacts)
 		let contacts = contacts["contacts"].map{ return $1 }
 		contactsModel.userContacts = []
 		
@@ -140,7 +140,7 @@ class network{
 		Alamofire.request(contactsAddURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in creating a neew contact: \(response.result.value)")                         // response serialization result
+			print("Result in creating a new contact: \(response.result.value)")                         // response serialization result
 			
 			if let json = response.result.value {
 				let res = JSON(json)
@@ -241,7 +241,8 @@ class network{
 				let res = JSON(json)
 				print(res)
 				if( res["status"] == "success"){
-					self.getContacts()
+					let contactDeleted = NSNotification.Name("contactDeleted")
+					NotificationCenter.default.post(name: contactDeleted, object: nil)
 				}
 				
 			}

@@ -10,4 +10,5 @@ target 'phostagram-ios' do
   pod 'Alamofire'
   pod 'IQKeyboardManager'
   pod 'ScalingCarousel'
+  pod 'Fusuma'
 end

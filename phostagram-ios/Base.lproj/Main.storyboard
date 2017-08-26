@@ -2021,8 +2021,7 @@ nagpur,India - 440010</string>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l6A-qc-DiH">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="newCardPressed:" destination="AOC-SV-Div" id="Y0F-SO-tcA"/>
-                                <segue destination="uQ4-ds-dOn" kind="show" id="blw-du-aTs"/>
+                                <action selector="newOrder:" destination="AOC-SV-Div" id="KYq-ht-hem"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
