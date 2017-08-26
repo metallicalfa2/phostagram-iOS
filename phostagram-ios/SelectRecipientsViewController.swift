@@ -13,6 +13,7 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var addressesSelectedText: UILabel!
 	@IBOutlet weak var sendToYourselfImag: UIImageView!
+	var orderImage: UIImage?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -65,6 +66,10 @@ class SelectRecipientsViewController: UIViewController , UITableViewDelegate, UI
 				destination.contactsIndex = indexPath.row
 			}
 			
+		}
+		
+		if segue.identifier == "recipientsToCaption", let destination = segue.destination as? CaptionViewController{
+			destination.image = orderImage
 		}
 		
 		

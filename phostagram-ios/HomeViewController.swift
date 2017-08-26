@@ -161,6 +161,12 @@ extension HomeViewController{
 		self.dismiss(animated: true, completion: nil)
 		//imageVIew.image = image
 		
+		let next = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectRecipients") as? SelectRecipientsViewController)!
+		
+		next.orderImage = image
+		DispatchQueue.main.async {
+			self.navigationController?.pushViewController(next, animated: true)
+		}
 		
 	}
 	
@@ -168,9 +174,6 @@ extension HomeViewController{
 	{
 		
 	}
-	
-	
-	
 	
 	// MARK: FusumaDelegate Protocol
 	func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
@@ -189,7 +192,6 @@ extension HomeViewController{
 			
 			print("Image selected")
 		}
-		//print(image)
 		
 		DispatchQueue.main.async {
 			AdobeImageEditorCustomization.setToolOrder([
@@ -202,11 +204,8 @@ extension HomeViewController{
 			
 			let adobeViewCtr = AdobeUXImageEditorViewController(image: image)
 			adobeViewCtr.delegate = self as?  AdobeUXImageEditorViewControllerDelegate
-			self.present(adobeViewCtr, animated: true) { () -> Void in
-			}
+			self.navigationController?.pushViewController(adobeViewCtr, animated: true)
 		}
-		
-		//self.imageVIew.image = image
 	}
 	
 	func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {

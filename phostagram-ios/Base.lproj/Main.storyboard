@@ -3351,7 +3351,7 @@ nagpur,India - 440010</string>
                         <barButtonItem key="rightBarButtonItem" title="next" id="fHs-ug-cYW">
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="b5K-1I-vvW" kind="show" id="8o1-xf-Z2m"/>
+                                <segue destination="b5K-1I-vvW" kind="show" identifier="recipientsToCaption" id="8o1-xf-Z2m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -3726,12 +3726,15 @@ nagpur,India - 440010</string>
                             <color key="tintColor" red="0.84313725490000002" green="0.61960784310000006" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="nextButtonPressed:" destination="b5K-1I-vvW" id="cdj-BV-7fr"/>
-                                <segue destination="QPi-XT-bbN" kind="show" id="n0T-12-ZrP"/>
+                                <segue destination="QPi-XT-bbN" kind="show" identifier="captionNextToPreview" id="n0T-12-ZrP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="MaO-SY-YxM" id="8Gy-fp-tY2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEM-dd-J2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3897,6 +3900,7 @@ nagpur,India - 440010</string>
                     </navigationItem>
                     <connections>
                         <outlet property="details" destination="36d-hl-8Ff" id="zva-PP-0C0"/>
+                        <outlet property="image" destination="QUY-FZ-fR2" id="2MA-0P-uR9"/>
                         <outlet property="recipients" destination="VVv-Aq-g7d" id="qCv-Kr-ZsW"/>
                     </connections>
                 </viewController>
@@ -3938,7 +3942,7 @@ nagpur,India - 440010</string>
         <!--Navigation Controller-->
         <scene sceneID="a5u-EP-5Ir">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uQ4-ds-dOn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="selectRecipientsNavigation" automaticallyAdjustsScrollViewInsets="NO" id="uQ4-ds-dOn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1dN-Ml-f13">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

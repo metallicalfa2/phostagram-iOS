@@ -12,11 +12,19 @@ class PreviewViewController: UIViewController {
 
 	@IBOutlet weak var details: UILabel!
 	@IBOutlet weak var recipients: UILabel!
+	@IBOutlet weak var image: UIImageView!
+	
+	var imageEl: UIImage?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		details.layer.addBorder(edge: .bottom, color: UIColor.lightGray , thickness: 0.5)
 		recipients.layer.addBorder(edge: .bottom, color: UIColor.lightGray , thickness: 0.5)
+		
+		if((imageEl) != nil){
+			image.image = imageEl
+		}
+		
         // Do any additional setup after loading the view.
     }
 

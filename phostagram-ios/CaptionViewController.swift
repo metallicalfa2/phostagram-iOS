@@ -10,9 +10,14 @@ import UIKit
 
 class CaptionViewController: UIViewController {
 
+	@IBOutlet weak var imageView: UIImageView!
+	var image: UIImage?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		if((image) != nil){
+			imageView.image = image
+		}
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +25,7 @@ class CaptionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
 	
 	@IBAction func nextButtonPressed(_ sender: Any) {
 	
@@ -30,6 +35,15 @@ class CaptionViewController: UIViewController {
 	
 	}
 	
+	
+	override func prepare( for segue: UIStoryboardSegue, sender: Any?) {
+		
+		if segue.identifier == "captionNextToPreview", let destination = segue.destination as? PreviewViewController{
+			destination.imageEl = image
+		}
+		
+		
+	}
 	
 	
 	

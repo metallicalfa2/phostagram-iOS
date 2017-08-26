@@ -17,8 +17,8 @@ protocol contactsDelegate {
 class network{
 	
 	let contactsController = ContactsViewController()
-	 
-	
+	let ghar = home()
+
 	let unavailable = "Unavailable"
 	let loginParameters: Parameters = ["phoneNumber": "9111100000", "password": "phostagram"]
 
@@ -37,13 +37,15 @@ class network{
 		Alamofire.request(loginURL as String, method: .post, parameters: self.loginParameters,encoding: URLEncoding.default).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url reqest
 			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in login: \(response.result)")                         // response serialization result
+			print("Result in login: \(response.result)") // response serialization result
 			
 			if let json = response.result.value {
 				print("JSON: \(json)") // serialized json response
 			}
 			self.getProfile()
 			self.getContacts()
+			self.ghar.homePageCards()
+			
 		}
 		
 	}
@@ -52,7 +54,7 @@ class network{
 		Alamofire.request(profileURL as String, method: .get).responseJSON { response in
 			//print("Request: \(String(describing: response.request))")   // original url request
 			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in Profile: \(response.result.value)")                         // response serialization result
+			print("Result in Profile: \(response.result)")                         // response serialization result
 			
 			if let json = response.result.value {
 				let profileData = JSON(json)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23779C3CEBAD2C9E9DBB0EF9 /* Pods_phostagram_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A291F57DA1CC8525DBA3 /* Pods_phostagram_ios.framework */; };
 		51033C041F2AB69700B03206 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51033C031F2AB69700B03206 /* AddressViewController.swift */; };
+		51284E011F5206B7009559A9 /* homeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51284E001F5206B7009559A9 /* homeModel.swift */; };
 		5162D42F1F34527E000B2DA7 /* SelectRecipientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D42E1F34527E000B2DA7 /* SelectRecipientsViewController.swift */; };
 		5162D4311F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4301F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift */; };
 		5162D4331F375D63000B2DA7 /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162D4321F375D63000B2DA7 /* CaptionViewController.swift */; };
@@ -82,6 +83,7 @@
 		0132AF52DBF8888BD8050792 /* Pods-phostagram-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phostagram-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-phostagram-ios/Pods-phostagram-ios.release.xcconfig"; sourceTree = "<group>"; };
 		100BAD7972A180EF0B25A2BC /* Pods-phostagram-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-phostagram-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-phostagram-ios/Pods-phostagram-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		51033C031F2AB69700B03206 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		51284E001F5206B7009559A9 /* homeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeModel.swift; sourceTree = "<group>"; };
 		5162D42E1F34527E000B2DA7 /* SelectRecipientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRecipientsViewController.swift; sourceTree = "<group>"; };
 		5162D4301F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRecipientsAddressesViewController.swift; sourceTree = "<group>"; };
 		5162D4321F375D63000B2DA7 /* CaptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				51802B0C1F1517400010EA5A /* profileModel.swift */,
 				51802B0E1F15605E0010EA5A /* addressModel.swift */,
 				51802B141F16483E0010EA5A /* contactsModel.swift */,
+				51284E001F5206B7009559A9 /* homeModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				5162D42F1F34527E000B2DA7 /* SelectRecipientsViewController.swift in Sources */,
 				51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */,
 				51C688DA1F0527B400518D56 /* AppDelegate.swift in Sources */,
+				51284E011F5206B7009559A9 /* homeModel.swift in Sources */,
 				5162D43D1F389C3D000B2DA7 /* order.swift in Sources */,
 				51D93BE21F0B777D00C057A7 /* GradientView.swift in Sources */,
 				5162D4311F3457D4000B2DA7 /* SelectRecipientsAddressesViewController.swift in Sources */,
