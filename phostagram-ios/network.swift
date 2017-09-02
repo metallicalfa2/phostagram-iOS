@@ -43,7 +43,7 @@ class network{
 			}
 			self.getProfile()
 			self.getContacts()
-			self.ghar.homePageCards()
+			self.ghar.homePageCards(withCompletion: self.ghar.reloadData)
 			
 		}
 		
@@ -117,6 +117,8 @@ class network{
 	}
 	
 	func reloadData(){
+	
+		//print(homeModel.orders)
 		
 		let notificationNme = NSNotification.Name("reloadTableData")
 		NotificationCenter.default.post(name: notificationNme, object: nil)
@@ -132,6 +134,9 @@ class network{
 		
 		let newAddressAdded = NSNotification.Name("newAddressAdded")
 		NotificationCenter.default.post(name: newAddressAdded, object: nil)
+		
+//		let homepage = NSNotification.Name("reloadHomepage")
+//		NotificationCenter.default.post(name: homepage, object: nil)
 	}
 	
 	

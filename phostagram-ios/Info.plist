@@ -22,40 +22,8 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>https://13.126.4.227:3000</key>
-			<dict>
-				<key>NSExceptionAllowInsecureHTTPLoads</key>
-				<true/>
-				<key>NSExceptionAllowInsecureHTTPSLoads</key>
-				<true/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
-			<key>https://api.homingos.com:3000</key>
-			<dict>
-				<key>NSExceptionAllowInsecureHTTPLoads</key>
-				<true/>
-				<key>NSExceptionAllowInsecureHTTPSLoads</key>
-				<true/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
-			<key>http://api.homingos.com:3000</key>
-			<dict>
-				<key>NSExceptionAllowInsecureHTTPLoads</key>
-				<true/>
-				<key>NSExceptionAllowInsecureHTTPSLoads</key>
-				<true/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
-		</dict>
+	  <key>NSAllowsArbitraryLoads</key>
+	  <true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Enable Camera to take photos.</string>

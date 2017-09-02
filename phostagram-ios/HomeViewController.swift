@@ -11,6 +11,7 @@ import ScalingCarousel
 import AdobeCreativeSDKCore
 import AdobeCreativeSDKImage
 import Fusuma
+import Nuke
 
 class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, FusumaDelegate, AdobeUXImageEditorViewControllerDelegate{
 	var isGridFlowLayoutUsed: Bool = false
@@ -50,8 +51,10 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		AdobeUXAuthManager.shared().setAuthenticationParametersWithClientID(kCreativeSDKClientId, withClientSecret: kCreativeSDKClientSecret)
 		AdobeUXAuthManager.shared().redirectURL = NSURL(string: kCreativeSDKRedirectURLString)! as URL!
 		
+		let notificationNme = NSNotification.Name("reloadHomepage")
+		NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTableData), name: notificationNme, object: nil)
 		
-		setupDatasource()
+		//setupDatasource()
 		setupInitialLayout()
 		self.newCardPressed(self)
 	}
@@ -92,7 +95,7 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	
 	
 	func setupDatasource() {
-		itemsToDisplay = [ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island")]
+		itemsToDisplay = [ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island"),ImageToDisplay(imageName: "island")]
 		
 		collection.reloadData()
 	}
@@ -106,22 +109,53 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 		listFlowLayout.scrollDirection = .horizontal
 	}
 	
+	func reloadTableData(){
+		print("FASDFD")
+		if(true){
+			DispatchQueue.main.async{
+				print("reloading collection view")
+				self.collection.reloadData()
+				//self.collectionView.reloadData()
+			}
+		}
+	}
+	
 }
 
 extension HomeViewController{
 	// MARK: collectionView methods
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		print(homeModel.orders.count)
+		if( homeModel.orders.count == 0){
+			return 0
+		}
+		else {
+			return homeModel.orders.count
+		}
+	}
+	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
-		let itemToDisplay = itemsToDisplay[indexPath.row]
+		//let itemToDisplay = itemsToDisplay[indexPath.row]
 		
-		cell.imageView.image = UIImage(named: "\(itemToDisplay.imageName)"+".jpg")
+		//cell.imageView.image = #imageLiteral(resourceName: "island")
+		cell.imageView.image = nil
+		//Nuke.loadImage(with: URL(string:"http://res.cloudinary.com/phostagram/image/upload/v1503839581/25734387393c46cba857d673b522f063.jpg")!, into: cell.imageView)
+		//var request = URL(url)
+		
+		Nuke.loadImage(with: URL(string: homeModel.orders[indexPath.row].photoURL! )!, into: cell.imageView) { [weak view] response, _ in
+			print(response)
+			cell.imageView?.image = response.value
+		}
+		
+		print(homeModel.orders[indexPath.row].photoURL)
 		DispatchQueue.main.async(
 			execute: {
 				//cell.imageView.dropShadow()
 			}
 		)
-		(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 2) : cell.imageView.cornerRadius(radius: 0)
+		//(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 2) : cell.imageView.cornerRadius(radius: 0)
 		return cell
 	}
 	
@@ -129,9 +163,6 @@ extension HomeViewController{
 		
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return itemsToDisplay.count
-	}
 	
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		collection.didScroll()

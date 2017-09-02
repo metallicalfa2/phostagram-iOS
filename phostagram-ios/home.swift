@@ -18,10 +18,10 @@ class home{
 	
 	let homepageOrders = "http://52.91.31.125:3000/history/orders/"+"20/0"
 	
-	func homePageCards(){
+	func homePageCards(withCompletion completion:@escaping () -> Void){
 		Alamofire.request(homepageOrders as String, method: .post,encoding: URLEncoding.default).responseJSON { response in
-			print("Request: \(String(describing: response.request))")   // original url reqest
-			print("Response: \(String(describing: response.response))") // h	ttp url response
+			//print("Request: \(String(describing: response.request))")   // original url reqest
+			//print("Response: \(String(describing: response.response))") // h	ttp url response
 			print("Result in history/orders: \(response.result)")   // response serialization result
 			
 			if let json = response.result.value {
@@ -36,15 +36,18 @@ class home{
 					
 					let home = homeModel(el["orderid"].stringValue, photourl: el["photos"][0]["photoUrl"].stringValue, time: el["photos"][0]["time"].stringValue, caption: el["photos"][0]["caption"].stringValue, place: el["photos"][0]["place"].stringValue, ocassion: el["photos"][0]["ocassion"].stringValue, addresses: addresses)
 					homeModel.orders.append(home)
-					print(el["photos"][0]["photoUrl"].stringValue)
 				}
-				//print(homeModel.orders)
-				
-				let notificationNme = NSNotification.Name("reloadHomepage")
-				NotificationCenter.default.post(name: notificationNme, object: nil)
+				//completion()
+				self.reloadData()
 			}
 		}
 		
+	}
+	
+	func reloadData(){
+		print(homeModel.orders)
+		let notificationNme = NSNotification.Name("reloadHomepage")
+		NotificationCenter.default.post(name: notificationNme, object: nil)
 	}
 	
 }

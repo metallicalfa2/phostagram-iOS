@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		net.login()
-		ord.newOrderDraft()
-		test.homePageCards()
+		//ord.newOrderDraft()
+		//test.homePageCards(withCompletion: test.reloadData)
 		
 		IQKeyboardManager.shared().isEnabled = true
 		IQKeyboardManager.shared().isEnableAutoToolbar = false
