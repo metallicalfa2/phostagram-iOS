@@ -9,7 +9,7 @@
 import UIKit
 
 class homeModel{
-	static let orders : [homeModel] = []
+	static var orders : [homeModel] = []
 
 	var orderId:String?
 	var photoURL:String?

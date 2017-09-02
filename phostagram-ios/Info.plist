@@ -37,6 +37,24 @@
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			<key>https://api.homingos.com:3000</key>
+			<dict>
+				<key>NSExceptionAllowInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionAllowInsecureHTTPSLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>http://api.homingos.com:3000</key>
+			<dict>
+				<key>NSExceptionAllowInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionAllowInsecureHTTPSLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>

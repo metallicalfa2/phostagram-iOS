@@ -1535,7 +1535,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dUP-n2-qgW">
-                                <rect key="frame" x="32" y="336.5" width="123" height="31.5"/>
+                                <rect key="frame" x="32" y="440.5" width="123" height="31.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-3p-cgp">
                                         <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
@@ -1555,29 +1555,8 @@ nagpur,India - 440010</string>
                                     <constraint firstAttribute="width" secondItem="dUP-n2-qgW" secondAttribute="height" multiplier="311:80" id="LtZ-VO-JvA"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-uW-IPa">
-                                <rect key="frame" x="165" y="336.5" width="123" height="31.5"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-Vt-Hzi">
-                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Vn-ad-jiT">
-                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Cth-k5-gE6"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="v4h-uW-IPa" secondAttribute="height" multiplier="311:80" id="wHR-bp-qUu"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rV0-EG-Q02">
-                                <rect key="frame" x="32" y="388" width="256" height="33"/>
+                                <rect key="frame" x="32" y="335.5" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pincode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VV0-I3-Xyv">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
@@ -1598,7 +1577,7 @@ nagpur,India - 440010</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-Io-kjJ">
-                                <rect key="frame" x="32" y="441" width="256" height="33"/>
+                                <rect key="frame" x="32" y="388.5" width="256" height="33"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SmP-Hr-YWZ">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="32"/>
@@ -1618,6 +1597,27 @@ nagpur,India - 440010</string>
                                     <constraint firstAttribute="width" secondItem="Kjy-Io-kjJ" secondAttribute="height" multiplier="311:40" id="FSH-fm-Tba"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-uW-IPa">
+                                <rect key="frame" x="165" y="440.5" width="123" height="31.5"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-Vt-Hzi">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Vn-ad-jiT">
+                                        <rect key="frame" x="0.0" y="30.5" width="123" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Cth-k5-gE6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="v4h-uW-IPa" secondAttribute="height" multiplier="311:80" id="wHR-bp-qUu"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1626,10 +1626,12 @@ nagpur,India - 440010</string>
                             <constraint firstAttribute="trailingMargin" secondItem="zf6-l9-kgF" secondAttribute="trailing" constant="16" id="4s0-b6-aNg"/>
                             <constraint firstItem="NOq-ze-tSx" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="5fK-lI-jcs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0w1-s5-eMS" secondAttribute="trailing" constant="16" id="6AH-cx-pbb"/>
+                            <constraint firstItem="dUP-n2-qgW" firstAttribute="top" secondItem="SmP-Hr-YWZ" secondAttribute="bottom" constant="20" id="7K7-Tq-2Gk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v4h-uW-IPa" secondAttribute="trailing" constant="16" id="7Mg-mf-Wlp"/>
                             <constraint firstItem="Kjy-Io-kjJ" firstAttribute="top" secondItem="rV0-EG-Q02" secondAttribute="bottom" constant="20" id="8ci-bZ-vIK"/>
                             <constraint firstItem="dUP-n2-qgW" firstAttribute="width" secondItem="v4h-uW-IPa" secondAttribute="width" id="Aj4-vg-ZIk"/>
                             <constraint firstItem="v4h-uW-IPa" firstAttribute="leading" secondItem="dUP-n2-qgW" secondAttribute="trailing" constant="10" id="FbQ-mb-tPF"/>
+                            <constraint firstItem="v4h-uW-IPa" firstAttribute="top" secondItem="SmP-Hr-YWZ" secondAttribute="bottom" constant="20" id="JvL-Ne-uqf"/>
                             <constraint firstItem="dUP-n2-qgW" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="SRG-vw-1jK"/>
                             <constraint firstItem="YOp-rG-mwk" firstAttribute="top" secondItem="0w1-s5-eMS" secondAttribute="bottom" constant="20" id="TZj-i3-lq3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kjy-Io-kjJ" secondAttribute="trailing" constant="16" id="UpZ-7U-gEz"/>
@@ -1638,17 +1640,15 @@ nagpur,India - 440010</string>
                             <constraint firstItem="Kjy-Io-kjJ" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="VCd-Iu-mNJ"/>
                             <constraint firstItem="zf6-l9-kgF" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="VJz-ri-yew"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YOp-rG-mwk" secondAttribute="trailing" constant="16" id="VY6-of-ffV"/>
-                            <constraint firstItem="v4h-uW-IPa" firstAttribute="top" secondItem="YOp-rG-mwk" secondAttribute="bottom" constant="20" id="bND-pM-zJz"/>
                             <constraint firstItem="0w1-s5-eMS" firstAttribute="top" secondItem="zf6-l9-kgF" secondAttribute="bottom" constant="20" id="cHo-Oh-1Hg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rV0-EG-Q02" secondAttribute="trailing" constant="16" id="dJW-XD-fvg"/>
                             <constraint firstItem="NOq-ze-tSx" firstAttribute="top" secondItem="zf6-l9-kgF" secondAttribute="bottom" constant="20" id="flL-jn-29e"/>
                             <constraint firstItem="0w1-s5-eMS" firstAttribute="leading" secondItem="NOq-ze-tSx" secondAttribute="trailing" constant="10" id="hTx-u8-Li7"/>
-                            <constraint firstItem="dUP-n2-qgW" firstAttribute="top" secondItem="YOp-rG-mwk" secondAttribute="bottom" constant="20" id="nfK-3q-XgL"/>
                             <constraint firstItem="m6Z-TC-MnA" firstAttribute="top" secondItem="spS-FI-hGR" secondAttribute="bottom" constant="20" id="o3c-SI-eOh"/>
+                            <constraint firstItem="rV0-EG-Q02" firstAttribute="top" secondItem="OO9-Gu-Gan" secondAttribute="bottom" constant="20" id="oIf-kd-tBR"/>
                             <constraint firstItem="dUP-n2-qgW" firstAttribute="height" secondItem="v4h-uW-IPa" secondAttribute="height" id="q7a-h2-brT"/>
                             <constraint firstItem="zf6-l9-kgF" firstAttribute="top" secondItem="m6Z-TC-MnA" secondAttribute="bottom" constant="20" id="tai-fR-cOV"/>
                             <constraint firstItem="YOp-rG-mwk" firstAttribute="leading" secondItem="XBh-wv-fDs" secondAttribute="leadingMargin" constant="16" id="x8D-l4-4r4"/>
-                            <constraint firstItem="rV0-EG-Q02" firstAttribute="top" secondItem="v4h-uW-IPa" secondAttribute="bottom" constant="20" id="xoj-7d-dyL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="new contact" id="mH1-dg-tqK">

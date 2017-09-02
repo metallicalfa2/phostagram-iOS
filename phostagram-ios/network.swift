@@ -20,9 +20,8 @@ class network{
 	let ghar = home()
 
 	let unavailable = "Unavailable"
-	let loginParameters: Parameters = ["phoneNumber": "9111100000", "password": "phostagram"]
-
-	let loginURL:String = "http://52.91.31.125:3000/login"
+	let loginParameters: Parameters = ["email": "rathi@homingos.com", "password": "phostagram"]
+	let loginURL:String = "http://52.91.31.125:3000/loginByEmail"
 	let contactsURL:String = "http://52.91.31.125:3000/contacts"
 	let contactsAddURL:String = "http://52.91.31.125:3000/contacts/add"
 	let contactsUpdateURL:String = "http://52.91.31.125:3000/contacts/update"
@@ -33,11 +32,11 @@ class network{
 	let contactsDeleteURL:String = "http://52.91.31.125:3000/contacts/remove"
 	
 	func login(){
-
 		Alamofire.request(loginURL as String, method: .post, parameters: self.loginParameters,encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url reqest
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in login: \(response.result)") // response serialization result
+			print("login called")
+			print("Request: \(String(describing: response.request))")   // original url reqest
+			print("Response: \(String(describing: response.response))") 
+			print("Result in login: \(response.result)") 
 			
 			if let json = response.result.value {
 				print("JSON: \(json)") // serialized json response
@@ -52,9 +51,9 @@ class network{
 	
 	func getProfile(){
 		Alamofire.request(profileURL as String, method: .get).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in Profile: \(response.result)")                         // response serialization result
+			//print("Request: \(String(describing: response.request))")   
+			//print("Response: \(String(describing: response.response))") 
+			print("Result in Profile: \(response.result)")                         
 			
 			if let json = response.result.value {
 				let profileData = JSON(json)
@@ -66,9 +65,9 @@ class network{
 	
 	func getContacts(){
 		Alamofire.request(contactsURL as String, method: .post).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in get Contacts: \(response.result.value)")                         // response serialization result
+			//print("Request: \(String(describing: response.request))")   
+			//print("Response: \(String(describing: response.response))") 
+			print("Result in get Contacts: \(response.result.value)")                         
 			
 			if let json = response.result.value {
 				let contacts = JSON(json)
@@ -140,9 +139,9 @@ class network{
 		print("adding new Contact")
 		
 		Alamofire.request(contactsAddURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in creating a new contact: \(response.result.value)")                         // response serialization result
+			print("Request: \(String(describing: response.request))")   
+			print("Response: \(String(describing: response.response))") 
+			print("Result in creating a new contact: \(response.result.value)")                         
 			
 			if let json = response.result.value {
 				let res = JSON(json)
@@ -160,9 +159,9 @@ class network{
 		print(array)
 		
 		Alamofire.request(contactsUpdateURL as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in update contact: \(response.result.value)")                         // response serialization result
+			//print("Request: \(String(describing: response.request))")   
+			//print("Response: \(String(describing: response.response))") 
+			print("Result in update contact: \(response.result.value)")                         
 			
 			if let json = response.result.value {
 				let res = JSON(json)
@@ -184,9 +183,9 @@ class network{
 		let parameter : Parameters = ["contactId" : contactId]
 		
 		Alamofire.request(contactsDeleteURL as String, method: .post, parameters: parameter, encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in deleting a contact: \(String(describing: response.result.value))") // response serialization result
+			//print("Request: \(String(describing: response.request))")   
+			//print("Response: \(String(describing: response.response))") 
+			print("Result in deleting a contact: \(String(describing: response.result.value))") 
 			let res : JSON
 			if let json = response.result.value {
 				res = JSON(json)
@@ -200,9 +199,9 @@ class network{
 	func addAddress(_ array:[String:Any]){
 	
 		Alamofire.request(addAddress as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in adding an address: \(response.result)")                         // response serialization result
+			//print("Request: \(String(describing: response.request))")   
+			//print("Response: \(String(describing: response.response))") 
+			print("Result in adding an address: \(response.result)")                         
 			if let json = response.result.value {
 				let res = JSON(json)
 				print(res)
@@ -218,9 +217,9 @@ class network{
 	func updateAddress(_ array:[String:Any]){
 	
 		Alamofire.request(updateAddress as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in updating an address: \(response.result)")                         // response serialization result
+			//print("Request: \(String(describing: response.request))")   
+			//print("Response: \(String(describing: response.response))") 
+			print("Result in updating an address: \(response.result)")                         
 			if let json = response.result.value {
 				let res = JSON(json)
 				print(res)
@@ -236,9 +235,9 @@ class network{
 	func deleteAddress(_ array:[String:Any]){
 		
 		Alamofire.request(deleteAddressString as String, method: .post, parameters: array, encoding: URLEncoding.default).responseJSON { response in
-			//print("Request: \(String(describing: response.request))")   // original url request
-			//print("Response: \(String(describing: response.response))") // http url response
-			print("Result in deleting address: \(response.result)")     // response serialization result
+			//print("Request: \(String(describing: response.request))")   
+			//print("Response: \(String(describing: response.response))") 
+			print("Result in deleting address: \(response.result)")     
 			if let json = response.result.value {
 				let res = JSON(json)
 				print(res)

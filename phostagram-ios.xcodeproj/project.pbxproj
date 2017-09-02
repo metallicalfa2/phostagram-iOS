@@ -26,6 +26,7 @@
 		51802B151F16483E0010EA5A /* contactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B141F16483E0010EA5A /* contactsModel.swift */; };
 		51802B181F179AEA0010EA5A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51802B171F179AEA0010EA5A /* UIViewController.swift */; };
 		519A04A11F0653DB00B3F8B0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A04A01F0653DB00B3F8B0 /* ProfileViewController.swift */; };
+		51AEFC661F55B8EE00038757 /* contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AEFC651F55B8EE00038757 /* contact.swift */; };
 		51C4097A1F0D672E00704A5D /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C409791F0D672E00704A5D /* EditContactViewController.swift */; };
 		51C4097C1F0D686900704A5D /* AddressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C4097B1F0D686900704A5D /* AddressViewCell.swift */; };
 		51C4097E1F0D79D600704A5D /* EditContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C4097D1F0D79D600704A5D /* EditContactInfoViewController.swift */; };
@@ -49,13 +50,11 @@
 		51D93BF41F0BF7D100C057A7 /* contactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BF31F0BF7D100C057A7 /* contactsViewCell.swift */; };
 		51D93BF61F0C289400C057A7 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BF51F0C289400C057A7 /* AddNewContactViewController.swift */; };
 		51F6E3941F519D350076B750 /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F6E3931F519D350076B750 /* home.swift */; };
-		51F6E39A1F51CC0A0076B750 /* AdobeCreativeSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F6E3951F51CC0A0076B750 /* AdobeCreativeSDKCore.framework */; };
 		51F6E39B1F51CC0A0076B750 /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F6E3961F51CC0A0076B750 /* AdobeCreativeSDKImage.framework */; };
 		51F6E39C1F51CC0A0076B750 /* AdobeCreativeSDKCoreResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51F6E3971F51CC0A0076B750 /* AdobeCreativeSDKCoreResources.bundle */; };
 		51F6E39D1F51CC0A0076B750 /* AdobeCreativeSDKImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51F6E3981F51CC0A0076B750 /* AdobeCreativeSDKImageResources.bundle */; };
 		51F6E39E1F51CE5A0076B750 /* AdobeCreativeSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F6E3951F51CC0A0076B750 /* AdobeCreativeSDKCore.framework */; };
 		51F6E39F1F51CE5A0076B750 /* AdobeCreativeSDKCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51F6E3951F51CC0A0076B750 /* AdobeCreativeSDKCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		51F6E3A01F51CE5E0076B750 /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F6E3961F51CC0A0076B750 /* AdobeCreativeSDKImage.framework */; };
 		51F6E3A11F51CE5E0076B750 /* AdobeCreativeSDKImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51F6E3961F51CC0A0076B750 /* AdobeCreativeSDKImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		51F6E3A31F51CE6C0076B750 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F6E3A21F51CE6C0076B750 /* MobileCoreServices.framework */; };
 		51F6E3A51F51CE730076B750 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F6E3A41F51CE730076B750 /* SystemConfiguration.framework */; };
@@ -100,6 +99,7 @@
 		51802B141F16483E0010EA5A /* contactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsModel.swift; sourceTree = "<group>"; };
 		51802B171F179AEA0010EA5A /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		519A04A01F0653DB00B3F8B0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		51AEFC651F55B8EE00038757 /* contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contact.swift; sourceTree = "<group>"; };
 		51C409791F0D672E00704A5D /* EditContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
 		51C4097B1F0D686900704A5D /* AddressViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewCell.swift; sourceTree = "<group>"; };
 		51C4097D1F0D79D600704A5D /* EditContactInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactInfoViewController.swift; sourceTree = "<group>"; };
@@ -153,8 +153,6 @@
 				23779C3CEBAD2C9E9DBB0EF9 /* Pods_phostagram_ios.framework in Frameworks */,
 				51F6E39E1F51CE5A0076B750 /* AdobeCreativeSDKCore.framework in Frameworks */,
 				51F6E39B1F51CC0A0076B750 /* AdobeCreativeSDKImage.framework in Frameworks */,
-				51F6E39A1F51CC0A0076B750 /* AdobeCreativeSDKCore.framework in Frameworks */,
-				51F6E3A01F51CE5E0076B750 /* AdobeCreativeSDKImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +192,7 @@
 				51802B051F1508710010EA5A /* network.swift */,
 				5162D43C1F389C3C000B2DA7 /* order.swift */,
 				51F6E3931F519D350076B750 /* home.swift */,
+				51AEFC651F55B8EE00038757 /* contact.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -509,6 +508,7 @@
 				5162D4331F375D63000B2DA7 /* CaptionViewController.swift in Sources */,
 				51C4097A1F0D672E00704A5D /* EditContactViewController.swift in Sources */,
 				5162D43B1F3873FF000B2DA7 /* CALayer+extention.swift in Sources */,
+				51AEFC661F55B8EE00038757 /* contact.swift in Sources */,
 				5162D42F1F34527E000B2DA7 /* SelectRecipientsViewController.swift in Sources */,
 				51C688E21F0527B400518D56 /* phostagram_ios.xcdatamodeld in Sources */,
 				51C688DA1F0527B400518D56 /* AppDelegate.swift in Sources */,
