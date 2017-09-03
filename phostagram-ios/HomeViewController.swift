@@ -17,7 +17,6 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	var isGridFlowLayoutUsed: Bool = false
 	
 	@IBOutlet weak var collection: ScalingCarouselView!
-	
 	@IBOutlet weak var listButton: UIButton!
 	@IBOutlet weak var gridButton: UIButton!
 	@IBOutlet weak var collectionView: UICollectionView!
@@ -33,6 +32,12 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	let gridFlowLayout = PhotoGridflowViewLayout()
 	/// Flow layout that displays cells with a List layout, like in a tableView
 	let listFlowLayout = PhotoListflowViewLayout()
+	
+	@IBOutlet weak var caption: UILabel!
+	@IBOutlet weak var date: UILabel!
+	@IBOutlet weak var place: UILabel!
+	@IBOutlet weak var occasion: UILabel!
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -110,7 +115,6 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 	}
 	
 	func reloadTableData(){
-		print("FASDFD")
 		if(true){
 			DispatchQueue.main.async{
 				print("reloading collection view")
@@ -125,7 +129,7 @@ class HomeViewController:UIViewController,UICollectionViewDataSource,UICollectio
 extension HomeViewController{
 	// MARK: collectionView methods
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		print(homeModel.orders.count)
+		//print(homeModel.orders.count)
 		if( homeModel.orders.count == 0){
 			return 0
 		}
@@ -137,25 +141,19 @@ extension HomeViewController{
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! photoCollectionViewCell
-		//let itemToDisplay = itemsToDisplay[indexPath.row]
-		
-		//cell.imageView.image = #imageLiteral(resourceName: "island")
 		cell.imageView.image = nil
-		//Nuke.loadImage(with: URL(string:"http://res.cloudinary.com/phostagram/image/upload/v1503839581/25734387393c46cba857d673b522f063.jpg")!, into: cell.imageView)
-		//var request = URL(url)
 		
 		Nuke.loadImage(with: URL(string: homeModel.orders[indexPath.row].photoURL! )!, into: cell.imageView) { [weak view] response, _ in
 			print(response)
 			cell.imageView?.image = response.value
 		}
+		print(homeModel.orders[indexPath.row].caption!)
+		caption.text = homeModel.orders[indexPath.row].caption! == " " ? homeModel.orders[indexPath.row].caption! : "no caption"
+		date.text = homeModel.orders[indexPath.row].time!
+		place.text = homeModel.orders[indexPath.row].place!
+		occasion.text = homeModel.orders[indexPath.row].ocassion!
 		
-		print(homeModel.orders[indexPath.row].photoURL)
-		DispatchQueue.main.async(
-			execute: {
-				//cell.imageView.dropShadow()
-			}
-		)
-		//(isGridFlowLayoutUsed == true ) ? cell.imageView.cornerRadius(radius: 2) : cell.imageView.cornerRadius(radius: 0)
+		//print(homeModel.orders[indexPath.row].caption)
 		return cell
 	}
 	

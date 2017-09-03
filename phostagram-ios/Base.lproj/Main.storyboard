@@ -1843,8 +1843,8 @@ nagpur,India - 440010</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K79-jv-aJ1" userLabel="likeButton">
                                         <rect key="frame" x="26" y="8" width="63" height="25"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkz-09-41C">
-                                                <rect key="frame" x="24" y="0.0" width="39" height="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkz-09-41C">
+                                                <rect key="frame" x="24" y="0.0" width="53" height="25"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="0.35294117650000001" green="0.14117647059999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1861,7 +1861,7 @@ nagpur,India - 440010</string>
                                             <constraint firstItem="HMd-uL-EWg" firstAttribute="leading" secondItem="K79-jv-aJ1" secondAttribute="leading" id="DED-JS-dpQ"/>
                                             <constraint firstAttribute="height" constant="25" id="ICB-rK-UmD"/>
                                             <constraint firstItem="HMd-uL-EWg" firstAttribute="top" secondItem="Kkz-09-41C" secondAttribute="top" id="NkM-jG-qfc"/>
-                                            <constraint firstAttribute="trailing" secondItem="Kkz-09-41C" secondAttribute="trailing" id="atz-8B-aF0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kkz-09-41C" secondAttribute="trailing" constant="-14" id="atz-8B-aF0"/>
                                             <constraint firstItem="HMd-uL-EWg" firstAttribute="top" secondItem="K79-jv-aJ1" secondAttribute="top" id="fHX-9J-bsX"/>
                                             <constraint firstItem="HMd-uL-EWg" firstAttribute="bottom" secondItem="Kkz-09-41C" secondAttribute="bottom" id="jIG-ZT-bXF"/>
                                             <constraint firstAttribute="bottom" secondItem="HMd-uL-EWg" secondAttribute="bottom" id="q2F-Ly-AhS"/>
@@ -2029,14 +2029,18 @@ nagpur,India - 440010</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="caption" destination="hGU-mg-bZn" id="XxS-ZG-gVv"/>
                         <outlet property="collection" destination="Wy9-Tl-lDh" id="Ikk-hg-fVd"/>
+                        <outlet property="date" destination="jMY-C5-fVX" id="PO8-6i-5cg"/>
                         <outlet property="gridButton" destination="QPT-uD-Eom" id="5ra-Gf-sJm"/>
                         <outlet property="listButton" destination="L7v-Xg-yZ2" id="a5h-1V-Fai"/>
+                        <outlet property="occasion" destination="yho-N2-CMj" id="dxo-cV-Bja"/>
+                        <outlet property="place" destination="KJ2-zS-DEj" id="sR8-6d-aqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AU5-g0-48o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2552.8000000000002" y="223.53823088455775"/>
+            <point key="canvasLocation" x="2551.875" y="222.88732394366198"/>
         </scene>
         <!--Choose Image-->
         <scene sceneID="zjD-gz-lzG">
